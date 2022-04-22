@@ -1,0 +1,143 @@
+/*
+
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7/04/2022, 04:02:51 PM
+    Author     : OSIADMIN
+*/
+
+
+
+#headerprincipal{
+    background-color:#3A6A9E;
+    /*#424242*/
+}
+
+#logo{
+    width: 100px; height: 100px;
+}
+
+#containerlogin{
+
+    margin-top: 100px; width: 35rem;
+
+}
+
+#botonlog{
+    background-color: #11A2C3;
+    border-color:#11A2C3;
+    width: 150px;
+
+}
+
+#botonreg1{
+    background-color: #11A2C3;
+    border-color:#11A2C3;
+    width: 150px;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 590px;
+}
+
+#botonreg2{
+    background-color: #11A2C3;
+    border-color:#11A2C3;
+    width: 150px;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    margin-left: 600px;
+
+}
+#botonlog:hover{
+    background-color: #3A6A9E;   
+
+}
+#botonreg1:hover{
+    background-color: #3A6A9E; 
+}
+#botonreg2:hover{
+    background-color: #3A6A9E;  
+}
+
+#foot{
+    background-color: #005C92;
+    margin-top:145px;
+}
+#textfoot{
+    color: white;
+}
+
+#headertext{
+    color: white;
+}
+
+#container_registroU{
+    margin-top: 100px;
+    bottom: 300px;
+    width: 60rem;
+}
+
+
+h1{
+    font-family: "Roboto-Regular","Helvetica","Arial","sans-serif";
+}
+
+button{
+    font-family: "Roboto-Medium","Helvetica","Arial","sans-serif";
+
+}
+
+#n_identificacion,#correo{
+
+    margin-top: 10px;
+}
+#favicon{
+    height: 32px;
+    width: 32px;
+}
+
+#emailimp{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/*#registrarme{
+    margin-top: 30px;
+}*/
+#nav_bar{
+    background-color:#3A6A9E;           
+
+}
+#text_nav{
+    color: white;
+}
+
+#offcanvasNavbar{
+    background-color:#F2F2F2;
+}
+
+#link1:hover{
+    color: #DCAE0A;
+
+}
+#link2:hover{
+    color: #DCAE0A;
+}
+#link3:hover{
+    color: #DCAE0A;
+}
+
+#link4:hover{
+    color: #DCAE0A;
+}
+#link5:hover{
+    color: #DCAE0A;
+}
+#logo_navbar{
+     width: 100px; height: 100px;
+     margin-top: 5px;
+     margin-left: 5px;
+}
