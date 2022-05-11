@@ -23,11 +23,14 @@
                     <h1> <b>Administrar Cupos</b> </h1>
                 </div>
             </div>
-
-            <div class=" align-self-end "> 
-                <h3> <b>Abrir Cupos </b> </h3>
-                <i class="fa-solid fa-plus"></i>
+                <!-- consultar la mejor opcion para abrir nuevos cupos   
+            <div class=" input-group text-end "> 
+                <span class="input-group-text align-content-end">
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+                <h3> <b>Abrir Cupos </b> </h3>  
             </div> 
+             -->     
             <div class="table-responsive">
                 <table class="table">
 
@@ -65,10 +68,11 @@
             <!--<div class="col-2">
                 <button type="submit" class=" btn btn-primary" id="botonreg1">Aceptar</button>
             </div>-->
-            <div class="row">
-
-                <div class="col-md-3">
-                    <button type="submit" class=" btn btn-primary" id="botonreg2">Cerrar</button>
+            <div class=" d-flex justify-content-end align-content-end">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class=" btn btn-primary" id="botonreg2">Cerrar</button>
+                    </div>
                 </div>
             </div>    
         </form>

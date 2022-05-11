@@ -22,7 +22,7 @@
                 <div class="col-md-3 mt-3">
                     <img id="logo" src="${pageContext.request.contextPath}/imagen/logo-1.png"  alt="Logo Universidad" >
                 </div> 
-                <div class="col-md-9 align-self-center">
+                <div class="col-md-9 mt-3 align-self-center">
                     <h1> <b>Registro de Usuarios</b> </h1>
                 </div>
             </div> 
@@ -60,16 +60,17 @@
                 </select>
             </div>
             -->
-            <div class="row mt-3">
-                <div class="col-md-2">
-                    <button type="submit" class=" btn btn-primary" id="botonreg1">Aceptar</button>
-                </div>
+            <div class=" d-flex justify-content-end align-content-end">    
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <button type="submit" class=" btn btn-primary" id="botonreg1">Aceptar</button>
+                    </div>
 
-                <div class="col-md-1">
-                    <button type="submit" class=" btn btn-primary" id="botonreg2">Cancelar</button>
+                    <div class="col-md-6">
+                        <button type="submit" class=" btn btn-primary" id="botonreg2">Cancelar</button>
+                    </div>
                 </div>
             </div>
-            
         </form>
                 
     </div>       
