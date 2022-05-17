@@ -21,7 +21,8 @@ and open the template in the editor.
 }
 
 #containerlogin{
-    margin-top: 100px; width: 480px;
+    margin-top: 100px;
+    /*width: 480px;*/
     background-color: #F2F2F2;
 }
 
@@ -81,7 +82,7 @@ and open the template in the editor.
     background-color: #F2F2F2;
     margin-top: 100px;
     bottom: 300px;
-    width: 960px;
+    /*width: 960px;*/
 }
 
 
@@ -157,5 +158,5 @@ button{
 #container_abrirCupo{
     margin-top: 100px;
     bottom: 300px;
-    width: 960px;
+   /* width: 960px;*/
 }

@@ -11,15 +11,15 @@
 
 <section>
 
-    <div class="container-fluid  p-3  border-3 shadow  mb-1 " id="container_registroU">
+    <div class="container-fluid  p-3 col-md-8  border-3 shadow  mb-1 " id="container_registroU">
 
         <form>
 
             <div class="row"> 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <img id="logo" src="${pageContext.request.contextPath}/imagen/logo-1.png"  alt="Logo Universidad" >
                 </div> 
-                <div class="col-md-9" style="margin-top: -55px; margin-left: 270px;" >
+                <div class="col-md-6  mt-3 aling-self-center" style="/*margin-top: -55px; margin-left: 270px;*/" >
                     <h1> <b>Administrar Cupos</b> </h1>
                 </div>
             </div>
