@@ -15,7 +15,7 @@
 <jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp" /> 
 
 <section>
-    <div class="container-fluid  p-3  border-3 shadow  mb-1 " id="container_registroU">
+    <div class="container-fluid  p-3 col-md-7  border-3 shadow  mb-1 " id="container_registroU">
 
         <form class="row g-3">
             <div class="row">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-md-6">
-                <label for="inputState" class="form-label">Facultad-Área</label>
+                <label for="facultad_area" class="form-label">Facultad-Área</label>
                 <select id="facultad_area" class="form-select">
                     <option selected>Seleccione...</option>
                     <option>...</option>
@@ -60,7 +60,7 @@
                 </select>
             </div>
             -->
-            <div class=" d-flex justify-content-end align-content-end">    
+            <!-- <div class=" d-flex justify-content-end align-content-end">    
                 <div class="row mt-3">
                     <div class="col-md-6">
                         <button type="submit" class=" btn btn-primary" id="botonreg1">Aceptar</button>
@@ -68,6 +68,14 @@
 
                     <div class="col-md-6">
                         <button type="submit" class=" btn btn-primary" id="botonreg2">Cancelar</button>
+                    </div>
+                </div>
+            </div>-->
+             <div class=" d-flex justify-content-end align-content-end col-12">    
+                <div class="row mt-2">
+                    <div>
+                        <button type="submit" class=" btn btn-primary col-md-6" id="botonreg1">Aceptar</button>
+                        <button type="submit" class=" btn btn-primary col-md-6" id="botonreg2">Cancelar</button>
                     </div>
                 </div>
             </div>

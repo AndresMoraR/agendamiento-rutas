@@ -43,19 +43,28 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link2" href="#">Asignar horarios</a>
+                                    <a class="nav-link active" id="link2" href="#">Usuarios</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link3" href="#">Reportes</a>
+                                    <a class="nav-link active" id="link3" href="#">Aministrar Cupos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="link3" href="#">Aministrar Horarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="link3" href="#">Aministrar Rutas</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active"  id="link4" href="#">Crear reservaciones</a>
+                                    <a class="nav-link active"  id="link4" href="#">Crear Reservaciones</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link5" href="#">Mis reservaciones</a>
+                                    <a class="nav-link active" id="link5" href="#">Mis Reservaciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="link5" href="#">Reportes</a>
                                 </li>
 
                             </ul>
