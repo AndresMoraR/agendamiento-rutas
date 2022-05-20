@@ -7,28 +7,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
+       
         <link rel="icon" id="favicon" type="image/png" href="${pageContext.request.contextPath}/imagen/logo-1.png" >
         <link rel="stylesheet" href="${pageContext.request.contextPath}/Bootstrap/Boot_css/bootstrap.min.css"/>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Estilos.css"/>
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/fontawesome/font_css/css/all.css"/>
-        
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/fontawesome/font_css/css/all.css"/>            
+        <script src="${pageContext.request.contextPath}/Bootstrap/boot_js/bootstrap.bundle.min.js"></script> 
+        <script src="${pageContext.request.contextPath}/fontawesome/font_js/js/all.min.js"></script>
+        <title>Rutas</title>
     </head>
-    <body>
+    <body style="background-image: url('${pageContext.request.contextPath}/imagen/fondo2.jpg'); background-repeat: no-repeat; background-size: auto;">
 
-        <section>
-            <nav class="navbar navbar-light fixed-top" id="nav_bar" >
+        <header>
+            <nav class="navbar navbar-light" id="nav_bar" >
                 <div class="container-fluid">
-                    <a class="navbar-brand" id="text_nav" href="#">Unisanitas -Agendamiento de Rutas </a>
+                    <label id="text_nav">Unisanitas - Agendamiento de Rutas</label>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span> 
                     </button>
 
                     <div class="offcanvas offcanvas-start" tabindex="-1"  aria-labelledby="offcanvasNavbarLabel" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" id="offcanvasNavbar" >
                         <div class="col-md-3">
-                            <img id="logo_navbar" src="${pageContext.request.contextPath}/imagen/logo-1.png"  alt="Logo Universidad" >
+                            <img id="logo_navbar" src="${pageContext.request.contextPath}/imagen/logo.png"  alt="Logo Universidad" >
                         </div> 
 
                         <div class="offcanvas-header">
@@ -39,32 +41,32 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link1" aria-current="page" href="#"><b>Inicio</b></a>
+                                    <a class="nav-link active link_menu" id="link1" aria-current="page" href="#"><b>Inicio</b></a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link2" href="#">Usuarios</a>
+                                    <a class="nav-link active link_menu" id="link2" href="#">Usuarios</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link3" href="#">Aministrar Cupos</a>
+                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Cupos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link3" href="#">Aministrar Horarios</a>
+                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Horarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link3" href="#">Aministrar Rutas</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link active"  id="link4" href="#">Crear Reservaciones</a>
+                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Rutas</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link5" href="#">Mis Reservaciones</a>
+                                    <a class="nav-link active link_menu"  id="link4" href="#">Crear Reservaciones</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active link_menu" id="link5" href="#">Mis Reservaciones</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="link5" href="#">Reportes</a>
+                                    <a class="nav-link active link_menu" id="link5" href="#">Reportes</a>
                                 </li>
 
                             </ul>
@@ -96,8 +98,7 @@
                     </div>
                 </div>
             </nav>
-        </section>    
-        <script src="${pageContext.request.contextPath}/Bootstrap/boot_js/bootstrap.bundle.min.js"></script> 
-        <script src="${pageContext.request.contextPath}/fontawesome/font_js/js/all.min.js"></script>
+        </header>
     </body>
+    
 </html>

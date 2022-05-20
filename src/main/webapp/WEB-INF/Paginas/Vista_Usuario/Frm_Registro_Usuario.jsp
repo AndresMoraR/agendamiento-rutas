@@ -6,81 +6,50 @@
 
 
 <!DOCTYPE html>
-
-
-
-<title>Registro de Usuario</title>
+<title>Rutas - Registro de Usuario</title>
 
 <!--Header-->
 <jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp" /> 
 
-<section>
-    <div class="container-fluid  p-3 col-md-7  border-3 shadow  mb-1 " id="container_registroU">
-
-        <form class="row g-3">
-            <div class="row">
-                <div class="col-md-3 mt-3">
-                    <img id="logo" src="${pageContext.request.contextPath}/imagen/logo-1.png"  alt="Logo Universidad" >
+<section class="form-resp m-0 row justify-content-center align-items-center">
+    <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerRegistroU">        
+        <div class="row">             
+            <div class="col-md-12">
+                <div class="text-center">
+                    <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png" alt="Logo Bienestar" >
+                    <h3 class="color-text"><b>Registrar Usuario</b></h3>
+                </div>
+            </div>
+            <hr>
+        </div>        
+        <form class="mt-1">
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <input type="text" class="form-control form-control-sm" id="nombres" placeholder="Nombres">
+                </div>
+                <div class="col-md-12">
+                    <input type="text" class="form-control form-control-sm" id="apellidos" placeholder="Apellidos">
+                </div>
+                <div class="col-md-12">
+                    <input type="text" class="form-control form-control-sm" id="n_identificacion" placeholder="Número de identificación">
+                </div>
+                <div class="col-md-12">
+                    <input type="email" class="form-control form-control-sm" id="correo" placeholder="Correo electrónico">
                 </div> 
-                <div class="col-md-9 mt-3 align-self-center">
-                    <h1> <b>Registro de Usuarios</b> </h1>
-                </div>
-            </div> 
-
-
-            <div class="col-md-6">
-                <input type="text" class="form-control" id="nombres" placeholder="Nombres">
-            </div>
-                
-            <div class="col-md-6">
-                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
-            </div>
-                
-            <div class="col-md-6">
-                <input type="text" class="form-control" id="n_identificacion" placeholder="Número de identificación">
-            </div>
-                
-            <div class="col-md-6">
-                <input type="email" class="form-control" id="correo" placeholder="Correo electrónico">
-            </div>
-
-            <div class="col-md-6">
-                <label for="facultad_area" class="form-label">Facultad-Área</label>
-                <select id="facultad_area" class="form-select">
-                    <option selected>Seleccione...</option>
-                    <option>...</option>
-                </select>
-            </div>
-            <!--    
-            <div class="col-md-6">
-                <label for="inputState" class="form-label">Rol Usuario</label>
-                <select id="rol_usuario" class="form-select">
-                    <option selected>Seleccione...</option>
-                    <option>...</option>
-                </select>
-            </div>
-            -->
-            <!-- <div class=" d-flex justify-content-end align-content-end">    
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <button type="submit" class=" btn btn-primary" id="botonreg1">Aceptar</button>
-                    </div>
-
-                    <div class="col-md-6">
-                        <button type="submit" class=" btn btn-primary" id="botonreg2">Cancelar</button>
-                    </div>
-                </div>
-            </div>-->
-             <div class=" d-flex justify-content-end align-content-end col-12">    
-                <div class="row mt-2">
-                    <div>
-                        <button type="submit" class=" btn btn-primary col-md-6" id="botonreg1">Aceptar</button>
-                        <button type="submit" class=" btn btn-primary col-md-6" id="botonreg2">Cancelar</button>
+                <div class="col-md-12">
+                    <select id="facultad_area" class="form-select form-select-sm">
+                        <option selected>Facultad/Área</option>
+                        <option>...</option>
+                    </select>
+                </div>                
+                <div class="col-md-12">
+                    <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
+                        <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Aceptar</button>
+                        <button type="submit" class="btn btn-primary col-md-6" id="btnCancelar">Cancelar</button>
                     </div>
                 </div>
             </div>
         </form>
-                
     </div>       
 </section>
 <!--foot-->
