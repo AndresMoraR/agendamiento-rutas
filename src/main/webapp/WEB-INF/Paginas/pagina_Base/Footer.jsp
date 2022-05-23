@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 
-<footer id="foot" class="p-3">
+<footer id="foot" class="p-3 color-foot-head">
     <div class="container">
         <div class="col">
             <p class="lead text-center" id="textfoot">Copyright 2022.</p>
