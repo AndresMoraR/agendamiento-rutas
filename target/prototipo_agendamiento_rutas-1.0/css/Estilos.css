@@ -8,10 +8,6 @@ and open the template in the editor.
     Created on : 7/04/2022, 04:02:51 PM
     Author     : OSIADMIN
 */
-#headerprincipal{
-    background-color:#3A6A9E;
-}
-
 #logoU{
     width: 100px; 
     height: 100px;
@@ -44,11 +40,6 @@ and open the template in the editor.
 }
 
 
-#foot{
-    background-color: #005C92;
-   
-}
-
 #textfoot{
     color: white;
 }
@@ -71,7 +62,7 @@ button{
     width: 32px;
 }
 
-#nav_bar{
+.color-foot-head{
     background-color:#3A6A9E;           
 
 }

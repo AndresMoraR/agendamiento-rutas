@@ -8,8 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-       
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
         <link rel="icon" id="favicon" type="image/png" href="${pageContext.request.contextPath}/imagen/logo.png" >
         <link rel="stylesheet" href="${pageContext.request.contextPath}/Bootstrap/Boot_css/bootstrap.min.css"/>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Estilos.css"/>
@@ -21,7 +20,7 @@
     <body style="background-image: url('${pageContext.request.contextPath}/imagen/fondo2.jpg'); background-repeat: no-repeat; background-size: auto;">
 
         <header>
-            <nav class="navbar navbar-light" id="nav_bar" >
+            <nav class="navbar navbar-light color-foot-head" id="nav_bar" >
                 <div class="container-fluid">
                     <label id="text_nav">Unisanitas - Agendamiento de Rutas</label>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -29,76 +28,55 @@
                     </button>
 
                     <div class="offcanvas offcanvas-start" tabindex="-1"  aria-labelledby="offcanvasNavbarLabel" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" id="offcanvasNavbar" >
-                        <div class="col-md-3">
+                        <div class="col-md-12 color-foot-head">
                             <img id="logo_navbar" src="${pageContext.request.contextPath}/imagen/logo.png"  alt="Logo Universidad" >
                         </div> 
 
-                        <div class="offcanvas-header">
+                        <div class="offcanvas-header color-foot-head">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> <b>Menú principal</b></h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" id="cerrarbarra"></button> 
                         </div>
 
-                        <div class="offcanvas-body">
+                        <div class="offcanvas-body container-fluid-form">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link1" aria-current="page" href="#"><b>Inicio</b></a>
+                                    <span><a class="nav-link active link_menu" id="link1" aria-current="page" href="#"><b><i class="fas fa-home"></i> Inicio</b></a></span>
                                 </li>
-
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link2" href="#">Usuarios</a>
+                                    <span><a class="nav-link active link_menu" id="link2" href="#"><i class="fas fa-user-circle"></i> Usuarios</a></span>
                                 </li>
-
+                                <hr>
+                                <li class="nav-item">	
+                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-clipboard-list"></i> Cupos</a></span>
+                                </li>
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Cupos</a>
+                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-clock"></i> Horarios</a></span>
                                 </li>
+                                <hr>
+                                <li class="nav-item">	
+                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-bus"></i> Rutas</a></span>
+                                </li>
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Horarios</a>
+                                    <span><a class="nav-link active link_menu"  id="link4" href="#"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
                                 </li>
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Rutas</a>
+                                    <span><a class="nav-link active link_menu" id="link5" href="#"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
                                 </li>
-
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu"  id="link4" href="#">Crear Reservaciones</a>
+                                    <span><a class="nav-link active link_menu" id="link5" href="#"><i class="fas fa-book-open"></i> Reportes</a></span>
                                 </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link5" href="#">Mis Reservaciones</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link5" href="#">Reportes</a>
-                                </li>
-
+                                <hr>
                             </ul>
-                            <!-- codigo para un menu interno y un campo de busqueda -->
-                            <%--
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Asignar horarios</a></li>
-                                    <li><a class="dropdown-item" href="#">Administrar horarios</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                            --%>
-                            <%--
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                            --%>
                         </div>
                     </div>
                 </div>
             </nav>
         </header>
     </body>
-    
+
 </html>
