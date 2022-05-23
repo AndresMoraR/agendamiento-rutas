@@ -16,18 +16,18 @@
             <div class="col-md-4 align-self-center">
                 <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
             </div> 
-            <div class="col-md-6 align-self-center" style="/*margin-top: -55px; margin-left: 270px;*/" >
-                <h1 class="color-text"> <b>Listado de Usuarios</b> </h1>
+            <div class="col-md-6 align-self-center" >
+                <h1 class="color-text"> <b>Administrar Usuarios</b> </h1>
             </div>
         </div>
-        <!-- consultar la mejor opcion para abrir nuevos cupos   
-    <div class=" input-group text-end "> 
-        <span class="input-group-text align-content-end">
-            <i class="fa-solid fa-plus"></i>
-        </span>
-        <h3> <b>Abrir Cupos </b> </h3>  
-    </div> 
-        -->     
+        <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-end">
+            <button class="btn btn-primary " title="Nuevo Usuario" type="button" id="nuevoUsuario">
+                <span>
+                    <i class="fa-solid fa-plus"></i>
+                    <b> Nuevo Usuario </b> 
+                </span>
+            </button>    
+        </div> 
         <div class="table-responsive">
             <table class="table">
 
@@ -58,12 +58,9 @@
                         <td>2022-19-05 12:00:00</td>
                         <td>
                             <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                <button title="Editar Usuario" type="button" id="editUser"><span>
+                                <button title="Editar Usuario" type="button" id="editarUsuario"><span>
                                         <i class="fas fa-user-edit"></i>
                                     </span></button>
-                                <!-- button title="Suspender Usuario" type="button" id="cancelUser"><span>
-                                        <i class="fas fa-user-lock"></i>
-                                    </span></button>-->
                             </div>
                         </td>
                     </tr>
@@ -80,11 +77,8 @@
                         <td>2022-19-05 12:00:00</td>
                         <td>
                             <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                <button title="Editar Usuario" type="button" id="editUser"><span>
+                                <button title="Editar Usuario" type="button" id="editarUsuario"><span>
                                         <i class="fas fa-user-edit"></i>
-                                    </span></button>
-                                <button title="Suspender Usuario" type="button" id="cancelUser"><span>
-                                        <i class="fas fa-user-lock"></i>
                                     </span></button>
                             </div>
                         </td>
@@ -93,9 +87,7 @@
                 </tbody>
             </table> 
         </div>
-        <!--<div class="col-2">
-            <button type="submit" class=" btn btn-primary" id="botonreg1">Aceptar</button>
-        </div>-->
+
         <div class=" d-flex justify-content-end align-content-end">
             <div class="row">
                 <div class="col-md-12">
