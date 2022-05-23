@@ -4,7 +4,7 @@
     Author     : OSIADMIN
 --%>
 
-<title>Administrar Cupos</title>
+<title>Lista Usuarios</title>
 
 <jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp"/>
 
@@ -61,9 +61,9 @@
                                 <button title="Editar Usuario" type="button" id="editUser"><span>
                                         <i class="fas fa-user-edit"></i>
                                     </span></button>
-                                <button title="Suspender Usuario" type="button" id="cancelUser"><span>
+                                <!-- button title="Suspender Usuario" type="button" id="cancelUser"><span>
                                         <i class="fas fa-user-lock"></i>
-                                    </span></button>
+                                    </span></button>-->
                             </div>
                         </td>
                     </tr>
