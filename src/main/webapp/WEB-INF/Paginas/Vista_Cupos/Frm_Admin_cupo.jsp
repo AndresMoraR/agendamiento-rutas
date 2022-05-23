@@ -23,43 +23,75 @@
                     <h1 class="color-text"> <b>Administrar Cupos</b> </h1>
                 </div>
             </div>
-                <!-- consultar la mejor opcion para abrir nuevos cupos   
-            <div class=" input-group text-end "> 
-                <span class="input-group-text align-content-end">
-                    <i class="fa-solid fa-plus"></i>
-                </span>
-                <h3> <b>Abrir Cupos </b> </h3>  
-            </div> 
-             -->     
+                <!-- consultar la mejor opcion para abrir nuevos cupos <h3> <b>Abrir Cupos </b> </h3> -->   
+            
+            <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-end">
+                                <button title="Editar Usuario" type="button" id="editUser"><span>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                </button>    
+            </div>      
             <div class="table-responsive">
                 <table class="table">
 
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <th scope="col"></th>
                             <th scope="col">Cupos Funcionarios</th>
                             <th scope="col">Cupos Estudiantes</th>
                             <th scope="col">Cupos Extra</th>
                             <th scope="col">Total Cupos</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Fecha Creación</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
+                            <td>6</td>
+                            <td>14</td>
+                            <td>5</td>
+                            <td>25</td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                </div>
+                            </td>
+                            <td>2022-23-05 9:00:00</td>
+                            <td>
+                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
+                                    <button title="Editar Usuario" type="button" id="editUser">
+                                        <span>
+                                            <i class="fa-solid fa-file-pen"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </td>
+                            
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
+                            <td>4</td>
+                            <td>12</td>
+                            <td>4</td>
+                            <td>20</td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                </div>                                
+                            </td>
+                            <td>2022-23-05 9:10:00</td>
+                            <td>
+                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
+                                    <button title="Editar Usuario" type="button" id="editUser">
+                                        <span>
+                                            <i class="fa-solid fa-file-pen"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </td>
+                            
                         </tr>
 
                     </tbody>
