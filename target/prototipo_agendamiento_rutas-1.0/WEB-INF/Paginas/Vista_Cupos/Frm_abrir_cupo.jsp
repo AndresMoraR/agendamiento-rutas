@@ -9,8 +9,8 @@
 
 <jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp"/>
 
-<section>
-    
+<section class="form-resp m-0 row justify-content-center align-items-center">
+    <!-- miga de pan 
         <div class=" breadcrumb p-3 mt-5">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -19,68 +19,44 @@
                 <li class="breadcrumb-item active" aria-current="page">Abrir Cupos</li>
             </ol>
         </nav>
-    </div>
+    </div>-->
 
-    <div class="container-fluid p-3 col-md-6 mt-1  border-3 shadow  mb-1 " id="container_registroU">
-        
-        <form class="row g-3">
-            
-            <div class="row ">  
-                <div class="col-md-4 mt-3">
-                    <img id="logo" src="${pageContext.request.contextPath}/imagen/logo-1.png"  alt="Logo Universidad" >
-                </div> 
-                <div class="col-md-8 align-self-center"   style="/*margin-top: -55px; margin-left: 270px;*/ " >
-                    <h1> <b>Abrir Cupos</b> </h1>
+    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="container_registroU">
+        <div class="row">             
+            <div class="col-md-12">
+                <div class="text-center">
+                    <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png" alt="Logo Bienestar" >
+                    <h3 class="color-text">
+                        <b>Abrir Cupos</b>
+                    </h3>
                 </div>
             </div>
-                
-            <div class="row">
-                <div class="col-md-6  ">
-                    <label for="cuposfuncionario" class="col-form-label">Cupos Funcionarios</label>
-                    <input type="number" class="form-control" id="nombres" placeholder="funcionarios">
-                </div>
+            <hr>
+        </div> 
 
-                <div class="col-md-6  ">
-                    <label for="cuposestudiantes" class="col-form-label">Cupos Estudiantes</label>
-                    <input type="number" class="form-control" id="apellidos" placeholder="estudiantes">
+        <form class="mt-1">    
+            <div class="row g-3">
+                <div class="col-md-12  ">
+                    <input type="number" class=" form-control form-control-sm" id="totalcupos" placeholder="Total cupos disponibles">
                 </div>
-
-                <div class="col-md-6  ">
-                    <label for="cuposextra" class="col-form-label">Cupos Extra</label>
-                    <input type="number" class="form-control" id="n_identificacion" placeholder="extra">
+                <div class="col-md-12  ">
+                    <input type="number" class=" form-control form-control-sm" id="cuposestudiantes" placeholder="Número de cupos estudiantes">
                 </div>
-
-                <div class="col-md-6  ">
-                    <label for="toralcupos" class="col-form-label"> Total Cupos </label>
-                    <input type="number" class="form-control" id="correo" placeholder="total">
+                <div class="col-md-12  ">
+                    <input type="number" class=" form-control form-control-sm" id="cuposfuncionario" placeholder="Número de cupos funcionarios">
+                </div>
+                <div class="col-md-12  ">
+                    <input type="number" class=" form-control form-control-sm" id="cuposextra" disabled placeholder="Número de cupos extra">
                 </div>
             </div>  
-            
-                <!-- <div class=" d-flex justify-content-end align-content-end"> 
-                <div class="row mt-3">
-                    <div class="col-6">
-                        <button type="submit" class=" btn btn-primary" id="botonreg1">Crear</button>
-                    </div>
-
-                    <div class="col-6">
-                        <button type="submit" class=" btn btn-primary" id="botonreg2">Cancelar</button>
-                    </div>
-                </div>
-            </div>  -->
-                <div class=" d-flex justify-content-end align-content-end col-12"> 
-                <div class="row mt-3">
-                    <div class="">
-                        <button type="submit" class=" btn btn-primary col-6" id="botonreg1">Crear</button>
-                    
-
-                    
-                        <button type="submit" class=" btn btn-primary col-6" id="botonreg2">Cancelar</button>
-                    </div>
+            <div class="col-md-12 mt-3">
+                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
+                    <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Crear</button>
+                    <button type="submit" class="btn btn-primary col-md-6" id="btnCancelar">Cancelar</button>
                 </div>
             </div>
-            
         </form>
-        
+
     </div> 
 
 </section> 
