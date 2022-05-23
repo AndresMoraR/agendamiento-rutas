@@ -19,18 +19,19 @@
                 <div class="col-md-4">
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
                 </div> 
-                <div class="col-md-6  mt-3 aling-self-center" style="/*margin-top: -55px; margin-left: 270px;*/" >
+                <div class="col-md-6 aling-self-center">
                     <h1 class="color-text"> <b>Administrar Cupos</b> </h1>
                 </div>
             </div>
-                <!-- consultar la mejor opcion para abrir nuevos cupos <h3> <b>Abrir Cupos </b> </h3> -->   
-            
+
+
             <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                                <button title="Editar Usuario" type="button" id="editUser"><span>
-                                        <i class="fa-solid fa-plus"></i>
-                                    </span>
-                                </button>    
-            </div>      
+                <button class="btn btn-primary " title="Abrir Cupos" type="button" id="abrirCupos"><span>
+                        <i class="fa-solid fa-plus"></i>
+                        <b> Abrir Cupos </b> 
+                    </span></button>    
+            </div>
+
             <div class="table-responsive">
                 <table class="table">
 
@@ -61,14 +62,14 @@
                             <td>2022-23-05 9:00:00</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Usuario" type="button" id="editUser">
+                                    <button title="Editar Cupos" type="button" id="editartCupos">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
                                     </button>
                                 </div>
                             </td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">2</th>
@@ -84,26 +85,24 @@
                             <td>2022-23-05 9:10:00</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Usuario" type="button" id="editUser">
+                                    <button title="Editar Cupos" type="button" id="editartCupos">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
                                     </button>
                                 </div>
                             </td>
-                            
+
                         </tr>
 
                     </tbody>
                 </table> 
             </div>
-            <!--<div class="col-2">
-                <button type="submit" class=" btn btn-primary" id="botonreg1">Aceptar</button>
-            </div>-->
+
             <div class=" d-flex justify-content-end align-content-end">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="submit" class=" btn btn-primary" id="botonreg2">Cerrar</button>
+                        <button type="submit" class=" btn btn-primary" id="botonreg2">Cancelar</button>
                     </div>
                 </div>
             </div>    

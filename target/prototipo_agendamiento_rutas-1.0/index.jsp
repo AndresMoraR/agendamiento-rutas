@@ -8,6 +8,6 @@
 <%--<jsp:include page="/WEB-INF/Paginas/Vista_Usuario/Frm_Login.jsp"/>--%>
 <%--<jsp:include page="/WEB-INF/Paginas/Vista_Usuario/Frm_Home.jsp"/>--%> 
 <%--<jsp:include page="/WEB-INF/Paginas/Vista_Usuario/Frm_generar_bloque.jsp"/>--%>
-<jsp:include page="/WEB-INF/Paginas/Vista_Cupos/Frm_Admin_cupo.jsp"/>
+<%--<jsp:include page="/WEB-INF/Paginas/Vista_Cupos/Frm_Admin_cupo.jsp"/>--%>
 <%--<jsp:include page="/WEB-INF/Paginas/Vista_Cupos/Frm_abrir_cupo.jsp"/>--%>
-<%--<jsp:include page="/WEB-INF/Paginas/Vista_Usuario/Frm_Lista_Usuarios.jsp"/>--%>
+<jsp:include page="/WEB-INF/Paginas/Vista_Usuario/Frm_Lista_Usuarios.jsp"/>
