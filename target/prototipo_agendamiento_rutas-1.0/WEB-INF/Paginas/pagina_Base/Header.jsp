@@ -9,7 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-       
+
         <link rel="icon" id="favicon" type="image/png" href="${pageContext.request.contextPath}/imagen/logo-1.png" >
         <link rel="stylesheet" href="${pageContext.request.contextPath}/Bootstrap/Boot_css/bootstrap.min.css"/>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Estilos.css"/>
@@ -29,46 +29,49 @@
                     </button>
 
                     <div class="offcanvas offcanvas-start" tabindex="-1"  aria-labelledby="offcanvasNavbarLabel" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" id="offcanvasNavbar" >
-                        <div class="col-md-3">
+                        <div class="col-md-12" style="background-color: #3A6A9E;">
                             <img id="logo_navbar" src="${pageContext.request.contextPath}/imagen/logo.png"  alt="Logo Universidad" >
                         </div> 
 
-                        <div class="offcanvas-header">
+                        <div class="offcanvas-header" style="background-color: #3A6A9E;">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> <b>Menú principal</b></h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" id="cerrarbarra"></button> 
                         </div>
 
-                        <div class="offcanvas-body">
+                        <div class="offcanvas-body" style="background-color: rgba(223, 232, 239, 0.70)">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link1" aria-current="page" href="#"><b>Inicio</b></a>
+                                    <span><a class="nav-link active link_menu" id="link1" aria-current="page" href="#"><b><i class="fas fa-home"></i> Inicio</b></a></span>
                                 </li>
-
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link2" href="#">Usuarios</a>
+                                    <span><a class="nav-link active link_menu" id="link2" href="#"><i class="fas fa-user-circle"></i> Usuarios</a></span>
                                 </li>
-
+                                <hr>
+                                <li class="nav-item">	
+                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-clipboard-list"></i> Aministrar Cupos</a></span>
+                                </li>
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Cupos</a>
+                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-clock"></i> Aministrar Horarios</a></span>
                                 </li>
+                                <hr>
+                                <li class="nav-item">	
+                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-bus"></i> Aministrar Rutas</a></span>
+                                </li>
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Horarios</a>
+                                    <span><a class="nav-link active link_menu"  id="link4" href="#"><i class="fas fa-calendar-alt"></i> Crear Reservaciones</a></span>
                                 </li>
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link3" href="#">Aministrar Rutas</a>
+                                    <span><a class="nav-link active link_menu" id="link5" href="#"><i class="fas fa-calendar-alt"></i> Mis Reservaciones</a></span>
                                 </li>
-
+                                <hr>
                                 <li class="nav-item">
-                                    <a class="nav-link active link_menu"  id="link4" href="#">Crear Reservaciones</a>
+                                    <span><a class="nav-link active link_menu" id="link5" href="#"><i class="fas fa-book-open"></i> Reportes</a></span>
                                 </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link5" href="#">Mis Reservaciones</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active link_menu" id="link5" href="#">Reportes</a>
-                                </li>
-
+                                <hr>
                             </ul>
                             <!-- codigo para un menu interno y un campo de busqueda -->
                             <%--
@@ -100,5 +103,5 @@
             </nav>
         </header>
     </body>
-    
+
 </html>
