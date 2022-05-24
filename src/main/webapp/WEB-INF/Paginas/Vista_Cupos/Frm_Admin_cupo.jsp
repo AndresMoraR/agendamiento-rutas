@@ -4,7 +4,7 @@
     Author     : OSIADMIN
 --%>
 
-<title>Administrar Cupos</title>
+<title>Rutas - Administrar Cupos</title>
 
 <jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp"/>
 
@@ -26,10 +26,12 @@
 
 
             <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <button class="btn btn-primary " title="Abrir Cupos" type="button" id="abrirCupos"><span>
+                <a class="btn btn-primary" title="Abrir Cupos" href="${pageContext.request.contextPath}/Cupo?action=add">
+                    <span>                     
                         <i class="fa-solid fa-plus"></i>
                         <b> Abrir Cupos </b> 
-                    </span></button>    
+                    </span>
+                </a>  
             </div>
 
             <div class="table-responsive">

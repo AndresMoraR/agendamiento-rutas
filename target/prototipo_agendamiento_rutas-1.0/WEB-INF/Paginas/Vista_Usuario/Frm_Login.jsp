@@ -44,7 +44,7 @@
         <hr>
         <div class="row">
             <div class="mt-2 mb-4">
-                <a class="color-text" href="${pageContext.request.contextPath}/LoginControlador" ><b>
+                <a class="color-text" href="${pageContext.request.contextPath}/User?action=add" ><b>
                     <span>
                         <i class="fa-solid fa-angles-right"></i>
                     </span>
