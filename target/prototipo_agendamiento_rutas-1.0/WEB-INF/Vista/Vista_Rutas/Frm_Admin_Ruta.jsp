@@ -4,9 +4,9 @@
     Author     : OSIADMIN
 --%>
 
-<title>Rutas - Administrar Cupos</title>
+<title>Administrar Rutas</title>
 
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
@@ -20,18 +20,18 @@
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
                 </div> 
                 <div class="col-md-6 aling-self-center">
-                    <h1 class="color-text"> <b>Administrar Cupos</b> </h1>
+                    <h1 class="color-text"> <b>Administrar Rutas</b> </h1>
                 </div>
             </div>
 
 
-            <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary" title="Abrir Cupos" href="${pageContext.request.contextPath}/Cupo?action=add">
-                    <span>                     
+            <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
+                <button class="btn btn-primary " title="Abrir Cupos" type="submit" id="abrirCupos">
+                    <span>
                         <i class="fa-solid fa-plus"></i>
-                        <b> Abrir Cupos </b> 
+                         Crear Ruta  
                     </span>
-                </a>  
+                </button>    
             </div>
 
             <div class="table-responsive">
@@ -40,33 +40,26 @@
                     <thead>
                         <tr>
                             <th scope="col"></th>
-                            <th scope="col">Cupos Funcionarios</th>
-                            <th scope="col">Cupos Estudiantes</th>
-                            <th scope="col">Cupos Extra</th>
-                            <th scope="col">Total Cupos</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Fecha Creación</th>
+                            <th scope="col">Nombre Ruta</th>
+                            <th scope="col">Descripcíon Ruta</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>6</td>
-                            <td>14</td>
-                            <td>5</td>
-                            <td>25</td>
-                            <td>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                </div>
-                            </td>
-                            <td>2022-23-05 9:00:00</td>
+                            <td>Sede Norte - CUC</td>
+                            <td>Ruta ........</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Cupos" type="button" id="editartCupos">
+                                    <button title="Editar Ruta" type="button" id="editarRuta">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
+                                        </span>
+                                    </button>
+                                    <button title="Editar Ruta" type="button" id="editarRuta">
+                                        <span>
+                                            <i class="fa-solid fa-trash-can"></i>
                                         </span>
                                     </button>
                                 </div>
@@ -75,21 +68,18 @@
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>4</td>
-                            <td>12</td>
-                            <td>4</td>
-                            <td>20</td>
-                            <td>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                </div>                                
-                            </td>
-                            <td>2022-23-05 9:10:00</td>
+                            <td>CUC - Venecia</td>
+                            <td>Ruta .......</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Cupos" type="button" id="editartCupos">
+                                    <button title="Editar Ruta" type="button" id="editarRuta">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
+                                        </span>
+                                    </button>
+                                    <button title="Editar Ruta" type="button" id="editarRuta">
+                                        <span>
+                                            <i class="fa-solid fa-trash-can"></i>
                                         </span>
                                     </button>
                                 </div>
@@ -114,5 +104,5 @@
 </section>
 
 
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Footer.jsp"/> 
+<jsp:include page="/WEB-INF/Vista/Vista_Base/Footer.jsp"/> 
 

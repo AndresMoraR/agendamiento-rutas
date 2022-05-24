@@ -7,7 +7,7 @@
 
 <title>Rutas - Abrir Cupos</title>
 
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
     <!-- miga de pan 
@@ -60,5 +60,5 @@
     </div> 
 
 </section> 
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Footer.jsp"/> 
+<jsp:include page="/WEB-INF/Vista/Vista_Base/Footer.jsp"/> 
 

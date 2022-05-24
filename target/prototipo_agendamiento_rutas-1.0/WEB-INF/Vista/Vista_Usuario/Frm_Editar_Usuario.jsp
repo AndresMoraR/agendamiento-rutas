@@ -9,7 +9,7 @@
 <title>Rutas - Registro de Usuario</title>
 
 <!--Header-->
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp" /> 
+<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp" /> 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
     <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerRegistroU">        
@@ -17,7 +17,7 @@
             <div class="col-md-12">
                 <div class="text-center">
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png" alt="Logo Bienestar" >
-                    <h3 class="color-text"><b>Registrar Usuario</b></h3>
+                    <h3 class="color-text"><b>Editar Usuario</b></h3>
                 </div>
             </div>
             <hr>
@@ -53,5 +53,5 @@
     </div>       
 </section>
 <!--foot-->
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Footer.jsp"/>    
+<jsp:include page="/WEB-INF/Vista/Vista_Base/Footer.jsp"/>    
 

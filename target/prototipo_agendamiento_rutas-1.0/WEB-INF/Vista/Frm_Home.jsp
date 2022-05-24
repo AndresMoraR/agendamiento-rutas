@@ -13,6 +13,4 @@
 <jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp"/>
 
 <!--foot-->
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Footer.jsp"/>                
-    
-
+<jsp:include page="/WEB-INF/Paginas/pagina_Base/Footer.jsp"/>

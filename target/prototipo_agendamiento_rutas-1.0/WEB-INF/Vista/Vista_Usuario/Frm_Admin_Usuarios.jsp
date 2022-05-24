@@ -6,7 +6,7 @@
 
 <title>Rutas - Lista Usuarios</title>
 
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Header.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
@@ -24,7 +24,7 @@
             <a class="btn btn-primary" title="Nuevo Usuario" href="${pageContext.request.contextPath}/User?action=add">
                 <span>
                     <i class="fa-solid fa-plus"></i>
-                    <b> Nuevo Usuario </b> 
+                      Nuevo Usuario 
                 </span>
             </a>
         </div> 
@@ -100,4 +100,4 @@
 </section>
 
 
-<jsp:include page="/WEB-INF/Paginas/pagina_Base/Footer.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/Footer.jsp"/>
