@@ -5,7 +5,7 @@
 --%>
 
 
-<title>Abrir Cupos</title>
+<title>Rutas - Abrir Cupos</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
 
