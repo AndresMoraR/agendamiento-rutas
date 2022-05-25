@@ -26,7 +26,7 @@ public class UserController extends HttpServlet {
         if (action != null) {
             switch(action){
                 case "add":
-                    request.getRequestDispatcher("/WEB-INF/Paginas/Vista_Usuario/Frm_Registro_Usuario.jsp").forward(request, response);
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/Frm_Registro_Usuario.jsp").forward(request, response);
                     break;
                 default:
                     this.accionDefault(request, response);
@@ -43,6 +43,6 @@ public class UserController extends HttpServlet {
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Paginas/Vista_Usuario/Frm_Admin_Usuarios.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/Frm_Admin_Usuarios.jsp").forward(request, response);
     }
 }
