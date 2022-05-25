@@ -22,7 +22,7 @@
         <header>
             <nav class="navbar navbar-light color-foot-head" id="nav_bar" >
                 <div class="container-fluid">
-                    <label id="text_nav">Unisanitas - Agendamiento de Rutas</label>
+                    <label id="text_nav" class="text-title-menu-nav">Unisanitas - Agendamiento de Rutas</label>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span> 
                     </button>
@@ -33,22 +33,22 @@
                         </div> 
 
                         <div class="offcanvas-header color-foot-head">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> <b>Menú principal</b></h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" id="cerrarbarra"></button> 
+                            <h5 class="offcanvas-title text-title-menu-nav" id="offcanvasNavbarLabel"> <b>Menú principal</b></h5>
+                            <button type="button" class="btn-close text-reset text-title-menu-nav" data-bs-dismiss="offcanvas" aria-label="Close" id="cerrarbarra"></button> 
                         </div>
 
                         <div class="offcanvas-body container-fluid-form">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link1" aria-current="page" href="#"><b><i class="fas fa-home"></i> Inicio</b></a></span>
+                                    <span><a class="nav-link active link_menu" id="link1" aria-current="page" href="${pageContext.request.contextPath}/Home"><b><i class="fas fa-home"></i> Inicio</b></a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link2" href="#"><i class="fas fa-user-circle"></i> Usuarios</a></span>
+                                    <span><a class="nav-link active link_menu" id="link2" href="${pageContext.request.contextPath}/User"><i class="fas fa-user-circle"></i> Usuarios</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">	
-                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-clipboard-list"></i> Cupos</a></span>
+                                    <span><a class="nav-link active link_menu" id="link3" href="${pageContext.request.contextPath}/Cupo"><i class="fas fa-clipboard-list"></i> Cupos</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">

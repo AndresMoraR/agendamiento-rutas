@@ -4,7 +4,7 @@
     Author     : OSIADMIN
 --%>
 
-<title>Lista Usuarios</title>
+<title>Rutas - Lista Usuarios</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
 
@@ -21,12 +21,12 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-end">
-            <button class="btn btn-primary " title="Nuevo Usuario" type="submit" id="nuevoUsuario">
+            <a class="btn btn-primary" title="Nuevo Usuario" href="${pageContext.request.contextPath}/User?action=add">
                 <span>
                     <i class="fa-solid fa-plus"></i>
                       Nuevo Usuario 
                 </span>
-            </button>    
+            </a>
         </div> 
         <div class="table-responsive">
             <table class="table">

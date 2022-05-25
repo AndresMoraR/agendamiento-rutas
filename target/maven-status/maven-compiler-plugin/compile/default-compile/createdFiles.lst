@@ -1,1 +1,6 @@
-web\LoginControlador.class
+Controller\UserController.class
+Controller\RutaController.class
+Controller\LoginController.class
+Controller\HomeController.class
+Controller\HorarioController.class
+Controller\CupoController.class
