@@ -5,7 +5,7 @@
 --%>
 
 
-<title>Editar Cupos</title>
+<title>Crear Ruta</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
 
@@ -21,13 +21,13 @@
         </nav>
     </div>-->
 
-    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="container_registroU">
+    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="containerEditarRuta">
         <div class="row">             
             <div class="col-md-12">
                 <div class="text-center">
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png" alt="Logo Bienestar" >
                     <h3 class="color-text">
-                        <b>Editar Cupos</b>
+                        <b>Crear Ruta</b>
                     </h3>
                 </div>
             </div>
@@ -37,21 +37,15 @@
         <form class="mt-1">    
             <div class="row g-3">
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="totalcupos" placeholder="Total cupos disponibles">
+                    <input type="text" class=" form-control form-control-sm" id="nombreRuta" placeholder="Nombre de la ruta">
                 </div>
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cuposestudiantes" placeholder="Número de cupos estudiantes">
-                </div>
-                <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cuposfuncionario" placeholder="Número de cupos funcionarios">
-                </div>
-                <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cuposextra" disabled placeholder="Número de cupos extra">
+                    <textarea  class=" form-control form-control-sm" id="descripRuta" placeholder="Descripción de la ruta"></textarea>
                 </div>
             </div>  
             <div class="col-md-12 mt-3">
                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                    <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Aceptar</button>
+                    <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Crear</button>
                     <button type="submit" class="btn btn-primary col-md-6" id="btnCancelar">Cancelar</button>
                 </div>
             </div>

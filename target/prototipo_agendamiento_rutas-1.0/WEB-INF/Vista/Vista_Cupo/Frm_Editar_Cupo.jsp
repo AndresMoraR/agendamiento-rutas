@@ -5,7 +5,7 @@
 --%>
 
 
-<title>Crear Ruta</title>
+<title>Editar Cupos</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
 
@@ -21,13 +21,13 @@
         </nav>
     </div>-->
 
-    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="container_registroU">
+    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="containerEditarCupo">
         <div class="row">             
             <div class="col-md-12">
                 <div class="text-center">
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png" alt="Logo Bienestar" >
                     <h3 class="color-text">
-                        <b>Crear Ruta</b>
+                        <b>Editar Cupos</b>
                     </h3>
                 </div>
             </div>
@@ -37,15 +37,21 @@
         <form class="mt-1">    
             <div class="row g-3">
                 <div class="col-md-12  ">
-                    <input type="text" class=" form-control form-control-sm" id="totalcupos" placeholder="Nombre de la ruta">
+                    <input type="number" class=" form-control form-control-sm" id="totalCupoEditar" placeholder="Total cupos disponibles">
                 </div>
                 <div class="col-md-12  ">
-                    <textarea  class=" form-control form-control-sm" id="cuposestudiantes" placeholder="Descripción de la ruta"></textarea>
+                    <input type="number" class=" form-control form-control-sm" id="cupoEstudianteEditar" placeholder="Número de cupos estudiantes">
+                </div>
+                <div class="col-md-12  ">
+                    <input type="number" class=" form-control form-control-sm" id="cupoFuncionarioEditar" placeholder="Número de cupos funcionarios">
+                </div>
+                <div class="col-md-12  ">
+                    <input type="number" class=" form-control form-control-sm" id="cupoExtraEditar" disabled placeholder="Número de cupos extra">
                 </div>
             </div>  
             <div class="col-md-12 mt-3">
                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                    <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Crear</button>
+                    <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Aceptar</button>
                     <button type="submit" class="btn btn-primary col-md-6" id="btnCancelar">Cancelar</button>
                 </div>
             </div>

@@ -21,7 +21,7 @@
         </nav>
     </div>-->
 
-    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="container_registroU">
+    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="containerAbrirCupo">
         <div class="row">             
             <div class="col-md-12">
                 <div class="text-center">
@@ -37,16 +37,16 @@
         <form class="mt-1">    
             <div class="row g-3">
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="totalcupos" placeholder="Total cupos disponibles">
+                    <input type="number" class=" form-control form-control-sm" id="totalCupo" placeholder="Total cupos disponibles">
                 </div>
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cuposestudiantes" placeholder="Número de cupos estudiantes">
+                    <input type="number" class=" form-control form-control-sm" id="cupoEstudiante" placeholder="Número de cupos estudiantes">
                 </div>
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cuposfuncionario" placeholder="Número de cupos funcionarios">
+                    <input type="number" class=" form-control form-control-sm" id="cupoFuncionario" placeholder="Número de cupos funcionarios">
                 </div>
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cuposextra" disabled placeholder="Número de cupos extra">
+                    <input type="number" class=" form-control form-control-sm" id="cupoExtra" disabled placeholder="Número de cupos extra">
                 </div>
             </div>  
             <div class="col-md-12 mt-3">

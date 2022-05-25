@@ -11,7 +11,7 @@
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
 
-    <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="container_registroU">
+    <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminUsuario">
         <div class="row"> 
             <div class="col-md-4 align-self-center">
                 <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
@@ -91,7 +91,7 @@
         <div class=" d-flex justify-content-end align-content-end">
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class=" btn btn-primary" id="botonreg2">Cancelar</button>
+                    <button type="submit" class=" btn btn-primary" id="btnCancelar">Cancelar</button>
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
                 <span class="input-group-text">
                     <i class="fa fa-at"></i>
                 </span>
-                <input type="email" class="form-control form-control-sm" id="emailimp" placeholder="Correo electrónico">
+                <input type="email" class="form-control form-control-sm" id="emailLogin" placeholder="Correo electrónico">
             </div>
         </div>
         <div class="row">
@@ -33,12 +33,12 @@
                 <span class="input-group-text">
                     <i class="fa-solid fa-lock"></i>
                 </span>
-                <input type="password" class="form-control form-control-sm" id="contraseñaimp" placeholder="Contraseña"> 
+                <input type="password" class="form-control form-control-sm" id="contraseñaLogin" placeholder="Contraseña"> 
             </div>
         </div>
         <div class="row">
             <div class="input-group mt-3">
-                <button type="submit" class="btn btn-primary col-md-12" id="botonlog">Login</button>
+                <button type="submit" class="btn btn-primary col-md-12" id="btnlogin">Login</button>
             </div>
         </div>
         <hr>

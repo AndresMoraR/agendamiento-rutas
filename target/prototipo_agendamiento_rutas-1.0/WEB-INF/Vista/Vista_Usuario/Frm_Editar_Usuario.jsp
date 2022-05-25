@@ -12,7 +12,7 @@
 <jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp" /> 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
-    <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerRegistroU">        
+    <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerEditarUsuario">        
         <div class="row">             
             <div class="col-md-12">
                 <div class="text-center">
