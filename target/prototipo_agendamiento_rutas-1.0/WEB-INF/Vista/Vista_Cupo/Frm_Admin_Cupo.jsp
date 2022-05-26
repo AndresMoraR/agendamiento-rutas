@@ -25,13 +25,8 @@
             </div>
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-<<<<<<< HEAD:target/prototipo_agendamiento_rutas-1.0/WEB-INF/Vista/Vista_Cupo/Frm_Admin_Cupo.jsp
-                <button class="btn btn-primary " title="Abrir Cupos" type="submit" id="abrirCupo">
-                    <span>
-=======
                 <a class="btn btn-primary" title="Abrir Cupos" href="${pageContext.request.contextPath}/Cupo?action=add">
                     <span>                     
->>>>>>> main:target/prototipo_agendamiento_rutas-1.0/WEB-INF/Vista/Vista_Cupos/Frm_Admin_Cupo.jsp
                         <i class="fa-solid fa-plus"></i>
                         <b> Abrir Cupos </b> 
                     </span>

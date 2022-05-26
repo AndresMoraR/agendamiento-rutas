@@ -25,7 +25,7 @@ public class CupoController extends HttpServlet{
         if (action != null) {
             switch(action){
                 case "add":
-                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupos/Frm_abrir_cupo.jsp").forward(request, response);
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupo/Frm_Abrir_Cupo.jsp").forward(request, response);
                     break;
                 default:
                     this.accionDefault(request, response);
@@ -42,6 +42,6 @@ public class CupoController extends HttpServlet{
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupos/Frm_Admin_cupo.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupo/Frm_Admin_Cupo.jsp").forward(request, response);
     }
 }

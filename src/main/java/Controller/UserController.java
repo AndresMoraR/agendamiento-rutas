@@ -43,6 +43,6 @@ public class UserController extends HttpServlet {
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/Frm_Admin_Usuarios.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/Frm_Admin_Usuario.jsp").forward(request, response);
     }
 }
