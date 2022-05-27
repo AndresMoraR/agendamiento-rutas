@@ -23,7 +23,8 @@
         <form class="mt-1">
             <div class="row g-3">
                 <div class="col-md-12">
-                    <input type="text" class="form-control form-control-sm" id="nombres" placeholder="Hora">
+                    <label for="appt" class="  " >Hora</label>
+                    <input type="time" class=" form-control form-control-sm border-0" id="appt" name="appt">
                 </div>
                 <div class="col-md-12">
                     <input type="text" class="form-control form-control-sm" id="apellidos" placeholder="Jornada">

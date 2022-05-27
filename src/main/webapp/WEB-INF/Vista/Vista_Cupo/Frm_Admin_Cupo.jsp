@@ -20,7 +20,7 @@
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
                 </div> 
                 <div class="col-md-6 aling-self-center">
-                    <h1 class="color-text"> <b>Administrar Cupos</b> </h1>
+                    <h1 class="color-text"><b> Administrar Cupos</b></h1>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                 <a class="btn btn-primary" title="Abrir Cupos" href="${pageContext.request.contextPath}/Cupo?action=add">
                     <span>                     
                         <i class="fa-solid fa-plus"></i>
-                        <b> Abrir Cupos </b> 
+                         Abrir Cupos 
                     </span>
                 </a>  
             </div>

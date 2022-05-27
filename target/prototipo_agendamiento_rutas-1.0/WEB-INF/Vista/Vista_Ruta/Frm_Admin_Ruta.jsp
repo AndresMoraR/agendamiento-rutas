@@ -26,12 +26,12 @@
 
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <button class="btn btn-primary " title="Abrir Ruta" type="submit" id="abrirRuta">
+                <a class="btn btn-primary " title="Abrir Ruta" href="${pageContext.request.contextPath}/Ruta?action=add">
                     <span>
                         <i class="fa-solid fa-plus"></i>
                          Crear Ruta  
                     </span>
-                </button>    
+                </a>    
             </div>
 
             <div class="table-responsive">
