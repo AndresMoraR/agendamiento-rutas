@@ -10,7 +10,7 @@
 <title>Rutas - Inicio</title>
 
 <!--Header-->
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
 <!--foot-->
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Footer.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/footer.jsp"/>

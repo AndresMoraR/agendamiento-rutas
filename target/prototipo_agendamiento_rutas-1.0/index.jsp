@@ -4,7 +4,7 @@
     Author     : OSIADMIN
 --%>
 
-<jsp:include page="/WEB-INF/Vista/Vista_Usuario/Frm_Login.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Usuario/frm_login.jsp"/>
 
 
 

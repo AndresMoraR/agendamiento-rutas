@@ -33,6 +33,6 @@ public class LoginController extends HttpServlet {
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/Frm_Login.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_login.jsp").forward(request, response);
     }
 }

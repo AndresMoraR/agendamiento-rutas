@@ -26,10 +26,10 @@ public class RutaController extends HttpServlet{
         if (action != null) {
             switch(action){
                 case "add":
-                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/Frm_Crear_Ruta.jsp").forward(request, response);
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_crear_ruta.jsp").forward(request, response);
                     break;
                 case "editar":
-                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/Frm_Editar_Ruta.jsp").forward(request, response);
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_editar_ruta.jsp").forward(request, response);
                     break;
                 default:
                     this.accionDefault(request, response);
@@ -46,7 +46,7 @@ public class RutaController extends HttpServlet{
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/Frm_Admin_Ruta.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_admin_ruta.jsp").forward(request, response);
     }
     
     

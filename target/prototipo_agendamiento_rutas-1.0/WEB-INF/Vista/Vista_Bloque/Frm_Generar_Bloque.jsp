@@ -4,7 +4,7 @@
     Author     : OSIADMIN
 --%>
 <title>Rutas - Crear Bloque</title>
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 <section class="form-resp m-0 row justify-content-center align-items-center">
     <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminCupo">
         <form>
