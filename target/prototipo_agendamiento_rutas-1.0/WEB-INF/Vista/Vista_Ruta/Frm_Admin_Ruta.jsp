@@ -6,7 +6,7 @@
 
 <title>Administrar Rutas</title>
 
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
@@ -104,5 +104,5 @@
 </section>
 
 
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Footer.jsp"/> 
+<jsp:include page="/WEB-INF/Vista/Vista_Base/footer.jsp"/> 
 
