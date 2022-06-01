@@ -68,6 +68,10 @@
                                 </li>
                                 <hr>
                                 <li class="nav-item">
+                                    <span><a class="nav-link active link_menu" id="link5" href="${pageContext.request.contextPath}/Bloque"><i class="fas fa-calendar-alt"></i> Bloques</a></span>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
                                     <span><a class="nav-link active link_menu" id="link5" href="#"><i class="fas fa-book-open"></i> Reportes</a></span>
                                 </li>
                                 <hr>

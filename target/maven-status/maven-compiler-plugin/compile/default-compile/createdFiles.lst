@@ -1,5 +1,6 @@
 Controller\UserController.class
 Controller\RutaController.class
+Controller\BloqueController.class
 Controller\LoginController.class
 Controller\HomeController.class
 Controller\HorarioController.class
