@@ -23,10 +23,26 @@
         <form class="mt-1">
             <div class="row g-3">
                 <div class="col-md-12">
-                    <input type="text" class="form-control form-control-sm" id="nombres" placeholder="Hora">
+                    <label for="appt" class="  " >Seleccionar Hora</label>
+                    <input type="time" class=" form-control form-control-sm border-0" id="appt" name="appt">
                 </div>
                 <div class="col-md-12">
-                    <input type="text" class="form-control form-control-sm" id="apellidos" placeholder="Jornada">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Mañana
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Tarde
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        Noche
+                    </label>
                 </div>
                 <div class="col-md-12">
                     <select id="facultad_area" class="form-select form-select-sm">
@@ -36,7 +52,7 @@
                 </div>                
                 <div class="col-md-12">
                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                        <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Aceptar</button>
+                        <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Guardar</button>
                         <button type="submit" class="btn btn-primary col-md-6" id="btnCancelar">Cancelar</button>
                     </div>
                 </div>

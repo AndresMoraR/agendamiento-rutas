@@ -58,9 +58,9 @@
                         <td>2022-19-05 12:00:00</td>
                         <td>
                             <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                <button title="Editar Usuario" type="button" id="editarUsuario"><span>
+                                <a title="Editar Usuario"  id="editarUsuario" href="${pageContext.request.contextPath}/User?action=editar&id=1"><span>
                                         <i class="fas fa-user-edit"></i>
-                                    </span></button>
+                                    </span></a>
                             </div>
                         </td>
                     </tr>
@@ -77,9 +77,9 @@
                         <td>2022-19-05 12:00:00</td>
                         <td>
                             <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                <button title="Editar Usuario" type="button" id="editarUsuario"><span>
+                                <a title="Editar Usuario" id="editarUsuario" href="${pageContext.request.contextPath}/User?action=editar&id=2"><span>
                                         <i class="fas fa-user-edit"></i>
-                                    </span></button>
+                                    </span></a>
                             </div>
                         </td>
                     </tr>

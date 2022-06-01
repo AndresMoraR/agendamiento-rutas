@@ -5,10 +5,49 @@
  */
 package Controller;
 
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  *
  * @author beamora
  */
-public class RutaController {
+
+@WebServlet("/Ruta")
+public class RutaController extends HttpServlet{
+    
+     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
+        String action = request.getParameter("action");
+        if (action != null) {
+            switch(action){
+                case "add":
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/Frm_Crear_Ruta.jsp").forward(request, response);
+                    break;
+                case "editar":
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/Frm_Editar_Ruta.jsp").forward(request, response);
+                    break;
+                default:
+                    this.accionDefault(request, response);
+            }   
+        }
+        else{
+            this.accionDefault(request, response);    
+        }         
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+    }
+    
+    private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
+        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/Frm_Admin_Ruta.jsp").forward(request, response);
+    }
+    
     
 }

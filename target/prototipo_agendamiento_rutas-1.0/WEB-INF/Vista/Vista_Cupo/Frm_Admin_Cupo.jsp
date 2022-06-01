@@ -20,7 +20,7 @@
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
                 </div> 
                 <div class="col-md-6 aling-self-center">
-                    <h1 class="color-text"> <b>Administrar Cupos</b> </h1>
+                    <h1 class="color-text"><b> Administrar Cupos</b></h1>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                 <a class="btn btn-primary" title="Abrir Cupos" href="${pageContext.request.contextPath}/Cupo?action=add">
                     <span>                     
                         <i class="fa-solid fa-plus"></i>
-                        <b> Abrir Cupos </b> 
+                         Abrir Cupos 
                     </span>
                 </a>  
             </div>
@@ -63,11 +63,11 @@
                             <td>2022-23-05 9:00:00</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Cupos" type="button" id="editartCupo">
+                                    <a title="Editar Cupos"  id="editartCupo" href="${pageContext.request.contextPath}/Cupo?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                 </div>
                             </td>
 
@@ -86,11 +86,11 @@
                             <td>2022-23-05 9:10:00</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Cupos" type="button" id="editartCupo">
+                                    <a title="Editar Cupos" id="editartCupo" href="${pageContext.request.contextPath}/Cupo?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                 </div>
                             </td>
 

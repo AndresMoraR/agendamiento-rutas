@@ -52,11 +52,11 @@
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-clock"></i> Horarios</a></span>
+                                    <span><a class="nav-link active link_menu" id="link3" href="${pageContext.request.contextPath}/Horario"><i class="fas fa-clock"></i> Horarios</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">	
-                                    <span><a class="nav-link active link_menu" id="link3" href="#"><i class="fas fa-bus"></i> Rutas</a></span>
+                                    <span><a class="nav-link active link_menu" id="link3" href="${pageContext.request.contextPath}/Ruta"><i class="fas fa-bus"></i> Rutas</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
