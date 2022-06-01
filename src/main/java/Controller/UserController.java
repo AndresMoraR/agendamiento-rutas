@@ -28,6 +28,9 @@ public class UserController extends HttpServlet {
                 case "add":
                     request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/Frm_Registro_Usuario.jsp").forward(request, response);
                     break;
+                case "editar":
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/Frm_Editar_Usuario.jsp").forward(request, response);
+                    break;
                 default:
                     this.accionDefault(request, response);
             }   

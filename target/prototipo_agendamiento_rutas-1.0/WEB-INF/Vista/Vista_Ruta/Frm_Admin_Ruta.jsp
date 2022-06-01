@@ -52,11 +52,11 @@
                             <td>Ruta ........</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Ruta" type="button" id="editarRuta">
+                                    <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                     <button title="Eliminar Ruta" type="button" id="eliminarRuta">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
@@ -72,11 +72,11 @@
                             <td>Ruta .......</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Ruta" type="button" id="editarRuta">
+                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=2">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                     <button title="Eliminar Ruta" type="button" id="eliminarRuta">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>

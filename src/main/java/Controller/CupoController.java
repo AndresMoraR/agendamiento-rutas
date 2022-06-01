@@ -27,6 +27,9 @@ public class CupoController extends HttpServlet{
                 case "add":
                     request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupo/Frm_Abrir_Cupo.jsp").forward(request, response);
                     break;
+                case "editar":
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupo/Frm_Editar_Cupo.jsp").forward(request, response);
+                    break;
                 default:
                     this.accionDefault(request, response);
             }   

@@ -28,6 +28,9 @@ public class RutaController extends HttpServlet{
                 case "add":
                     request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/Frm_Crear_Ruta.jsp").forward(request, response);
                     break;
+                case "editar":
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/Frm_Editar_Ruta.jsp").forward(request, response);
+                    break;
                 default:
                     this.accionDefault(request, response);
             }   
