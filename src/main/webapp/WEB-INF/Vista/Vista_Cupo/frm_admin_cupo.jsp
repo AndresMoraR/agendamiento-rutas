@@ -44,7 +44,7 @@
                             <th scope="col">Cupos Extra</th>
                             <th scope="col">Total Cupos</th>
                             <th scope="col">Estado</th>
-                            <th scope="col">Fecha Creación</th>
+                            <th scope="col">Fecha Creaci?n</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -114,4 +114,3 @@
 
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/footer.jsp"/> 
-

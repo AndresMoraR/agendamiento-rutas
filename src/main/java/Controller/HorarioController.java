@@ -27,6 +27,9 @@ public class HorarioController extends HttpServlet{
                 case "add":
                     request.getRequestDispatcher("/WEB-INF/Vista/Vista_Horario/frm_crear_horario.jsp").forward(request, response);
                     break;
+                case "editar":
+                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Horario/frm_editar_horario.jsp").forward(request, response);
+                    break;    
                 default:
                     this.accionDefault(request, response);
             }   

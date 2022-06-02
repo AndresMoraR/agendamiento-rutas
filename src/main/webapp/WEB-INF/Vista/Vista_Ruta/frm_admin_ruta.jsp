@@ -57,11 +57,11 @@
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
                                     </a>
-                                    <button title="Eliminar Ruta" type="button" id="eliminarRuta">
+                                    <a title="Eliminar Ruta" id="eliminarRuta" href="">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                 </div>
                             </td>
 
@@ -77,11 +77,11 @@
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
                                     </a>
-                                    <button title="Eliminar Ruta" type="button" id="eliminarRuta">
+                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                 </div>
                             </td>
 

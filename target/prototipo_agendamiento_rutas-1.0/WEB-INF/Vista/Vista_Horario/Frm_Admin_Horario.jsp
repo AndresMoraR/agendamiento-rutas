@@ -50,20 +50,20 @@
                         <tr>
                             <th scope="row">1</th>
                             <td>6:50</td>
-                            <td>Diurna</td>
+                            <td>Mañana</td>
                             <td>CUC - Sede Norte</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Horario" type="button" id="editarHorario">
+                                    <a title="Editar Horario" id="editarHorario" href="${pageContext.request.contextPath}/Horario?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
-                                    </button>
-                                    <button title="Eliminar Ruta" type="button" id="eliminarRuta">
+                                    </a>
+                                        <a title="Eliminar Ruta"  id="eliminarRuta" href="">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                 </div>
                             </td>
 
@@ -75,16 +75,16 @@
                             <td>CUC - Sede Norte</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <button title="Editar Ruta" type="button" id="editarRuta">
+                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Horario?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
-                                    </button>
-                                    <button title="Eliminar Ruta" type="button" id="eliminarRuta">
+                                    </a>
+                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
                                         </span>
-                                    </button>
+                                    </a>
                                 </div>
                             </td>
 
