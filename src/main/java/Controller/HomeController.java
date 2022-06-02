@@ -30,6 +30,6 @@ public class HomeController extends HttpServlet{
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Vista/Home/Frm_Home.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/Vista/Home/frm_home.jsp").forward(request, response);
     }    
 }

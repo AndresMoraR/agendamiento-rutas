@@ -9,7 +9,7 @@
 <title>Rutas - Registro de Usuario</title>
 
 <!--Header-->
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp" /> 
+<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp" /> 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
     <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerRegistroU">        
@@ -53,5 +53,5 @@
     </div>       
 </section>
 <!--foot-->
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Footer.jsp"/>    
+<jsp:include page="/WEB-INF/Vista/Vista_Base/footer.jsp"/>    
 

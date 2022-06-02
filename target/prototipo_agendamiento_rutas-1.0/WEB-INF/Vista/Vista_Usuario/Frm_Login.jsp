@@ -9,7 +9,7 @@
 
 
 <!--Header-->
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Header.jsp"/>
+<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
@@ -56,5 +56,5 @@
     </div>
 </section>
 
-<jsp:include page="/WEB-INF/Vista/Vista_Base/Footer.jsp"/>            
+<jsp:include page="/WEB-INF/Vista/Vista_Base/footer.jsp"/>            
 

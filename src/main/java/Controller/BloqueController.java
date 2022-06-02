@@ -30,6 +30,6 @@ public class BloqueController extends HttpServlet{
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Bloque/Frm_Generar_Bloque.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Bloque/frm_generar_bloque.jsp").forward(request, response);
     }
 }
