@@ -4,14 +4,14 @@
     Author     : OSIADMIN
 --%>
 
-<title>Administrar Rutas</title>
+<title>Rutas - Administrar Cupos</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
 
-    <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminRuta">
+    <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminCupo">
 
         <form>
 
@@ -20,18 +20,17 @@
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
                 </div> 
                 <div class="col-md-6 aling-self-center">
-                    <h1 class="color-text"> <b>Administrar Rutas</b> </h1>
+                    <h1 class="color-text"><b> Administrar Cupos</b></h1>
                 </div>
             </div>
 
-
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary " title="Abrir Ruta" href="${pageContext.request.contextPath}/Ruta?action=add">
-                    <span>
+                <a class="btn btn-primary" title="Abrir Cupos" href="${pageContext.request.contextPath}/Cupo?action=add">
+                    <span>                     
                         <i class="fa-solid fa-plus"></i>
-                         Crear Ruta  
+                         Abrir Cupos 
                     </span>
-                </a>    
+                </a>  
             </div>
 
             <div class="table-responsive">
@@ -40,26 +39,33 @@
                     <thead>
                         <tr>
                             <th scope="col"></th>
-                            <th scope="col">Nombre Ruta</th>
-                            <th scope="col">Descripcíon Ruta</th>
+                            <th scope="col">Cupos Funcionarios</th>
+                            <th scope="col">Cupos Estudiantes</th>
+                            <th scope="col">Cupos Extra</th>
+                            <th scope="col">Total Cupos</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Fecha Creaci?n</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Sede Norte - CUC</td>
-                            <td>Ruta ........</td>
+                            <td>6</td>
+                            <td>14</td>
+                            <td>5</td>
+                            <td>25</td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                </div>
+                            </td>
+                            <td>2022-23-05 9:00:00</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=1">
+                                    <a title="Editar Cupos"  id="editartCupo" href="${pageContext.request.contextPath}/Cupo?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                    <a title="Eliminar Ruta" id="eliminarRuta" href="">
-                                        <span>
-                                            <i class="fa-solid fa-trash-can"></i>
                                         </span>
                                     </a>
                                 </div>
@@ -68,18 +74,21 @@
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>CUC - Venecia</td>
-                            <td>Ruta .......</td>
+                            <td>4</td>
+                            <td>12</td>
+                            <td>4</td>
+                            <td>20</td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                </div>                                
+                            </td>
+                            <td>2022-23-05 9:10:00</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=2">
+                                    <a title="Editar Cupos" id="editartCupo" href="${pageContext.request.contextPath}/Cupo?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
-                                        <span>
-                                            <i class="fa-solid fa-trash-can"></i>
                                         </span>
                                     </a>
                                 </div>
@@ -105,4 +114,3 @@
 
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/footer.jsp"/> 
-

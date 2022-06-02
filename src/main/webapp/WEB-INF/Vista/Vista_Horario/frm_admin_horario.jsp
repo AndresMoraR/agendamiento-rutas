@@ -4,7 +4,7 @@
     Author     : OSIADMIN
 --%>
 
-<title>Administrar Rutas</title>
+<title>Administrar Horarios</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
@@ -20,16 +20,16 @@
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
                 </div> 
                 <div class="col-md-6 aling-self-center">
-                    <h1 class="color-text"> <b>Administrar Rutas</b> </h1>
+                    <h1 class="color-text"> <b>Administrar Horarios</b> </h1>
                 </div>
             </div>
 
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary " title="Abrir Ruta" href="${pageContext.request.contextPath}/Ruta?action=add">
+                <a class="btn btn-primary " title="Abrir Ruta" href="${pageContext.request.contextPath}/Horario?action=add">
                     <span>
                         <i class="fa-solid fa-plus"></i>
-                         Crear Ruta  
+                         Crear Horario  
                     </span>
                 </a>    
             </div>
@@ -40,24 +40,26 @@
                     <thead>
                         <tr>
                             <th scope="col"></th>
-                            <th scope="col">Nombre Ruta</th>
-                            <th scope="col">Descripcíon Ruta</th>
+                            <th scope="col">Hora</th>
+                            <th scope="col">Jornada</th>
+                            <th scope="col">Ruta</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Sede Norte - CUC</td>
-                            <td>Ruta ........</td>
+                            <td>6:50</td>
+                            <td>Diurna</td>
+                            <td>CUC - Sede Norte</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=1">
+                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Horario?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
                                     </a>
-                                    <a title="Eliminar Ruta" id="eliminarRuta" href="">
+                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
                                         </span>
@@ -67,17 +69,18 @@
 
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>CUC - Venecia</td>
-                            <td>Ruta .......</td>
+                            <th scope="row">1</th>
+                            <td>17:00</td>
+                            <td>Tarde</td>
+                            <td>CUC - Sede Norte</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=2">
+                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Horario?action=editar&id=2">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
                                     </a>
-                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
+                                    <a title="Eliminar Ruta" id="eliminarRuta" href="">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
                                         </span>
@@ -105,4 +108,3 @@
 
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/footer.jsp"/> 
-
