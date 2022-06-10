@@ -52,27 +52,27 @@
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link3" href="${pageContext.request.contextPath}/Horario"><i class="fas fa-clock"></i> Horarios</a></span>
+                                    <span><a class="nav-link active link_menu" id="link4" href="${pageContext.request.contextPath}/Horario"><i class="fas fa-clock"></i> Horarios</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">	
-                                    <span><a class="nav-link active link_menu" id="link3" href="${pageContext.request.contextPath}/Ruta"><i class="fas fa-bus"></i> Rutas</a></span>
+                                    <span><a class="nav-link active link_menu" id="link5" href="${pageContext.request.contextPath}/Ruta"><i class="fas fa-bus"></i> Rutas</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu"  id="link4" href="#"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
+                                    <span><a class="nav-link active link_menu"  id="link6" href="#"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link5" href="${pageContext.request.contextPath}/Reserva"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
+                                    <span><a class="nav-link active link_menu" id="link7" href="${pageContext.request.contextPath}/Reserva"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link5" href="${pageContext.request.contextPath}/Bloque"><i class="fas fa-calendar-alt"></i> Bloques</a></span>
+                                    <span><a class="nav-link active link_menu" id="link8" href="${pageContext.request.contextPath}/Bloque"><i class="fas fa-calendar-alt"></i> Bloques</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link5" href="#"><i class="fas fa-book-open"></i> Reportes</a></span>
+                                    <span><a class="nav-link active link_menu" id="link9" href="${pageContext.request.contextPath}/Sancion"><i class="fa-solid fa-ban"></i> Sanciones</a></span>
                                 </li>
                                 <hr>
                             </ul>
