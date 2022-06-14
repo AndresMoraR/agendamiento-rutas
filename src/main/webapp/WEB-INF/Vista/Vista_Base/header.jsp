@@ -60,11 +60,11 @@
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu"  id="link6" href="#"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
+                                    <span><a class="nav-link active link_menu" id="link6" href="${pageContext.request.contextPath}/Reservar"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link7" href="${pageContext.request.contextPath}/Reserva"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
+                                    <span><a class="nav-link active link_menu" id="link7" href="${pageContext.request.contextPath}/CnsReserva"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">

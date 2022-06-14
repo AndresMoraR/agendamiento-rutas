@@ -23,8 +23,8 @@
                   <label><b>Seleccione el rango de fechas a consultar:</b></label>                  
                   <select class="form-select form-select-sm" id="inp_date_range">
                       <option value="">Seleccione</option>
-                      <option value="1">(06-06-2022 / 11-06-2022)</option>
-                      <option value="2">(13-06-2022 / 18-06-2022)</option>
+                      <option value="1">(2022-06-06 / 2022-06-11)</option>
+                      <option value="2">(2022-06-13 / 2022-06-18)</option>
                   </select>
                 </div>
             </div>

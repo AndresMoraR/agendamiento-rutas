@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author beamora
  */
-@WebServlet("/Reserva")
-public class ReservaController extends HttpServlet{
+@WebServlet("/CnsReserva")
+public class ConsultarReservaController extends HttpServlet{
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
