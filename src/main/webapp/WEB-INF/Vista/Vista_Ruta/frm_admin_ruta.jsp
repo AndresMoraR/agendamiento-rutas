@@ -1,10 +1,10 @@
 <%-- 
-    Document   : Frm_Admin_cupo
+    Document   : frm_admin_ruta
     Created on : 5/05/2022, 08:59:18 AM
     Author     : OSIADMIN
 --%>
 
-<title>Administrar Rutas</title>
+<title>Rutas - Administrar Rutas</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 

@@ -1,11 +1,11 @@
 <%-- 
-    Document   : Frm_abrir_cupo
+    Document   : frm_editar_ruta
     Created on : 5/05/2022, 12:35:59 PM
     Author     : OSIADMIN
 --%>
 
 
-<title>Editar Ruta</title>
+<title>Ruta - Editar Ruta</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 

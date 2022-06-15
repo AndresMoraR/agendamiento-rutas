@@ -11,10 +11,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">     
         <link rel="icon" id="favicon" type="image/png" href="${pageContext.request.contextPath}/imagen/logo.png" >
         <link rel="stylesheet" href="${pageContext.request.contextPath}/Bootstrap/Boot_css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/Bootstrap/Boot_css/bootstrap-select.min.css"/>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Estilos.css"/>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/fontawesome/font_css/css/all.css"/>            
-        <script src="${pageContext.request.contextPath}/Bootstrap/boot_js/bootstrap.bundle.min.js"></script> 
-        <script src="${pageContext.request.contextPath}/fontawesome/font_js/js/all.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/Bootstrap/boot_js/bootstrap.bundle.min.js"></script> 
+        <script type="text/javascript" src="${pageContext.request.contextPath}/fontawesome/font_js/js/all.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/Bootstrap/boot_js/jquery-3.6.0.min.js"></script> 
+        <script type="text/javascript" src="${pageContext.request.contextPath}/Bootstrap/boot_js/popper.min.js"></script> 
+        <script type="text/javascript" src="${pageContext.request.contextPath}/Bootstrap/boot_js/bootstrap-select.min.js"></script>
+        <script type="text/javascript">
+            $.fn.selectpicker.Constructor.BootstrapVersion = '4';
+        </script>
+        
         <title>Rutas</title>
     </head>
     <body style="background-image: url('${pageContext.request.contextPath}/imagen/fondo2.jpg'); background-repeat: no-repeat; background-size: auto;">
@@ -60,7 +68,11 @@
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu"  id="link6" href="#"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
+                                    <span><a class="nav-link active link_menu"  id="link6" href=""><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <span><a class="nav-link active link_menu"  id="link6" href="${pageContext.request.contextPath}/ConfiReserva"><i class="fas fa-calendar-alt"></i> Confirmar Reservaciones</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">

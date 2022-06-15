@@ -3,18 +3,18 @@
     Created on : 8/06/2022, 03:13:55 PM
     Author     : OSIADMIN
 --%>
-<title>Consulta de Sanciones</title>
+<title>Rutas - Consultar Sanciones</title>
 
 <!--Header-->
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 <section class="form-resp m-0 row justify-content-center align-items-center">
-    <div class="container-fluid container-fluid-form p-3 col-md-10 border-3 shadow  mb-1 " id="containerAdminCupo">
+    <div class="container-fluid container-fluid-form p-3 col-md-8 border-3 shadow  mb-1 " id="containerConsultaSancion">
         <form>
             <div class="row"> 
                 <div class="col-md-4">
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
                 </div> 
-                <div class="col-md-6 aling-self-center">
+                <div class="col-md-4 text-center p-0">
                     <h1 class="color-text"> <b>Consultar Sanciones</b> </h1>
                 </div>
             </div>

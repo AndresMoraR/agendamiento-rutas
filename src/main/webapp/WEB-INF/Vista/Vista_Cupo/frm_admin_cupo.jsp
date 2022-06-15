@@ -1,5 +1,5 @@
 <%-- 
-    Document   : Frm_Admin_cupo
+    Document   : frm_admin_cupo
     Created on : 5/05/2022, 08:59:18 AM
     Author     : OSIADMIN
 --%>
@@ -44,7 +44,7 @@
                             <th scope="col">Cupos Extra</th>
                             <th scope="col">Total Cupos</th>
                             <th scope="col">Estado</th>
-                            <th scope="col">Fecha Creaci?n</th>
+                            <th scope="col">Fecha Creacion</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>

@@ -1,16 +1,16 @@
 <%-- 
-    Document   : Frm_Crear_Horario
+    Document   : frm_editar_horario
     Created on : 25/05/2022, 04:25:03 PM
     Author     : OSIADMIN
 --%>
 
 
-<title>Crear Horario</title>
+<title>Rutas - Editar Horario</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
-    <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerRegistroU">        
+    <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerEditarHorario">        
         <div class="row">             
             <div class="col-md-12">
                 <div class="text-center">

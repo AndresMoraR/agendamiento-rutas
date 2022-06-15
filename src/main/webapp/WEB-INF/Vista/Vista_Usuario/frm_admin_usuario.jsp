@@ -4,7 +4,7 @@
     Author     : OSIADMIN
 --%>
 
-<title>Rutas - Lista Usuarios</title>
+<title>Rutas - Administrar Usuarios</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
