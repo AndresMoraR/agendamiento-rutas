@@ -1,11 +1,11 @@
 <%-- 
-    Document   : Frm_abrir_cupo
+    Document   : frm_crear_ruta
     Created on : 5/05/2022, 12:35:59 PM
     Author     : OSIADMIN
 --%>
 
 
-<title>Crear Ruta</title>
+<title>Rutas - Crear Ruta</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
@@ -21,7 +21,7 @@
         </nav>
     </div>-->
 
-    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="containerEditarRuta">
+    <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="containerCrearRuta">
         <div class="row">             
             <div class="col-md-12">
                 <div class="text-center">

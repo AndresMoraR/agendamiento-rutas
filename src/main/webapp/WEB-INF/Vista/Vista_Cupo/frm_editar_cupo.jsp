@@ -1,11 +1,11 @@
 <%-- 
-    Document   : Frm_abrir_cupo
+    Document   : frm_editar_cupo
     Created on : 5/05/2022, 12:35:59 PM
     Author     : OSIADMIN
 --%>
 
 
-<title>Editar Cupos</title>
+<title>Rutas - Editar Cupos</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
@@ -46,7 +46,7 @@
                     <input type="number" class=" form-control form-control-sm" id="cupoFuncionarioEditar" placeholder="Número de cupos funcionarios">
                 </div>
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cupoExtraEditar" disabled placeholder="Número de cupos extra">
+                    <input type="number" class=" form-control form-control-sm" id="cupoExtraEditar" readonly placeholder="Número de cupos extra">
                 </div>
             </div>  
             <div class="col-md-12 mt-3">

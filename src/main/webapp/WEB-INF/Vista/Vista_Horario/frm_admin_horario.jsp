@@ -1,17 +1,17 @@
 <%-- 
-    Document   : Frm_Admin_cupo
+    Document   : frm_admin_horario
     Created on : 5/05/2022, 08:59:18 AM
     Author     : OSIADMIN
 --%>
 
-<title>Administrar Horarios</title>
+<title>Rutas - Administrar Horarios</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
 
-    <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminRuta">
+    <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminHorario">
 
         <form>
 
@@ -54,12 +54,12 @@
                             <td>CUC - Sede Norte</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Horario?action=editar&id=1">
+                                    <a title="Editar Horario" id="editarHorario" href="${pageContext.request.contextPath}/Horario?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
                                     </a>
-                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
+                                        <a title="Eliminar Horario" id="eliminarHorario" href="">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
                                         </span>
@@ -75,12 +75,12 @@
                             <td>CUC - Sede Norte</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Horario?action=editar&id=2">
+                                    <a title="Editar Horario" id="editarRuta" href="${pageContext.request.contextPath}/Horario?action=editar&id=2">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
                                     </a>
-                                    <a title="Eliminar Ruta" id="eliminarRuta" href="">
+                                    <a title="Eliminar Horario" id="eliminarRuta" href="">
                                         <span>
                                             <i class="fa-solid fa-trash-can"></i>
                                         </span>

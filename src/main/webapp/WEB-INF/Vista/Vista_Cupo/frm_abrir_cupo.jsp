@@ -1,5 +1,5 @@
 <%-- 
-    Document   : Frm_abrir_cupo
+    Document   : frm_abrir_cupo
     Created on : 5/05/2022, 12:35:59 PM
     Author     : OSIADMIN
 --%>
@@ -46,7 +46,7 @@
                     <input type="number" class=" form-control form-control-sm" id="cupoFuncionario" placeholder="Número de cupos funcionarios">
                 </div>
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cupoExtra" disabled placeholder="Número de cupos extra">
+                    <input type="number" class=" form-control form-control-sm" id="cupoExtra" readonly placeholder="Número de cupos extra">
                 </div>
             </div>  
             <div class="col-md-12 mt-3">

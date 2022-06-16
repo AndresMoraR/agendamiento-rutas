@@ -1,23 +1,22 @@
 <%-- 
-    Document   : Frm_Registro_Usuario
-    Created on : 11/04/2022, 10:25:14 AM
+    Document   : frm_crear_reserva_extra
+    Created on : 9/06/2022, 01:32:07 PM
     Author     : OSIADMIN
 --%>
 
-
 <!DOCTYPE html>
-<title>Rutas - Editar Usuario</title>
+<title>Rutas - Reserva Extra </title>
 
 <!--Header-->
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp" /> 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
-    <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerEditarUsuario">        
+    <div class="container-fluid container-fluid-form p-4 col-md-3 border-3 shadow" id="containerRegistroU">        
         <div class="row">             
             <div class="col-md-12">
                 <div class="text-center">
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png" alt="Logo Bienestar" >
-                    <h3 class="color-text"><b>Editar Usuario</b></h3>
+                    <h3 class="color-text"><b>Reserva Extra</b></h3>
                 </div>
             </div>
             <hr>
@@ -25,26 +24,28 @@
         <form class="mt-1">
             <div class="row g-3">
                 <div class="col-md-12">
-                    <input type="text" class="form-control form-control-sm" id="nombres" placeholder="Nombres">
+                    <label>Fecha:</label>
+                    <input type="text" class="form-control form-control-sm" id="fecha" placeholder="2022-06-14" readonly>
                 </div>
                 <div class="col-md-12">
-                    <input type="text" class="form-control form-control-sm" id="apellidos" placeholder="Apellidos">
+                    <label>Hora:</label>
+                    <input type="text" class="form-control form-control-sm" id="horario" placeholder="16:50" readonly>
                 </div>
                 <div class="col-md-12">
-                    <input type="text" class="form-control form-control-sm" id="n_identificacion" placeholder="Número de identificación">
+                    <label>Ruta:</label>
+                    <input type="text" class="form-control form-control-sm" id="nombreRuta" placeholder="SedeNorte-Venecia" readonly>
                 </div>
                 <div class="col-md-12">
-                    <input type="email" class="form-control form-control-sm" id="correo" placeholder="Correo electrónico">
-                </div> 
-                <div class="col-md-12">
-                    <select id="facultad_area" class="form-select form-select-sm">
-                        <option selected>Facultad/Área</option>
-                        <option>...</option>
+                    <label for="listaUsuario">Usuarios:</label>
+                    <select class="selectpicker" data-live-search="true" id="listaUsuario" name="listaUsuario">
+                        <option>Fernando Perez 1725345678</option>
+                        <option>Alejandra Ramírez 186383927</option>
                     </select>
-                </div>                
+                </div> 
+                
                 <div class="col-md-12">
                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                        <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Guardar</button>
+                        <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Reservar</button>
                         <button type="submit" class="btn btn-primary col-md-6" id="btnCancelar">Cancelar</button>
                     </div>
                 </div>
@@ -54,4 +55,5 @@
 </section>
 <!--foot-->
 <jsp:include page="/WEB-INF/Vista/Vista_Base/footer.jsp"/>    
+
 
