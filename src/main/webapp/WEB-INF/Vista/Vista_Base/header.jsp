@@ -68,23 +68,23 @@
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu"  id="link6" href=""><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">
                                     <span><a class="nav-link active link_menu"  id="link6" href="${pageContext.request.contextPath}/ConfiReserva"><i class="fas fa-calendar-alt"></i> Confirmar Reservaciones</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link7" href="#"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
+                                    <span><a class="nav-link active link_menu" id="link7" href="${pageContext.request.contextPath}/Reservar"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link8" href="${pageContext.request.contextPath}/Bloque"><i class="fas fa-calendar-alt"></i> Bloques</a></span>
+                                    <span><a class="nav-link active link_menu" id="link8" href="${pageContext.request.contextPath}/CnsReserva"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link9" href="${pageContext.request.contextPath}/Sancion"><i class="fa-solid fa-ban"></i> Sanciones</a></span>
+                                    <span><a class="nav-link active link_menu" id="link9" href="${pageContext.request.contextPath}/Bloque"><i class="fas fa-calendar-alt"></i> Bloques</a></span>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <span><a class="nav-link active link_menu" id="link10" href="${pageContext.request.contextPath}/Sancion"><i class="fa-solid fa-ban"></i> Sanciones</a></span>
                                 </li>
                                 <hr>
                             </ul>
