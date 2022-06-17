@@ -27,21 +27,21 @@
                   <input type="date" class="form-control form-control-sm" id="inp_date_end">
                 </div>             
                 <div class="d-flex flex-sm-row flex-column justify-content-end">
-                    <button type="submit" class="btn btn-primary" id="btnConsultar">Consultar</button>
+                    <button type="submit" class="btn btn-primary btn-buttons" id="btnConsultar">Consultar</button>
                 </div>
             </div>
                 
             <div class="row">
                 <label class="text-center"><b>Días Disponibles</b></label>
                 <div class="gap-1 d-flex flex-sm-row flex-column justify-content-center">
-                    <a href="" class="btn btn-primary">30</a>
-                    <a href="" class="btn btn-primary">31</a>
-                    <a href="" class="btn btn-primary">01</a>
-                    <a href="" class="btn btn-primary">02</a>
-                    <a href="" class="btn btn-primary">03</a>
-                    <a href="" class="btn btn-primary">04</a>
-                    <a href="" class="btn btn-primary">05</a>
-                    <a href="" class="btn btn-primary">06</a>
+                    <a href="" class="btn btn-primary btn-buttons">30</a>
+                    <a href="" class="btn btn-primary btn-buttons">31</a>
+                    <a href="" class="btn btn-primary btn-buttons">01</a>
+                    <a href="" class="btn btn-primary btn-buttons">02</a>
+                    <a href="" class="btn btn-primary btn-buttons">03</a>
+                    <a href="" class="btn btn-primary btn-buttons">04</a>
+                    <a href="" class="btn btn-primary btn-buttons">05</a>
+                    <a href="" class="btn btn-primary btn-buttons">06</a>
                 </div>
             </div>
                 
@@ -87,7 +87,7 @@
                             <td><input type="number" min="0" class="form-control form-control-sm"></td>
                             <td><b><label>16</label></b></td>
                             <td>
-                                <a href="#" class="btn">
+                                <a href="#" class="btn btn-buttons">
                                     <span><i class="fa-solid fa-plus"></i></span>
                                 </a>
                             </td>
@@ -117,7 +117,7 @@
                             <td><input type="number" min="0" class="form-control form-control-sm"></td>
                             <td><b><label>16</label></b></td>
                             <td>
-                                <a href="#" class="btn">
+                                <a href="#" class="btn btn-buttons">
                                     <span><i class="fa-solid fa-minus"></i></span>
                                 </a>
                             </td>
@@ -133,8 +133,8 @@
                     </label>
                 </div>
                 <div class="gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                    <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
-                    <button type="submit" class="btn btn-primary" id="btnCancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-buttons" id="btnGuardar">Guardar</button>
+                    <button type="submit" class="btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
                 </div>
             </div>    
         </form>

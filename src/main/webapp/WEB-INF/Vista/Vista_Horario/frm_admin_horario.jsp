@@ -26,7 +26,7 @@
 
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary " title="Abrir Ruta" href="${pageContext.request.contextPath}/Horario?action=add">
+                <a class="btn btn-primary btn-buttons" title="Abrir Ruta" href="${pageContext.request.contextPath}/Horario?action=add">
                     <span>
                         <i class="fa-solid fa-plus"></i>
                          Crear Horario  
@@ -97,7 +97,7 @@
             <div class=" d-flex justify-content-end align-content-end">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="submit" class=" btn btn-primary" id="btnCancelar">Cancelar</button>
+                        <button type="submit" class=" btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
                     </div>
                 </div>
             </div>    

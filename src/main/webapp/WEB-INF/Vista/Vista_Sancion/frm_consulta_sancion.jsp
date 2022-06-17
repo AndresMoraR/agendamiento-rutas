@@ -66,7 +66,7 @@
             </div>
             <div class="col-md-12 mt-3">
                 <div class="gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                    <button type="submit" class="btn btn-primary" id="btnCancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
                 </div>
             </div>    
         </form>

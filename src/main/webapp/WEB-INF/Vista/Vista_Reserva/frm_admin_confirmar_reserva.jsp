@@ -44,7 +44,7 @@
                             </select>
                         </div>
                         <div class="d-flex flex-sm-row flex-column mt-3 justify-content-end">
-                            <button type="submit" class="btn btn-primary" id="btnConsultar">Consultar</button>
+                            <button type="submit" class="btn btn-primary btn-buttons" id="btnConsultar">Consultar</button>
                         </div>
                     </div>
                 </div>
@@ -132,13 +132,13 @@
             </div>
             <div class="col-md-12 mt-3">
                 <div class="gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                    <a class="btn btn-primary " title="Usuario Extra" href="${pageContext.request.contextPath}/ConfiReserva?action=add">
+                    <a class="btn btn-primary btn-buttons" title="Usuario Extra" href="${pageContext.request.contextPath}/ConfiReserva?action=add">
                         <span>
                             Reserva Extra  
                         </span>
                     </a>
-                    <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
-                    <button type="submit" class="btn btn-primary" id="btnCancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-primary btn-buttons" id="btnGuardar">Guardar</button>
+                    <button type="submit" class="btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
                 </div>
             </div>    
         </form>

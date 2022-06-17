@@ -52,8 +52,8 @@
                 </div>                
                 <div class="col-md-12">
                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                        <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Guardar</button>
-                        <button type="submit" class="btn btn-primary col-md-6" id="btnCancelar">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-buttons col-md-6" id="btnAceptar">Guardar</button>
+                        <button type="submit" class="btn btn-primary btn-buttons col-md-6" id="btnCancelar">Cancelar</button>
                     </div>
                 </div>
             </div>

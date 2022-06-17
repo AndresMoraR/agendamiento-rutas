@@ -38,7 +38,7 @@
         </div>
         <div class="row">
             <div class="input-group mt-3">
-                <button type="submit" class="btn btn-primary col-md-12" id="btnlogin">Login</button>
+                <button type="submit" class="btn btn-primary col-md-12 btn-buttons" id="btnlogin">Login</button>
             </div>
         </div>
         <hr>
