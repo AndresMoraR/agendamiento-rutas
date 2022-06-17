@@ -25,28 +25,30 @@
             <div class="row g-3">
                 <div class="col-md-12">
                     <label>Fecha:</label>
-                    <input type="text" class="form-control form-control-sm" id="fecha" placeholder="2022-06-14" readonly>
+                    <input type="text" class="form-control form-control-sm" id="fecha" readonly value="2022-06-14">
                 </div>
                 <div class="col-md-12">
                     <label>Hora:</label>
-                    <input type="text" class="form-control form-control-sm" id="horario" placeholder="16:50" readonly>
+                    <input type="text" class="form-control form-control-sm" id="horario" readonly value="16:50">
                 </div>
                 <div class="col-md-12">
                     <label>Ruta:</label>
-                    <input type="text" class="form-control form-control-sm" id="nombreRuta" placeholder="SedeNorte-Venecia" readonly>
+                    <input type="text" class="form-control form-control-sm" id="nombreRuta" readonly value="SedeNorte-Venecia">
                 </div>
                 <div class="col-md-12">
                     <label for="listaUsuario">Usuarios:</label>
-                    <select class="selectpicker" data-live-search="true" id="listaUsuario" name="listaUsuario">
-                        <option>Fernando Perez 1725345678</option>
-                        <option>Alejandra Ramírez 186383927</option>
-                    </select>
+                    <div class="row g-3">
+                        <select class="selectpicker form-control-sm" data-live-search="true" id="listaUsuario" name="listaUsuario">
+                            <option>Fernando Perez - 1725345678</option>
+                            <option>Alejandra Ramírez - 186383927</option>
+                        </select>
+                    </div>     
                 </div> 
                 
                 <div class="col-md-12">
                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                        <button type="submit" class="btn btn-primary col-md-6" id="btnAceptar">Reservar</button>
-                        <button type="submit" class="btn btn-primary col-md-6" id="btnCancelar">Cancelar</button>
+                        <button type="submit" class="btn btn-primary btn-buttons col-md-6" id="btnAceptar">Reservar</button>
+                        <button type="submit" class="btn btn-primary btn-buttons col-md-6" id="btnCancelar">Cancelar</button>
                     </div>
                 </div>
             </div>
