@@ -5,7 +5,10 @@
  */
 package Controller;
 
+import Datos.QueryAdminCupoDAO;
+import Model.AR_admin_cupo;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,6 +48,9 @@ public class CupoController extends HttpServlet{
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
+        List<AR_admin_cupo> cupos = new QueryAdminCupoDAO().consultarCupos();
+        System.out.println("cupos = " + cupos);
+        request.setAttribute("cupos", cupos);
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupo/frm_admin_cupo.jsp").forward(request, response);
     }
 }
