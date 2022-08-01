@@ -3,11 +3,10 @@
     Created on : 5/05/2022, 08:59:18 AM
     Author     : OSIADMIN
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Rutas - Administrar Cupos</title>
-
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
-
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_admin_cupo.js"></script>
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
 
@@ -35,7 +34,6 @@
 
             <div class="table-responsive">
                 <table class="table">
-
                     <thead>
                         <tr>
                             <th scope="col"></th>
@@ -49,7 +47,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <%--<tr>
                             <th scope="row">1</th>
                             <td>6</td>
                             <td>14</td>
@@ -93,9 +91,32 @@
                                     </a>
                                 </div>
                             </td>
-
-                        </tr>
-
+                        </tr>--%>
+                        <!-- Iteramos cada elemento de lista Cupos -->
+                        <c:forEach var="cupo" items="${cupos}" varStatus="status">
+                            <tr>
+                                <th scope="row">${status.count}</th>
+                                <td>${cupo.funcionarioCupo}</td>
+                                <td>${cupo.estudianteCupo}</td>
+                                <td>${cupo.cupoExtra}</td>
+                                <td>${cupo.totalCupo}</td>
+                                <td>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" value="${cupo.idCupo}" id="flexSwitchCheckChecked" ${cupo.estadoCupo == 'true' ? "checked" : ""}>
+                                    </div>
+                                </td>
+                                <td>${cupo.fechaCreacionCupo}</td>
+                                <td>
+                                    <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
+                                        <a title="Editar Cupos"  id="editartCupo" href="${pageContext.request.contextPath}/Cupo?action=editar&id=${cupo.idCupo}">
+                                            <span>
+                                                <i class="fa-solid fa-file-pen"></i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </c:forEach>
                     </tbody>
                 </table> 
             </div>

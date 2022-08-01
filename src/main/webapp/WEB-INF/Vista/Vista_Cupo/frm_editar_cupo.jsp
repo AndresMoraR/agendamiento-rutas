@@ -8,9 +8,10 @@
 <title>Rutas - Editar Cupos</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_admin_cupo.js"></script>
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
-    <!-- miga de pan 
+    <%-- miga de pan 
         <div class=" breadcrumb p-3 mt-5">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -19,7 +20,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Abrir Cupos</li>
             </ol>
         </nav>
-    </div>-->
+    </div>--%>
 
     <div class="container-fluid container-fluid-form p-4 col-md-3   border-3 shadow  " id="containerEditarCupo">
         <div class="row">             
@@ -34,19 +35,23 @@
             <hr>
         </div> 
 
-        <form class="mt-1">    
+        <form action="${pageContext.request.contextPath}/Cupo?accion=modificar_cupo&id=${cupo.idCupo}" method="POST" class="mt-1">    
             <div class="row g-3">
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="totalCupoEditar" placeholder="Total cupos disponibles">
+                    <label for="totalCupoEditar"><b>Total de cupos disponibles:</b></label>
+                    <input type="number" class="form-control editar-cupo form-control-sm" name="totalCupo" id="totalCupoEditar" placeholder="Total cupos disponibles" value="${cupo.totalCupo}">
+                </div>
+                <div class="col-md-12">
+                    <label for="cupoEstudianteEditar"><b>Número de cupos para estudiantes:</b></label>
+                    <input type="number" class="form-control editar-cupo form-control-sm" name="cupoEstudiante" id="cupoEstudianteEditar" placeholder="Número de cupos estudiantes" value="${cupo.estudianteCupo}">
                 </div>
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cupoEstudianteEditar" placeholder="Número de cupos estudiantes">
+                    <label for="cupoFuncionarioEditar"><b>Número de cupos para funcionarios:</b></label>
+                    <input type="number" class="form-control editar-cupo form-control-sm" name="cupoFuncionario" id="cupoFuncionarioEditar" placeholder="Número de cupos funcionarios" value="${cupo.funcionarioCupo}">
                 </div>
                 <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cupoFuncionarioEditar" placeholder="Número de cupos funcionarios">
-                </div>
-                <div class="col-md-12  ">
-                    <input type="number" class=" form-control form-control-sm" id="cupoExtraEditar" readonly placeholder="Número de cupos extra">
+                    <label for="cupoExtraEditar"><b>Número de cupos extra:</b></label>
+                    <input type="number" class="form-control form-control-sm" name="cupoExtra" id="cupoExtraEditar" readonly placeholder="Número de cupos extra" value="${cupo.cupoExtra}">
                 </div>
             </div>  
             <div class="col-md-12 mt-3">
