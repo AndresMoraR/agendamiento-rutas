@@ -24,19 +24,19 @@
         <form class="mt-1">
             <div class="row g-3">
                 <div class="col-md-12">
-                    <label>Fecha:</label>
+                    <label><b>Fecha:</b></label>
                     <input type="text" class="form-control form-control-sm" id="fecha" readonly value="2022-06-14">
                 </div>
                 <div class="col-md-12">
-                    <label>Hora:</label>
+                    <label><b>Hora:</b></label>
                     <input type="text" class="form-control form-control-sm" id="horario" readonly value="16:50">
                 </div>
                 <div class="col-md-12">
-                    <label>Ruta:</label>
+                    <label><b>Ruta:</b></label>
                     <input type="text" class="form-control form-control-sm" id="nombreRuta" readonly value="SedeNorte-Venecia">
                 </div>
                 <div class="col-md-12">
-                    <label for="listaUsuario">Usuarios:</label>
+                    <label for="listaUsuario"><b>Usuarios:</b></label>
                     <div class="row g-3">
                         <select class="selectpicker form-control-sm" data-live-search="true" id="listaUsuario" name="listaUsuario">
                             <option>Fernando Perez - 1725345678</option>

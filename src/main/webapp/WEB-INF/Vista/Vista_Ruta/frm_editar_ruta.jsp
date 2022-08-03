@@ -37,9 +37,11 @@
         <form class="mt-1">    
             <div class="row g-3">
                 <div class="col-md-12  ">
+                    <label><b>Nombre de la ruta</b></label>
                     <input type="text" class=" form-control form-control-sm" id="nombreRuta" placeholder="Nombre de la ruta">
                 </div>
                 <div class="col-md-12  ">
+                    <label><b>Descripción de la ruta</b></label>
                     <textarea  class=" form-control form-control-sm" id="descripRuta" placeholder="Descripción de la ruta"></textarea>
                 </div>
             </div>  
