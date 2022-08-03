@@ -25,18 +25,23 @@
         <form class="mt-1">
             <div class="row g-3">
                 <div class="col-md-12">
+                    <label><b>Nombres</b></label>
                     <input type="text" class="form-control form-control-sm" id="nombres" placeholder="Nombres">
                 </div>
                 <div class="col-md-12">
+                    <label><b>Apellidos</b></label>
                     <input type="text" class="form-control form-control-sm" id="apellidos" placeholder="Apellidos">
                 </div>
                 <div class="col-md-12">
+                    <label><b>Número de identificación</b></label>
                     <input type="text" class="form-control form-control-sm" id="n_identificacion" placeholder="Número de identificación">
                 </div>
                 <div class="col-md-12">
+                    <label><b>Correo electrónico</b></label>
                     <input type="email" class="form-control form-control-sm" id="correo" placeholder="Correo electrónico">
                 </div> 
                 <div class="col-md-12">
+                    <label><b>Facultad/Área</b></label>
                     <select id="facultad_area" class="form-select form-select-sm">
                         <option selected>Facultad/Área</option>
                         <option>...</option>

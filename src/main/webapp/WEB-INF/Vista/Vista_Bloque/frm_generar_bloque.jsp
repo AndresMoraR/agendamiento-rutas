@@ -82,10 +82,10 @@
                                     <option>12</option>
                                 </select> 
                             </td>
-                            <td><b><label>16</label></b></td>
+                            <td><label>16</label></td>
                             <td><input type="number" min="0" class="form-control form-control-sm"></td>
                             <td><input type="number" min="0" class="form-control form-control-sm"></td>
-                            <td><b><label>16</label></b></td>
+                            <td><label>16</label></td>
                             <td>
                                 <a href="#" class="btn btn-buttons">
                                     <span><i class="fa-solid fa-plus"></i></span>
@@ -112,10 +112,10 @@
                                     <option>12</option>
                                 </select> 
                             </td>
-                            <td><b><label>16</label></b></td>
+                            <td><label>16</label></td>
                             <td><input type="number" min="0" class="form-control form-control-sm"></td>
                             <td><input type="number" min="0" class="form-control form-control-sm"></td>
-                            <td><b><label>16</label></b></td>
+                            <td><label>16</label></td>
                             <td>
                                 <a href="#" class="btn btn-buttons">
                                     <span><i class="fa-solid fa-minus"></i></span>

@@ -23,25 +23,25 @@
         <form class="mt-1">
             <div class="row g-3">
                 <div class="col-md-12">
-                    <label for="appt" class="  " >Seleccionar Hora</label>
+                    <label for="appt" class="  " ><b>Seleccionar Hora</b></label>
                     <input type="time" class=" form-control form-control-sm border-0" id="appt" name="appt">
                 </div>
                 <div class="col-md-12">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
-                        Mañana
+                        <b>Mañana</b>
                     </label>
                 </div>
                 <div class="col-md-12">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                     <label class="form-check-label" for="flexRadioDefault2">
-                        Tarde
+                        <b>Tarde</b>
                     </label>
                 </div>
                 <div class="col-md-12">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
                     <label class="form-check-label" for="flexRadioDefault3">
-                        Noche
+                        <b>Noche</b>
                     </label>
                 </div>
                 <div class="col-md-12">
