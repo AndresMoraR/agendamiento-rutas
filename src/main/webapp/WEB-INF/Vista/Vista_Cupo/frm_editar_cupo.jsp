@@ -9,6 +9,9 @@
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_admin_cupo.js"></script>
+<script type="text/javascript">
+    var path_url = "${pageContext.request.contextPath}";
+</script>
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
     <%-- miga de pan 
@@ -35,32 +38,32 @@
             <hr>
         </div> 
 
-        <form action="${pageContext.request.contextPath}/Cupo?accion=modificar_cupo&id=${cupo.idCupo}" method="POST" class="mt-1">    
+        <%--<form method="POST" action="${pageContext.request.contextPath}/Cupo?accion=modificar_cupo&id=${cupo.idCupo}" class="mt-1">--%>
             <div class="row g-3">
                 <div class="col-md-12  ">
-                    <label for="totalCupoEditar"><b>Total de cupos disponibles:</b></label>
-                    <input type="number" class="form-control editar-cupo form-control-sm" name="totalCupo" id="totalCupoEditar" placeholder="Total cupos disponibles" value="${cupo.totalCupo}">
+                    <label for="totalCupo"><b>Total de cupos disponibles:</b></label>
+                    <input type="number" class="form-control editar-cupo form-control-sm" name="totalCupo" id="totalCupo" placeholder="Total cupos disponibles" value="${cupo.totalCupo}">
                 </div>
                 <div class="col-md-12">
-                    <label for="cupoEstudianteEditar"><b>Número de cupos para estudiantes:</b></label>
-                    <input type="number" class="form-control editar-cupo form-control-sm" name="cupoEstudiante" id="cupoEstudianteEditar" placeholder="Número de cupos estudiantes" value="${cupo.estudianteCupo}">
+                    <label for="cupoEstudiante"><b>Número de cupos para estudiantes:</b></label>
+                    <input type="number" class="form-control editar-cupo form-control-sm" name="cupoEstudiante" id="cupoEstudiante" placeholder="Número de cupos estudiantes" value="${cupo.estudianteCupo}">
                 </div>
                 <div class="col-md-12  ">
-                    <label for="cupoFuncionarioEditar"><b>Número de cupos para funcionarios:</b></label>
-                    <input type="number" class="form-control editar-cupo form-control-sm" name="cupoFuncionario" id="cupoFuncionarioEditar" placeholder="Número de cupos funcionarios" value="${cupo.funcionarioCupo}">
+                    <label for="cupoFuncionario"><b>Número de cupos para funcionarios:</b></label>
+                    <input type="number" class="form-control editar-cupo form-control-sm" name="cupoFuncionario" id="cupoFuncionario" placeholder="Número de cupos funcionarios" value="${cupo.funcionarioCupo}">
                 </div>
                 <div class="col-md-12  ">
-                    <label for="cupoExtraEditar"><b>Número de cupos extra:</b></label>
-                    <input type="number" class="form-control form-control-sm" name="cupoExtra" id="cupoExtraEditar" readonly placeholder="Número de cupos extra" value="${cupo.cupoExtra}">
+                    <label for="cupoExtra"><b>Número de cupos extra:</b></label>
+                    <input type="number" class="form-control form-control-sm" name="cupoExtra" id="cupoExtra" readonly placeholder="Número de cupos extra" value="${cupo.cupoExtra}">
                 </div>
             </div>  
             <div class="col-md-12 mt-3">
                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                    <button type="submit" class="btn btn-primary col-md-6 btn-buttons" id="btnAceptar">Guardar</button>
-                    <button type="submit" class="btn btn-primary col-md-6 btn-buttons"  id="btnCancelar">Cancelar</button>
+                    <button type="button" class="btn btn-primary col-md-6 btn-buttons" id="btnEditar" value="${cupo.idCupo}">Guardar</button>
+                    <a href="${pageContext.request.contextPath}/Cupo" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelar">Cancelar</a>
                 </div>
             </div>
-        </form>
+        <%--</form>--%>
 
     </div> 
 
