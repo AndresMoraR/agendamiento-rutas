@@ -9,6 +9,7 @@ import Model.AR_admin_cupo;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 
 /**
  *
@@ -16,8 +17,8 @@ import java.util.List;
  */
 public class QueryAdminCupoDAO {
     
-    private static final String SQL_INSERT = "INSERT INTO ar_admin_cupo(funcionario_cupo, estudiante_cupo, total_cupo_cupo, cupo_extra_cupo, estado_cupo, fecha_creacion_cupo, id_usuario_creacion_cupo)"
-        + " VALUES(?,?,?,?,?,?,?)";
+    private static final String SQL_INSERT = "INSERT INTO ar_admin_cupo(funcionario_cupo, estudiante_cupo, total_cupo_cupo, cupo_extra_cupo, estado_cupo, id_usuario_creacion_cupo)"
+        + " VALUES(?,?,?,?,?,?)";
     
     private static final String SQL_SELECT = "SELECT id_cupo, funcionario_cupo, estudiante_cupo, total_cupo_cupo, cupo_extra_cupo, estado_cupo, fecha_creacion_cupo, id_usuario_creacion_cupo"
         + " FROM ar_admin_cupo";
@@ -71,9 +72,9 @@ public class QueryAdminCupoDAO {
             stmt.setInt(2, cupo.getEstudianteCupo());
             stmt.setInt(3, cupo.getTotalCupo());
             stmt.setInt(4, cupo.getCupoExtra());
-            stmt.setBoolean(5, cupo.getEstadoCupo());            
-            stmt.setDate(6, (Date) cupo.getFechaCreacionCupo());
-            stmt.setInt(7, cupo.getIdUsuarioCreacionCupo());
+            stmt.setBoolean(5, true);
+            //stmt.setInt(6, cupo.getIdUsuarioCreacionCupo());
+            stmt.setInt(6, 1);
             rows = stmt.executeUpdate();            
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
