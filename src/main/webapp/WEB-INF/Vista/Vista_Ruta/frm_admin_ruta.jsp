@@ -3,7 +3,7 @@
     Created on : 5/05/2022, 08:59:18 AM
     Author     : OSIADMIN
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Rutas - Administrar Rutas</title>
 
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
@@ -46,27 +46,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Sede Norte - CUC</td>
-                            <td>Ruta ........</td>
-                            <td>
-                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=1">
-                                        <span>
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                    <a title="Eliminar Ruta" id="eliminarRuta" href="">
-                                        <span>
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
+                        <c:forEach var="ruta" items="${rutas}" varStatus="status">
+                            <tr>
+                                <th scope="row">${status.count}</th>
+                                <td>${ruta.nombre_ruta}</td>
+                                <td>${ruta.descripcion_ruta}</td>
+                                <td>
+                                    <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
+                                        <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=1">
+                                            <span>
+                                                <i class="fa-solid fa-file-pen"></i>
+                                            </span>
+                                        </a>
+                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
+                                            <span>
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </td> 
+                            </tr>
+                        </c:forEach>       
+                        <%--<tr>
                             <th scope="row">2</th>
                             <td>CUC - Venecia</td>
                             <td>Ruta .......</td>
@@ -85,7 +86,7 @@
                                 </div>
                             </td>
 
-                        </tr>
+                        </tr>--%>
 
                     </tbody>
                 </table> 
