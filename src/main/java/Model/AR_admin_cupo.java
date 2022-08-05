@@ -49,6 +49,13 @@ public class AR_admin_cupo {
         this.cupoExtra = cupoExtra;
     }
 
+    public AR_admin_cupo(int funcionarioCupo, int estudianteCupo, int totalCupo, int cupoExtra) {
+        this.funcionarioCupo = funcionarioCupo;
+        this.estudianteCupo = estudianteCupo;
+        this.totalCupo = totalCupo;
+        this.cupoExtra = cupoExtra;
+    }
+
     public int getIdCupo() {
         return idCupo;
     }

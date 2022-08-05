@@ -8,7 +8,32 @@ $(function () {
         $.post('Cupo', {
             idCupo: $(this).val(),
             nuevoEstado: $(this).is(":checked"),
-            action: 'cambiar_estado'
+            accion: 'cambiar_estado'
+        });
+    });
+    
+    $('#btnEditar').on('click', function () {
+        $.post('Cupo', {
+            id: $(this).val(),
+            totalCupo: $('#totalCupo').val(),
+            cupoEstudiante: $('#cupoEstudiante').val(),
+            cupoFuncionario: $('#cupoFuncionario').val(),
+            cupoExtra: $('#cupoExtra').val(),
+            accion: 'modificar_cupo'
+        }, function (rs) {
+            window.location.href = path_url+"/Cupo";
+        });
+    });
+    
+    $('#btnCrear').on('click', function () {
+        $.post('Cupo', {
+            totalCupo: $('#totalCupo').val(),
+            cupoEstudiante: $('#cupoEstudiante').val(),
+            cupoFuncionario: $('#cupoFuncionario').val(),
+            cupoExtra: $('#cupoExtra').val(),
+            accion: 'crear_cupo'
+        }, function (rs) {
+            window.location.href = path_url+"/Cupo";
         });
     });
     
@@ -24,7 +49,7 @@ $(function () {
             }           
         });
         cupos_extra = (cupos_total - cupos_est_func);
-        $('#cupoExtraEditar').val(cupos_extra);
+        $('#cupoExtra').val(cupos_extra);
     });
 });
 
