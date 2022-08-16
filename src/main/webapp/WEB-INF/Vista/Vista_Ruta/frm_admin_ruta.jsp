@@ -5,8 +5,8 @@
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Rutas - Administrar Rutas</title>
-
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_admin_ruta.js"></script>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
@@ -53,7 +53,7 @@
                                 <td>${ruta.descripcion_ruta}</td>
                                 <td>
                                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                        <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=1">
+                                        <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=${ruta.id_ruta}">
                                             <span>
                                                 <i class="fa-solid fa-file-pen"></i>
                                             </span>
