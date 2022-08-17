@@ -46,52 +46,7 @@
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <%--<tr>
-                            <th scope="row">1</th>
-                            <td>6</td>
-                            <td>14</td>
-                            <td>5</td>
-                            <td>25</td>
-                            <td>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                </div>
-                            </td>
-                            <td>2022-23-05 9:00:00</td>
-                            <td>
-                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Cupos"  id="editartCupo" href="${pageContext.request.contextPath}/Cupo?action=editar&id=1">
-                                        <span>
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>4</td>
-                            <td>12</td>
-                            <td>4</td>
-                            <td>20</td>
-                            <td>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                </div>                                
-                            </td>
-                            <td>2022-23-05 9:10:00</td>
-                            <td>
-                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Cupos" id="editartCupo" href="${pageContext.request.contextPath}/Cupo?action=editar&id=1">
-                                        <span>
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>--%>
+                    <tbody>                        
                         <!-- Iteramos cada elemento de lista Cupos -->
                         <c:forEach var="cupo" items="${cupos}" varStatus="status">
                             <tr>

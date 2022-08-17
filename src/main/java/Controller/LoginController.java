@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author OSIADMIN
  */
-@WebServlet("/Login")
+@WebServlet("/login")
 public class LoginController extends HttpServlet {
 
     @Override
@@ -33,6 +33,5 @@ public class LoginController extends HttpServlet {
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_login.jsp").forward(request, response);
     }
 }

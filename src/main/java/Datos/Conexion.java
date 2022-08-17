@@ -15,9 +15,9 @@ import org.apache.commons.dbcp2.BasicDataSource;
  */
 public class Conexion {
 
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/agendar_rutasv5?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/agendar_rutasv4?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     private static final String JDBC_USER = "root";
-    private static final String JDBC_PASSWORD = "123456"; 
+    private static final String JDBC_PASSWORD = "root"; 
     private static BasicDataSource dataSource;
 
     public static DataSource getDataSource() {

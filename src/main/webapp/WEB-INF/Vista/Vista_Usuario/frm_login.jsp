@@ -20,27 +20,29 @@
                 <img id="logoB" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Bienestar" >
             </div> 
         </div>
-        <div class="row">
-            <div class="input-group mb-2 mt-3">                             
-                <span class="input-group-text">
-                    <i class="fa fa-at"></i>
-                </span>
-                <input type="email" class="form-control form-control-sm" id="emailLogin" placeholder="Correo electrónico">
+        <form action="${pageContext.request.contextPath}/login" method="post">
+            <div class="row">
+                <div class="input-group mb-2 mt-3">                             
+                    <span class="input-group-text">
+                        <i class="fa fa-at"></i>
+                    </span>
+                    <input type="email" class="form-control form-control-sm" name="email" id="emailLogin" placeholder="Correo electrónico">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-group mb-2 mt-2">
-                <span class="input-group-text">
-                    <i class="fa-solid fa-lock"></i>
-                </span>
-                <input type="password" class="form-control form-control-sm" id="contraseñaLogin" placeholder="Contraseña"> 
+            <div class="row">
+                <div class="input-group mb-2 mt-2">
+                    <span class="input-group-text">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <input type="password" class="form-control form-control-sm" name="contraseña" id="contraseñaLogin" placeholder="Contraseña"> 
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-group mt-3">
-                <button type="submit" class="btn btn-primary col-md-12 btn-buttons" id="btnlogin">Login</button>
+            <div class="row">
+                <div class="input-group mt-3">
+                    <button type="submit" class="btn btn-primary col-md-12 btn-buttons" id="btnlogin">Login</button>
+                </div>
             </div>
-        </div>
+        </form>
         <hr>
         <div class="row">
             <div class="mt-2 mb-4">
