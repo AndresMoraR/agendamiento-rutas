@@ -51,8 +51,8 @@
             </div>  
             <div class="col-md-12 mt-3">
                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                    <button type="submit" class="btn btn-primary col-md-6 btn-buttons" id="btnAceptar" value="${ruta.id_ruta}">Guardar</button>
-                    <button type="submit" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelar">Cancelar</button>
+                    <button type="button" class="btn btn-primary col-md-6 btn-buttons" id="btnEditar" value="${ruta.id_ruta}">Guardar</button>
+                    <a href="${pageContext.request.contextPath}/ruta" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelar">Cancelar</a>
                 </div>
             </div>
         </form>

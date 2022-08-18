@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author beamora
  */
-@WebServlet("/User")
+@WebServlet("/user")
 public class UserController extends HttpServlet {
     
     @Override

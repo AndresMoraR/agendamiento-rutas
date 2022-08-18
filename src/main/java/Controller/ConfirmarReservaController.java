@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author OSIADMIN
  */
-@WebServlet("/ConfiReserva")
+@WebServlet("/confireserva")
 public class ConfirmarReservaController extends HttpServlet{
     
     @Override

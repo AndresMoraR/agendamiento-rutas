@@ -5,7 +5,7 @@
  */
 $(function () {
     $('.form-check-input').on('click', function () {        
-        $.post('Cupo', {
+        $.post('cupo', {
             idCupo: $(this).val(),
             nuevoEstado: $(this).is(":checked"),
             accion: 'cambiar_estado'
@@ -13,7 +13,7 @@ $(function () {
     });
     
     $('#btnEditar').on('click', function () {
-        $.post('Cupo', {
+        $.post('cupo', {
             id: $(this).val(),
             totalCupo: $('#totalCupo').val(),
             cupoEstudiante: $('#cupoEstudiante').val(),
@@ -21,19 +21,19 @@ $(function () {
             cupoExtra: $('#cupoExtra').val(),
             accion: 'modificar_cupo'
         }, function (rs) {
-            window.location.href = path_url+"/Cupo";
+            window.location.href = path_url+"/cupo";
         });
     });
     
     $('#btnCrear').on('click', function () {
-        $.post('Cupo', {
+        $.post('cupo', {
             totalCupo: $('#totalCupo').val(),
             cupoEstudiante: $('#cupoEstudiante').val(),
             cupoFuncionario: $('#cupoFuncionario').val(),
             cupoExtra: $('#cupoExtra').val(),
             accion: 'crear_cupo'
         }, function (rs) {
-            window.location.href = path_url+"/Cupo";
+            window.location.href = path_url+"/cupo";
         });
     });
     

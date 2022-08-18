@@ -103,7 +103,6 @@ public class QueryAdminRutaDAO {
     }
     
     public int insertarRuta( AR_admin_ruta ruta) {
-        
         Connection conn = null;
         PreparedStatement ps = null;
         int rows = 0;

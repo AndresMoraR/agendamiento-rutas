@@ -26,12 +26,12 @@ import javax.servlet.http.HttpServletResponse;
  * @author beamora
  */
 
-@WebServlet("/Ruta")
+@WebServlet("/ruta")
 public class RutaController extends HttpServlet{
     
      @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
-        String action = request.getParameter("action");
+        String action = request.getParameter("accion");
         if (action != null) {
             switch(action){
                 case "add":
@@ -39,7 +39,7 @@ public class RutaController extends HttpServlet{
                     break;
                 case "editar":
                     //request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_editar_ruta.jsp").forward(request, response);
-                    this.editarRuta(request, response);
+                    editarRuta(request, response);
                     break;
                 default:
                     this.accionDefault(request, response);
@@ -111,7 +111,7 @@ public class RutaController extends HttpServlet{
         String descripcionRuta = (request.getParameter("descripRuta"));
         
         //Crearmo el objeto de cliente (modelo)
-        AR_admin_ruta ruta = new AR_admin_ruta (1,nombreRuta, descripcionRuta);
+        AR_admin_ruta ruta = new AR_admin_ruta (nombreRuta, descripcionRuta);
 
         //Insertar en base de datos el objeto.
         int registroModificado = new QueryAdminRutaDAO().insertarRuta(ruta);

@@ -27,18 +27,18 @@ public class AR_admin_ruta {
     
     }
     
-    /*public AR_admin_ruta(int String nombre_ruta, String descripcion_ruta){
+    public AR_admin_ruta(String nombre_ruta, String descripcion_ruta){
         
         this.nombre_ruta = nombre_ruta;
         this.descripcion_ruta = descripcion_ruta;
     
-    }*/
+    }
 
     public int getId_ruta() {
         return id_ruta;
     }
 
-    public void setId_ruta(Integer id_ruta) {
+    public void setId_ruta(int id_ruta) {
         this.id_ruta = id_ruta;
     }
 

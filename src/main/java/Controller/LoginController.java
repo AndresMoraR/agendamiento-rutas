@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author OSIADMIN
  */
-@WebServlet("/Login")
+@WebServlet("/login")
 public class LoginController extends HttpServlet {
 
     @Override

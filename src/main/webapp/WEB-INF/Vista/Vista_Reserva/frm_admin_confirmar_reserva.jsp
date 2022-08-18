@@ -132,7 +132,7 @@
             </div>
             <div class="col-md-12 mt-3">
                 <div class="gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                    <a class="btn btn-primary btn-buttons" title="Usuario Extra" href="${pageContext.request.contextPath}/ConfiReserva?action=add">
+                    <a class="btn btn-primary btn-buttons" title="Usuario Extra" href="${pageContext.request.contextPath}/confireserva?action=add">
                         <span>
                             Reserva Extra  
                         </span>

@@ -26,7 +26,7 @@
 
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary btn-buttons " title="Abrir Ruta" href="${pageContext.request.contextPath}/Ruta?action=add">
+                <a class="btn btn-primary btn-buttons " title="Abrir Ruta" href="${pageContext.request.contextPath}/ruta?accion=add">
                     <span>
                         <i class="fa-solid fa-plus"></i>
                          Crear Ruta  
@@ -53,7 +53,7 @@
                                 <td>${ruta.descripcion_ruta}</td>
                                 <td>
                                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                        <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=${ruta.id_ruta}">
+                                        <a title="Editar Ruta"  id="editarRuta" href="${pageContext.request.contextPath}/ruta?accion=editar&id=${ruta.id_ruta}">
                                             <span>
                                                 <i class="fa-solid fa-file-pen"></i>
                                             </span>
