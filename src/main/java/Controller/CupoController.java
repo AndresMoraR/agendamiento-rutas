@@ -119,7 +119,7 @@ public class CupoController extends HttpServlet{
         int cupoFuncionario = Integer.parseInt(request.getParameter("cupoFuncionario"));
         int cupoExtra = Integer.parseInt(request.getParameter("cupoExtra"));
 
-        //Crearmo el objeto de cliente (modelo)
+        //Crear el objeto de cupo (modelo)
         AR_admin_cupo cupo = new AR_admin_cupo(cupoFuncionario, cupoEstudiante, totalCupo, cupoExtra);
 
         //Insertar en base de datos el objeto.

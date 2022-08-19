@@ -7,7 +7,11 @@
 <!DOCTYPE html>
 <title>Rutas - Registro de Usuario</title>
 <!--Header-->
-<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp" /> 
+<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_usuario.js"></script>
+<script type="text/javascript">
+    var path_url = "${pageContext.request.contextPath}";
+</script>
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
     <div class="container-fluid container-fluid-form p-4 col-md-3 border-3 shadow" id="containerRegistroU">        
@@ -49,8 +53,8 @@
                 </div>                
                 <div class="col-md-12">
                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                        <button type="submit" class="btn btn-primary col-md-6 btn-buttons" id="btnCrear">Guardar</button>
-                        <button type="submit" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelar">Cancelar</button>
+                        <button type="button" class="btn btn-primary col-md-6 btn-buttons" id="btnCrear">Guardar</button>
+                        <a href="${pageContext.request.contextPath}/" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelar">Cancelar</a>
                     </div>
                 </div>
             </div>
