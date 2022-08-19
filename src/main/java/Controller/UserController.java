@@ -83,19 +83,17 @@ public class UserController extends HttpServlet {
         String apellidos = request.getParameter("apellidos");
         int n_identificacion = Integer.parseInt(request.getParameter("n_identificacion"));
         String correo = request.getParameter("correo");
-               
-        StrongPasswordEncryptor encryptor = new StrongPasswordEncryptor();
-        String passEncrypted = encryptor.encryptPassword(request.getParameter("n_identificacion"));
-        System.out.println("passEncrypted = " + passEncrypted);
-        
-        String contraseña = "NN";
         int facultad = Integer.parseInt(request.getParameter("facultad"));
-                
+        
+        StrongPasswordEncryptor encryptor = new StrongPasswordEncryptor();
+        String contraseña = encryptor.encryptPassword(request.getParameter("n_identificacion"));
+        System.out.println("passEncrypted = " + contraseña);
+                               
         //Crear el objeto de user (modelo)
         AR_user user = new AR_user(nombres, apellidos, n_identificacion, correo, contraseña, facultad, true, 3);
 
         //Insertar en base de datos el objeto.
-        /*int registroCreado = new QueryUserDAO().insertarUser(user);
+        int registroCreado = new QueryUserDAO().insertarUser(user);
         System.out.println("registroCreado = " + registroCreado);
 
         PrintWriter out = response.getWriter();
@@ -109,7 +107,7 @@ public class UserController extends HttpServlet {
             out.println(myObj.toString());
         } finally {
             out.close();
-        }*/
+        }
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
