@@ -23,12 +23,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import java.util.Base64;    
+import javax.crypto.Cipher;  
+import javax.crypto.KeyGenerator;   
+import javax.crypto.SecretKey;
+import org.jasypt.util.password.StrongPasswordEncryptor;
+
 /**
  *
  * @author beamora
  */
 @WebServlet("/user")
 public class UserController extends HttpServlet {
+    
+    static Cipher cipher;
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
@@ -75,6 +83,11 @@ public class UserController extends HttpServlet {
         String apellidos = request.getParameter("apellidos");
         int n_identificacion = Integer.parseInt(request.getParameter("n_identificacion"));
         String correo = request.getParameter("correo");
+               
+        StrongPasswordEncryptor encryptor = new StrongPasswordEncryptor();
+        String passEncrypted = encryptor.encryptPassword(request.getParameter("n_identificacion"));
+        System.out.println("passEncrypted = " + passEncrypted);
+        
         String contraseña = "NN";
         int facultad = Integer.parseInt(request.getParameter("facultad"));
                 
@@ -82,7 +95,7 @@ public class UserController extends HttpServlet {
         AR_user user = new AR_user(nombres, apellidos, n_identificacion, correo, contraseña, facultad, true, 3);
 
         //Insertar en base de datos el objeto.
-        int registroCreado = new QueryUserDAO().insertarUser(user);
+        /*int registroCreado = new QueryUserDAO().insertarUser(user);
         System.out.println("registroCreado = " + registroCreado);
 
         PrintWriter out = response.getWriter();
@@ -96,10 +109,11 @@ public class UserController extends HttpServlet {
             out.println(myObj.toString());
         } finally {
             out.close();
-        }
+        }*/
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_admin_usuario.jsp").forward(request, response);
     }
+    
 }

@@ -18,7 +18,7 @@ import java.util.List;
  * @author estfa
  */
 public class QueryFacultadAreaDAO {
-    private static final String SQL_SELECT = "SELECT id_facultad_area, nombre_facultad_area FROM ahr_facultad_area";
+    private static final String SQL_SELECT = "SELECT id_facultad_area, nombre_facultad_area FROM ar_facultad_area";
     
     public List<AR_facultad_area> consultarFacultadArea() {
         Connection conn = null;

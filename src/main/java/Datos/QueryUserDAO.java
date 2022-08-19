@@ -17,7 +17,7 @@ import java.sql.SQLException;
 public class QueryUserDAO {
     
     private static final String SQL_INSERT = 
-          "INSERT INTO ahr_registro_usuario (nombres_usuario, apellidos_usuario, numero_identificacion_usuario, correo_usuario,"
+          "INSERT INTO ar_registro_usuario (nombres_usuario, apellidos_usuario, numero_identificacion_usuario, correo_usuario,"
         + " password_usuario, id_facultad_area_usuario, estado_usuario, id_rol_usuario) "
         + " VALUES (?,?,?,?,?,?,?,?)";
     
