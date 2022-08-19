@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author beamora
  */
-@WebServlet("/Cupo")
+@WebServlet("/cupo")
 public class CupoController extends HttpServlet{
     
     @Override

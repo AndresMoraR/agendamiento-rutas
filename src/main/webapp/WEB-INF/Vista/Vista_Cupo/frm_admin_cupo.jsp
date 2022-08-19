@@ -24,7 +24,7 @@
             </div>
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary btn-buttons" title="Abrir Cupos" href="${pageContext.request.contextPath}/Cupo?accion=add">
+                <a class="btn btn-primary btn-buttons" title="Abrir Cupos" href="${pageContext.request.contextPath}/cupo?accion=add">
                     <span>                     
                         <i class="fa-solid fa-plus"></i>
                          Abrir Cupos 
@@ -63,7 +63,7 @@
                                 <td>${cupo.fechaCreacionCupo}</td>
                                 <td>
                                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                        <a title="Editar Cupos"  id="editartCupo" href="${pageContext.request.contextPath}/Cupo?accion=editar&id=${cupo.idCupo}">
+                                        <a title="Editar Cupos"  id="editartCupo" href="${pageContext.request.contextPath}/cupo?accion=editar&id=${cupo.idCupo}">
                                             <span>
                                                 <i class="fa-solid fa-file-pen"></i>
                                             </span>

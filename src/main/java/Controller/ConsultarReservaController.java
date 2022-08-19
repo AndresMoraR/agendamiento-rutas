@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author beamora
  */
-@WebServlet("/CnsReserva")
+@WebServlet("/cnsreserva")
 public class ConsultarReservaController extends HttpServlet{
     
     @Override

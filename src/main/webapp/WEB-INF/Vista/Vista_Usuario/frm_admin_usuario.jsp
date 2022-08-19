@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-end">
-            <a class="btn btn-primary btn-buttons" title="Nuevo Usuario" href="${pageContext.request.contextPath}/User?action=add">
+            <a class="btn btn-primary btn-buttons" title="Nuevo Usuario" href="${pageContext.request.contextPath}/user?action=add">
                 <span>
                     <i class="fa-solid fa-plus"></i>
                       Nuevo Usuario 
@@ -58,7 +58,7 @@
                         <td>2022-19-05 12:00:00</td>
                         <td>
                             <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                <a title="Editar Usuario"  id="editarUsuario" href="${pageContext.request.contextPath}/User?action=editar&id=1"><span>
+                                <a title="Editar Usuario"  id="editarUsuario" href="${pageContext.request.contextPath}/user?action=editar&id=1"><span>
                                         <i class="fas fa-user-edit"></i>
                                     </span></a>
                             </div>
@@ -77,7 +77,7 @@
                         <td>2022-19-05 12:00:00</td>
                         <td>
                             <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                <a title="Editar Usuario" id="editarUsuario" href="${pageContext.request.contextPath}/User?action=editar&id=2"><span>
+                                <a title="Editar Usuario" id="editarUsuario" href="${pageContext.request.contextPath}/user?action=editar&id=2"><span>
                                         <i class="fas fa-user-edit"></i>
                                     </span></a>
                             </div>

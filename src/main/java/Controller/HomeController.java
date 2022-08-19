@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author beamora
  */
-@WebServlet("/Home")
+@WebServlet("/home")
 public class HomeController extends HttpServlet{
     
     @Override

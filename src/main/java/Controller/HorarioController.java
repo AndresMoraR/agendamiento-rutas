@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author beamora
  */
-@WebServlet("/Horario")
+@WebServlet("/horario")
 public class HorarioController extends HttpServlet{
     
     @Override

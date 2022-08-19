@@ -26,7 +26,7 @@
 
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary btn-buttons" title="Abrir Ruta" href="${pageContext.request.contextPath}/Horario?action=add">
+                <a class="btn btn-primary btn-buttons" title="Abrir Ruta" href="${pageContext.request.contextPath}/horario?action=add">
                     <span>
                         <i class="fa-solid fa-plus"></i>
                          Crear Horario  
@@ -54,7 +54,7 @@
                             <td>CUC - Sede Norte</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Horario" id="editarHorario" href="${pageContext.request.contextPath}/Horario?action=editar&id=1">
+                                    <a title="Editar Horario" id="editarHorario" href="${pageContext.request.contextPath}/horario?action=editar&id=1">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
@@ -75,7 +75,7 @@
                             <td>CUC - Sede Norte</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Horario" id="editarRuta" href="${pageContext.request.contextPath}/Horario?action=editar&id=2">
+                                    <a title="Editar Horario" id="editarRuta" href="${pageContext.request.contextPath}/horario?action=editar&id=2">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
