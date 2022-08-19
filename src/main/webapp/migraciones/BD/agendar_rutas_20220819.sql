@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-08-2022 a las 16:44:42
+-- Tiempo de generación: 19-08-2022 a las 23:35:27
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 5.6.40
 
@@ -39,6 +39,15 @@ CREATE TABLE `ar_admin_cupo` (
   `id_usuario_creacion_cupo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `ar_admin_cupo`
+--
+
+INSERT INTO `ar_admin_cupo` (`id_cupo`, `funcionario_cupo`, `estudiante_cupo`, `total_cupo_cupo`, `cupo_extra_cupo`, `estado_cupo`, `fecha_creacion_cupo`, `id_usuario_creacion_cupo`) VALUES
+(1, 10, 15, 30, 5, 1, '2022-08-02 00:00:00', 1),
+(2, 7, 13, 25, 5, 0, '2022-08-02 00:00:00', 1),
+(3, 10, 10, 35, 15, 1, '2022-08-16 13:12:40', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -65,6 +74,16 @@ CREATE TABLE `ar_admin_ruta` (
   `nombre_ruta` varchar(40) NOT NULL,
   `descripcion_ruta` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ar_admin_ruta`
+--
+
+INSERT INTO `ar_admin_ruta` (`id_ruta`, `nombre_ruta`, `descripcion_ruta`) VALUES
+(1, 'FUS-CUC', 'Ruta que sale de la sede'),
+(2, 'CUC-Venecia', 'Ruta que en la Clínica Colombia'),
+(3, 'CUC - SEDE 170', 'CUC - SEDE 170 '),
+(4, 'Sede 170 - Venecia', 'Sede 170 - Venecia');
 
 -- --------------------------------------------------------
 
@@ -216,7 +235,9 @@ ALTER TABLE `ar_log`
 -- Indices de la tabla `ar_registro_usuario`
 --
 ALTER TABLE `ar_registro_usuario`
-  ADD PRIMARY KEY (`id_usuario`);
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `numero_identificacion_usuario` (`numero_identificacion_usuario`),
+  ADD UNIQUE KEY `correo_usuario` (`correo_usuario`);
 
 --
 -- Indices de la tabla `ar_reserva`
@@ -244,7 +265,7 @@ ALTER TABLE `ar_sancion`
 -- AUTO_INCREMENT de la tabla `ar_admin_cupo`
 --
 ALTER TABLE `ar_admin_cupo`
-  MODIFY `id_cupo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cupo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `ar_admin_horario`
@@ -256,7 +277,7 @@ ALTER TABLE `ar_admin_horario`
 -- AUTO_INCREMENT de la tabla `ar_admin_ruta`
 --
 ALTER TABLE `ar_admin_ruta`
-  MODIFY `id_ruta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ruta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `ar_bloque`
