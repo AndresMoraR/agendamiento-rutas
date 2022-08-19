@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author beamora
  */
-@WebServlet("/Bloque")
+@WebServlet("/bloque")
 public class BloqueController extends HttpServlet{
     
     @Override

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author OSIADMIN
  */
-@WebServlet("/Sancion")
+@WebServlet("/sancion")
 public class SancionController extends HttpServlet {
 @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
