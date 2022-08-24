@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-end">
-            <a class="btn btn-primary btn-buttons" title="Nuevo Usuario" href="${pageContext.request.contextPath}/user?action=add">
+            <a class="btn btn-primary btn-buttons" title="Nuevo Usuario" href="${pageContext.request.contextPath}/user?accion=add">
                 <span>
                     <i class="fa-solid fa-plus"></i>
                       Nuevo Usuario 

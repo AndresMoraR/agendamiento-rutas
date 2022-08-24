@@ -15,19 +15,24 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+import java.util.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import java.util.Base64;    
-import javax.crypto.Cipher;  
-import javax.crypto.KeyGenerator;   
-import javax.crypto.SecretKey;
 import org.jasypt.util.password.StrongPasswordEncryptor;
+
+import javax.servlet.http.HttpSession;
+  
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
 
 /**
  *
@@ -35,9 +40,7 @@ import org.jasypt.util.password.StrongPasswordEncryptor;
  */
 @WebServlet("/user")
 public class UserController extends HttpServlet {
-    
-    static Cipher cipher;
-    
+        
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
         String action = request.getParameter("accion");
@@ -89,8 +92,9 @@ public class UserController extends HttpServlet {
         String contraseña = encryptor.encryptPassword(request.getParameter("n_identificacion"));
         System.out.println("passEncrypted = " + contraseña);
                                
+        this.enviarCorreo();
         //Crear el objeto de user (modelo)
-        AR_user user = new AR_user(nombres, apellidos, n_identificacion, correo, contraseña, facultad, true, 3);
+        /*AR_user user = new AR_user(nombres, apellidos, n_identificacion, correo, contraseña, facultad, true, 3);
 
         //Insertar en base de datos el objeto.
         int registroCreado = new QueryUserDAO().insertarUser(user);
@@ -107,11 +111,62 @@ public class UserController extends HttpServlet {
             out.println(myObj.toString());
         } finally {
             out.close();
-        }
+        }*/
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_admin_usuario.jsp").forward(request, response);
+    }
+    
+    private void enviarCorreo(){
+    
+        String to = "bamoraro@unisanitas.edu.co";
+        String from = "sistemas@unisanitas.edu.co"; 
+        String host = "email-smtp.us-east-1.amazonaws.com";//or IP address  
+  
+        //Get the session object  
+        Properties properties = System.getProperties();  
+        properties.setProperty("mail.smtp.host", host);
+        properties.setProperty("mail.smtp.auth", "true");
+        properties.setProperty("mail.smtp.port", "587");  
+        properties.setProperty("mail.smtp.starttls.enable", "true");
+        
+        //Session emailSession = Session.getInstance(properties);
+        
+        // Setup authentication, get session
+        Session emailSession = Session.getInstance(properties,
+            new javax.mail.Authenticator() {
+               protected PasswordAuthentication getPasswordAuthentication() {
+                  return new PasswordAuthentication(
+                     "AKIAXNN6FNWZECW2BXFQ", "BL04kHcCf1+U3PkZBjjieBvJ/2WmZ8NZ+ZWGEv8f/bjg");
+               }
+            });
+        
+        try{  
+            // Create a default MimeMessage object.
+	   Message message = new MimeMessage(emailSession);
+	
+	   // Set From: header field of the header.
+	   message.setFrom(new InternetAddress(from));
+	
+	   // Set To: header field of the header.
+	   message.setRecipients(Message.RecipientType.TO,
+               InternetAddress.parse(to));
+	
+	   // Set Subject: header field
+	   message.setSubject("Testing Subject");
+	
+	   // Now set the actual message
+	   message.setText("Hello, this is sample for to check send " +
+		"email using JavaMailAPI ");
+
+	   // Send message
+	   Transport.send(message);
+
+	   System.out.println("Sent message successfully....");
+        }catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
     }
     
 }
