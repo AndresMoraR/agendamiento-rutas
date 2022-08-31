@@ -34,6 +34,11 @@ public class AR_user {
         this.rol = rol;
     }
 
+    public AR_user(int identificacion, String correo) {
+        this.identificacion = identificacion;
+        this.correo = correo;
+    }
+
     public String getIdUser() {
         return idUser;
     }

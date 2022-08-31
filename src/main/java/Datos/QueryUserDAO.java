@@ -35,7 +35,7 @@ public class QueryUserDAO {
             stmt.setString(5, user.getPassword());
             stmt.setInt(6, user.getFacultad());
             stmt.setBoolean(7, user.getEstado());
-            stmt.setInt(8, 1);
+            stmt.setInt(8, user.getRol());
             rows = stmt.executeUpdate();            
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);

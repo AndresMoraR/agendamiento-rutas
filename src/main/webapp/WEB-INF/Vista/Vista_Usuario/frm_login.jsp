@@ -20,13 +20,13 @@
                 <img id="logoB" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Bienestar" >
             </div> 
         </div>
-        <form action="${pageContext.request.contextPath}/login" method="post">
+        <form action="${pageContext.request.contextPath}/login?accion=login" method="post">
             <div class="row">
                 <div class="input-group mb-2 mt-3">                             
                     <span class="input-group-text">
                         <i class="fa fa-at"></i>
                     </span>
-                    <input type="email" class="form-control form-control-sm" name="email" id="emailLogin" placeholder="Correo electrónico">
+                    <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Correo electrónico">
                 </div>
             </div>
             <div class="row">
@@ -34,7 +34,7 @@
                     <span class="input-group-text">
                         <i class="fa-solid fa-lock"></i>
                     </span>
-                    <input type="password" class="form-control form-control-sm" name="contraseña" id="contraseñaLogin" placeholder="Contraseña"> 
+                    <input type="password" class="form-control form-control-sm" name="contraseña" id="contraseña" placeholder="Contraseña"> 
                 </div>
             </div>
             <div class="row">
