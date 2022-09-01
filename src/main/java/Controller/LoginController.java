@@ -55,15 +55,18 @@ public class LoginController extends HttpServlet {
         String correo = request.getParameter("email");
         int num_id = Integer.parseInt(request.getParameter("contraseña"));
         AR_user user = new QueryLoginDAO().findOneById(new AR_user(num_id, correo));
-        System.out.println("user = " + user);
-        /*StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
-        String encryptedPassword = passwordEncryptor.encryptPassword(userPassword);
-        if (passwordEncryptor.checkPassword(request.getParameter("contraseña"), encryptedPassword)) {
-          // correct!
+        System.out.println("user = " + user.getPassword());
+        StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
+        if (passwordEncryptor.checkPassword(request.getParameter("contraseña"), user.getPassword())) {
+             //creamos o recuperamos el objeto http session
+            HttpSession sesion = request.getSession();           
+            /*sesion.setAttribute("id", num_identificacion);
+            sesion.setAttribute("name", person_data.getNom_largo());
+            sesion.setAttribute("type", person_data.getTip_identificacion());*/
+            request.getRequestDispatcher("/WEB-INF/Vista/Home/frm_home.jsp").forward(request, response);
         } else {
-          // bad login!
-        }*/
-        //request.getRequestDispatcher("/WEB-INF/Vista/Home/frm_home.jsp").forward(request, response);
+            response.sendRedirect("index.jsp");
+        }        
     }
     
     private void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
