@@ -3,7 +3,7 @@
     Created on : 7/04/2022, 03:40:46 PM
     Author     : OSIADMIN
 --%>
-
+<%@page session="true" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +22,10 @@
         <script type="text/javascript">
             $.fn.selectpicker.Constructor.BootstrapVersion = '4';
         </script>
-        
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_usuario.js"></script>
+        <script type="text/javascript">
+            var path_url = "${pageContext.request.contextPath}";
+        </script>
         <title>Rutas</title>
     </head>
     <body style="background-image: url('${pageContext.request.contextPath}/imagen/fondo2.jpg'); background-repeat: no-repeat; background-size: auto;">
@@ -30,7 +33,15 @@
         <header>
             <nav class="navbar navbar-light color-foot-head" id="nav_bar" >
                 <div class="container-fluid">
-                    <label id="text_nav" class="text-title-menu-nav">Unisanitas - Agendamiento de Rutas</label>
+                    <label id="text_nav" class="text-title-menu-nav">
+                        Unisanitas - Agendamiento de Rutas 
+                        <% 
+                            if (session.getAttribute("id") != null) {
+                                out.println("<br><b>Usuario: "+session.getAttribute("nombre_user").toString()+" - "+session.getAttribute("id").toString()+"</b>");
+                                //out.println("<b>"+session.getAttribute("id").toString()+"</b>");
+                            } 
+                        %>
+                    </label>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span> 
                     </button>
@@ -85,6 +96,10 @@
                                 <hr>
                                 <li class="nav-item">
                                     <span><a class="nav-link active link_menu" id="link10" href="${pageContext.request.contextPath}/sancion"><i class="fa-solid fa-ban"></i> Sanciones</a></span>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <span><a class="nav-link active link_menu" id="link11" href="${pageContext.request.contextPath}/login"><i class="fa fa-sign-out"></i> Salir</a></span>
                                 </li>
                                 <hr>
                             </ul>

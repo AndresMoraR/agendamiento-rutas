@@ -3,7 +3,6 @@
     Created on : 8/04/2022, 09:46:07 AM
     Author     : OSIADMIN
 --%>
-
 <!DOCTYPE html>
 
 <footer id="foot" class="p-3 color-foot-head">
