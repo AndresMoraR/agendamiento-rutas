@@ -37,8 +37,7 @@
                         Unisanitas - Agendamiento de Rutas 
                         <% 
                             if (session.getAttribute("id") != null) {
-                                out.println("<br><b>Usuario: "+session.getAttribute("nombre_user").toString()+" - "+session.getAttribute("id").toString()+"</b>");
-                                //out.println("<b>"+session.getAttribute("id").toString()+"</b>");
+                                out.println("<br><b>Usuario: "+session.getAttribute("nombre_user").toString()+" - "+session.getAttribute("id").toString()+"</b>");                                
                             } 
                         %>
                     </label>
@@ -79,7 +78,7 @@
                                 </li>
                                 <hr>
                                 <li class="nav-item">
-                                    <span><a class="nav-link active link_menu"  id="link6" href="${pageContext.request.contextPath}/confireserva"><i class="fas fa-calendar-alt"></i> Confirmar Reservaciones</a></span>
+                                    <span><a class="nav-link active link_menu" id="link6" href="${pageContext.request.contextPath}/confireserva"><i class="fas fa-calendar-alt"></i> Confirmar Reservaciones</a></span>
                                 </li>
                                 <hr>
                                 <li class="nav-item">
