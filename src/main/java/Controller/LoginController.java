@@ -24,53 +24,36 @@ import org.jasypt.util.password.StrongPasswordEncryptor;
 public class LoginController extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.accionDefault(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String accion = request.getParameter("accion");
-        if (accion != null) {
-            switch(accion){
-                case "login":
-                    this.login(request, response);
-                    break;
-                case "logout":
-                    this.logout(request, response);
-                    break;
-                default:
-                    this.accionDefault(request, response);
-            }   
-        }else{
-            this.accionDefault(request, response);
-        }            
+        this.login(request, response);     
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_login.jsp").forward(request, response);
+        HttpSession sesion = request.getSession();
+        sesion.invalidate();
+        System.out.println(sesion);
+        response.sendRedirect("index.jsp");
     }
     
     private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String correo = request.getParameter("email");
-        int num_id = Integer.parseInt(request.getParameter("contraseña"));
-        AR_user user = new QueryLoginDAO().findOneById(new AR_user(num_id, correo));
+        int num_id = Integer.parseInt(request.getParameter("password"));
+        AR_user user = new QueryLoginDAO().findOneByIdEmail(new AR_user(num_id, correo));
         System.out.println("user = " + user.getPassword());
         StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
-        if (passwordEncryptor.checkPassword(request.getParameter("contraseña"), user.getPassword())) {
+        if (passwordEncryptor.checkPassword(request.getParameter("password"), user.getPassword())) {
              //creamos o recuperamos el objeto http session
             HttpSession sesion = request.getSession();           
-            /*sesion.setAttribute("id", num_identificacion);
-            sesion.setAttribute("name", person_data.getNom_largo());
-            sesion.setAttribute("type", person_data.getTip_identificacion());*/
-            request.getRequestDispatcher("/WEB-INF/Vista/Home/frm_home.jsp").forward(request, response);
+            sesion.setAttribute("id", user.getIdentificacion());
+            sesion.setAttribute("nombre_user", user.getNombres());
+            sesion.setAttribute("rol", user.getRol());
         } else {
             response.sendRedirect("index.jsp");
         }        
     }
-    
-    private void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_login.jsp").forward(request, response);
-    }   
-    
 }

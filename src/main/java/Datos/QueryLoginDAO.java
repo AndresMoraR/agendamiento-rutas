@@ -17,10 +17,10 @@ import java.sql.SQLException;
  */
 public class QueryLoginDAO {
     
-    private static final String SQL_SELECT = "SELECT numero_identificacion_usuario, correo_usuario, password_usuario"
+    private static final String SQL_SELECT = "SELECT nombres_usuario, numero_identificacion_usuario, correo_usuario, password_usuario, id_rol_usuario"
         + " FROM ar_registro_usuario WHERE numero_identificacion_usuario = ? and correo_usuario = ?";
     
-    public AR_user findOneById(AR_user user) {
+    public AR_user findOneByIdEmail(AR_user user) {
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -35,10 +35,14 @@ public class QueryLoginDAO {
             int numeroIdUsuario = rs.getInt("numero_identificacion_usuario");
             String correoUsuario = rs.getString("correo_usuario");
             String passwordUsuario = rs.getString("password_usuario");
+            int idRolUsuario = rs.getInt("id_rol_usuario");
+            String nombresUsuario = rs.getString("nombres_usuario");
             
             user.setIdentificacion(numeroIdUsuario);
             user.setCorreo(correoUsuario);
             user.setPassword(passwordUsuario);
+            user.setRol(idRolUsuario);
+            user.setNombres(nombresUsuario);
 
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
