@@ -19,6 +19,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -29,43 +30,53 @@ public class CupoController extends HttpServlet{
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
+        HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if (action != null) {
-            switch(action){
-                case "add":
-                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupo/frm_abrir_cupo.jsp").forward(request, response);
-                    break;
-                case "editar":
-                    editarCupo(request, response);
-                    break;
-                default:
-                    this.accionDefault(request, response);
+        if(sesion.getAttribute("id") != null){
+            if (action != null) {
+                switch(action){
+                    case "add":
+                        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Cupo/frm_abrir_cupo.jsp").forward(request, response);
+                        break;
+                    case "editar":
+                        editarCupo(request, response);
+                        break;
+                    default:                                          
+                        this.accionDefault(request, response);                    
+                }   
+            }
+            else{
+                this.accionDefault(request, response);    
             }   
+        }else{
+            this.redirectToIndex(request, response);
         }
-        else{
-            this.accionDefault(request, response);    
-        }         
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if (action != null) {
-            switch(action){
-                case "cambiar_estado":
-                    this.cambiarEstado(request, response);
-                    break;
-                case "modificar_cupo":
-                    this.modificarCupo(request, response);
-                    break;
-                case "crear_cupo":
-                    this.crearCupo(request, response);
-                    break;
-                default:
-                    this.accionDefault(request, response);
-            }   
+        if(sesion.getAttribute("id") != null){
+            if (action != null) {
+                switch(action){
+                    case "cambiar_estado":
+                        this.cambiarEstado(request, response);
+                        break;
+                    case "modificar_cupo":
+                        this.modificarCupo(request, response);
+                        break;
+                    case "crear_cupo":
+                        this.crearCupo(request, response);
+                        break;
+                    default:
+                        this.accionDefault(request, response);
+                }   
+            }else{
+                this.accionDefault(request, response);
+            }
         }else{
-            this.accionDefault(request, response);
+            this.redirectToIndex(request, response);
         }
     }
     
@@ -138,5 +149,9 @@ public class CupoController extends HttpServlet{
         } finally {
             out.close();
         }
+    }
+    
+    private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        response.sendRedirect("index.jsp");
     }
 }
