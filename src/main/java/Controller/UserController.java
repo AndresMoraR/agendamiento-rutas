@@ -43,35 +43,45 @@ public class UserController extends HttpServlet {
         
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
+        HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if (action != null) {
-            switch(action){
-                case "add":
-                    this.frmCrearUsuario(request, response);
-                    break;
-                case "editar":
-                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_editar_usuario.jsp").forward(request, response);
-                    break;
-                default:
-                    this.accionDefault(request, response);
-            }   
-        }
-        else{
-            this.accionDefault(request, response);    
+        if(sesion.getAttribute("id") != null){
+            if (action != null) {
+                switch(action){
+                    case "add":
+                        this.frmCrearUsuario(request, response);
+                        break;
+                    case "editar":
+                        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_editar_usuario.jsp").forward(request, response);
+                        break;
+                    default:
+                        this.accionDefault(request, response);
+                }   
+            }
+            else{
+                this.accionDefault(request, response);    
+            }
+        }else{
+            this.redirectToIndex(request, response);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if (action != null) {
-            switch(action){
-                case "crear_usuario":
-                    this.crearUsuario(request, response);
-                    break;
-                default:
-                    this.accionDefault(request, response);
+        if(sesion.getAttribute("id") != null){
+            if (action != null) {
+                switch(action){
+                    case "crear_usuario":
+                        this.crearUsuario(request, response);
+                        break;
+                    default:
+                        this.accionDefault(request, response);
+                }
             }
+        }else{
+            this.redirectToIndex(request, response);
         }
     }
     
@@ -175,4 +185,7 @@ public class UserController extends HttpServlet {
         }
     }
     
+    private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        response.sendRedirect("index.jsp");
+    }
 }
