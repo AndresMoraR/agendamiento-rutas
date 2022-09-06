@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -21,7 +22,12 @@ public class ConsultarReservaController extends HttpServlet{
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
-        this.accionDefault(request, response);
+        HttpSession sesion = request.getSession();
+        if(sesion.getAttribute("id") != null){
+            this.accionDefault(request, response);
+        }else{
+            this.redirectToIndex(request, response);
+        }
     }
 
     @Override
@@ -33,4 +39,7 @@ public class ConsultarReservaController extends HttpServlet{
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Reserva/frm_mis_reservas.jsp").forward(request, response);
     }
     
+    private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        response.sendRedirect("index.jsp");
+    }    
 }

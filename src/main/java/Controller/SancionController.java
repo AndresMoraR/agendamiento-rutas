@@ -6,12 +6,12 @@
 package Controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -21,7 +21,12 @@ import javax.servlet.http.HttpServletResponse;
 public class SancionController extends HttpServlet {
 @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
-        this.accionDefault(request, response);        
+        HttpSession sesion = request.getSession();
+        if(sesion.getAttribute("id") != null){
+            this.accionDefault(request, response); 
+        }else{
+            this.redirectToIndex(request, response);
+        }
     }
 
     @Override
@@ -32,5 +37,8 @@ public class SancionController extends HttpServlet {
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Sancion/frm_consulta_sancion.jsp").forward(request, response);
     }
-
+    
+    private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        response.sendRedirect("index.jsp");
+    }
 }

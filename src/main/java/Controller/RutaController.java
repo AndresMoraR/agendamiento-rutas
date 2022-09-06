@@ -20,6 +20,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -31,44 +32,53 @@ public class RutaController extends HttpServlet{
     
      @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
+        HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if (action != null) {
-            switch(action){
-                case "add":
-                    request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_crear_ruta.jsp").forward(request, response);
-                    break;
-                case "editar":
-                    //request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_editar_ruta.jsp").forward(request, response);
-                    editarRuta(request, response);
-                    break;
-                default:
-                    this.accionDefault(request, response);
-            }   
-        }
-        else{
-            this.accionDefault(request, response);    
-        }         
+        if(sesion.getAttribute("id") != null){
+            if (action != null) {
+                switch(action){
+                    case "add":
+                        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_crear_ruta.jsp").forward(request, response);
+                        break;
+                    case "editar":
+                        //request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_editar_ruta.jsp").forward(request, response);
+                        editarRuta(request, response);
+                        break;
+                    default:
+                        this.accionDefault(request, response);
+                }   
+            }
+            else{
+                this.accionDefault(request, response);    
+            }
+        }else{
+            this.redirectToIndex(request, response);
+        } 
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("accion");
-        if (action != null) {
-            switch(action){
-                
-                case "modificar_ruta":
-                    this.modificarRuta(request, response);
-                    break;
-                case "crear_ruta":
-                    this.crearRuta(request, response);
-                    break;
-                default:
-                    this.accionDefault(request, response);
-            }   
+        HttpSession sesion = request.getSession();
+        if(sesion.getAttribute("id") != null){
+            if (action != null) {
+                switch(action){
+
+                    case "modificar_ruta":
+                        this.modificarRuta(request, response);
+                        break;
+                    case "crear_ruta":
+                        this.crearRuta(request, response);
+                        break;
+                    default:
+                        this.accionDefault(request, response);
+                }   
+            }else{
+                this.accionDefault(request, response);
+            }
         }else{
-            this.accionDefault(request, response);
-        }
-        
+            this.redirectToIndex(request, response);
+        }        
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
@@ -106,7 +116,7 @@ public class RutaController extends HttpServlet{
         }
     }
     
-        private void crearRuta(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void crearRuta(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nombreRuta = (request.getParameter("nombreRuta"));
         String descripcionRuta = (request.getParameter("descripRuta"));
         
@@ -130,4 +140,8 @@ public class RutaController extends HttpServlet{
             out.close();
         }
     } 
+        
+    private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        response.sendRedirect("index.jsp");
+    }
 }
