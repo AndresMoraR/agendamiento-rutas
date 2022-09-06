@@ -4,6 +4,7 @@
     Author     : OSIADMIN
 --%>
 <%@page session="true" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,8 +38,7 @@
                         Unisanitas - Agendamiento de Rutas 
                         <% 
                             if (session.getAttribute("id") != null) {
-                                out.println("<br><b>Usuario: "+session.getAttribute("nombre_user").toString()+" - "+session.getAttribute("id").toString()+"</b>");
-                                //out.println("<b>"+session.getAttribute("id").toString()+"</b>");
+                                out.println("<br><b>Usuario: "+session.getAttribute("nombre_user").toString()+" - "+session.getAttribute("id").toString()+"</b>");                                
                             } 
                         %>
                     </label>
@@ -61,43 +61,61 @@
                                 <li class="nav-item">
                                     <span><a class="nav-link active link_menu" id="link1" aria-current="page" href="${pageContext.request.contextPath}/home"><b><i class="fas fa-home"></i> Inicio</b></a></span>
                                 </li>
-                                <hr>
-                                <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link2" href="${pageContext.request.contextPath}/user"><i class="fas fa-user-circle"></i> Usuarios</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">	
-                                    <span><a class="nav-link active link_menu" id="link3" href="${pageContext.request.contextPath}/cupo"><i class="fas fa-clipboard-list"></i> Cupos</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link4" href="${pageContext.request.contextPath}/horario"><i class="fas fa-clock"></i> Horarios</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">	
-                                    <span><a class="nav-link active link_menu" id="link5" href="${pageContext.request.contextPath}/ruta"><i class="fas fa-bus"></i> Rutas</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">
-                                    <span><a class="nav-link active link_menu"  id="link6" href="${pageContext.request.contextPath}/confireserva"><i class="fas fa-calendar-alt"></i> Confirmar Reservaciones</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link7" href="${pageContext.request.contextPath}/reservar"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link8" href="${pageContext.request.contextPath}/cnsreserva"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link9" href="${pageContext.request.contextPath}/bloque"><i class="fas fa-calendar-alt"></i> Bloques</a></span>
-                                </li>
-                                <hr>
-                                <li class="nav-item">
-                                    <span><a class="nav-link active link_menu" id="link10" href="${pageContext.request.contextPath}/sancion"><i class="fa-solid fa-ban"></i> Sanciones</a></span>
-                                </li>
-                                <hr>
+                                <hr>                                
+                                <c:if test="${rol == '4'}">
+                                    <li class="nav-item">
+                                        <span><a class="nav-link active link_menu" id="link2" href="${pageContext.request.contextPath}/user"><i class="fas fa-user-circle"></i> Usuarios</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
+                                <c:if test="${rol == '4'}">
+                                    <li class="nav-item">	
+                                        <span><a class="nav-link active link_menu" id="link3" href="${pageContext.request.contextPath}/cupo"><i class="fas fa-clipboard-list"></i> Cupos</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
+                                <c:if test="${rol == '4'}">
+                                    <li class="nav-item">
+                                        <span><a class="nav-link active link_menu" id="link4" href="${pageContext.request.contextPath}/horario"><i class="fas fa-clock"></i> Horarios</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
+                                <c:if test="${rol == '4'}">
+                                    <li class="nav-item">	
+                                        <span><a class="nav-link active link_menu" id="link5" href="${pageContext.request.contextPath}/ruta"><i class="fas fa-bus"></i> Rutas</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
+                                <c:if test="${rol == '4'}">
+                                    <li class="nav-item">
+                                        <span><a class="nav-link active link_menu" id="link6" href="${pageContext.request.contextPath}/confireserva"><i class="fas fa-calendar-alt"></i> Confirmar Reservaciones</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
+                                <c:if test="${rol == '4' or rol == '2' or rol == '1'}">
+                                    <li class="nav-item">
+                                        <span><a class="nav-link active link_menu" id="link7" href="${pageContext.request.contextPath}/reservar"><i class="fas fa-calendar-alt"></i> Reservaciones</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
+                                <c:if test="${rol == '4' or rol == '2' or rol == '1'}">
+                                    <li class="nav-item">
+                                        <span><a class="nav-link active link_menu" id="link8" href="${pageContext.request.contextPath}/cnsreserva"><i class="fas fa-calendar-alt"></i> Mis Reservas</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
+                                <c:if test="${rol == '4'}">
+                                    <li class="nav-item">
+                                        <span><a class="nav-link active link_menu" id="link9" href="${pageContext.request.contextPath}/bloque"><i class="fas fa-calendar-alt"></i> Bloques</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
+                                <c:if test="${rol == '4' or rol == '2' or rol == '1'}">
+                                    <li class="nav-item">
+                                        <span><a class="nav-link active link_menu" id="link10" href="${pageContext.request.contextPath}/sancion"><i class="fa-solid fa-ban"></i> Sanciones</a></span>
+                                    </li>
+                                    <hr>
+                                </c:if>
                                 <li class="nav-item">
                                     <span><a class="nav-link active link_menu" id="link11" href="${pageContext.request.contextPath}/login"><i class="fa fa-sign-out"></i> Salir</a></span>
                                 </li>
