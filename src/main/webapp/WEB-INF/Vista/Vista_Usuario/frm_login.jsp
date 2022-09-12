@@ -41,7 +41,7 @@
                 </div>
                 <hr>
                 <div class="mt-2 mb-4">
-                    <a class="color-text" href="${pageContext.request.contextPath}/user?accion=add" ><b>
+                    <a class="color-text" href="${pageContext.request.contextPath}/user?accion=add_login" ><b>
                         <span>
                             <i class="fa-solid fa-angles-right"></i>
                         </span>

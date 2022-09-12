@@ -22,8 +22,10 @@ $(function () {
         });
     });
     
-    /*$('#link11').on('click', function () {
-        alert('Entro aqui');
-    })*/
+    $(document).keydown(function (tecla) {
+        if (tecla.keyCode == 13) {
+            $('#btnLogin').click();
+        }
+    });
 })
 
