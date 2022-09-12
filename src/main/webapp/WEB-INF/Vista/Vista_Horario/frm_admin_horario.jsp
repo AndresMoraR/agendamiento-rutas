@@ -3,10 +3,10 @@
     Created on : 5/05/2022, 08:59:18 AM
     Author     : OSIADMIN
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Rutas - Administrar Horarios</title>
-
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_admin_horario.js"></script>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
@@ -26,7 +26,7 @@
 
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary btn-buttons" title="Abrir Ruta" href="${pageContext.request.contextPath}/horario?action=add">
+                <a class="btn btn-primary btn-buttons" title="Abrir Ruta" href="${pageContext.request.contextPath}/horario?accion=add">
                     <span>
                         <i class="fa-solid fa-plus"></i>
                          Crear Horario  
@@ -47,14 +47,15 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <c:forEach var="horario" items="${horarios}" varStatus="status"> 
                         <tr>
-                            <th scope="row">1</th>
-                            <td>6:50</td>
-                            <td>Diurna</td>
-                            <td>CUC - Sede Norte</td>
+                            <th scope="row">${status.count}</th>
+                            <td>${horario.hora_horario}</td>
+                            <td>${horario.jornada_horario}</td>
+                            <td>${horario.nombre_ruta}</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Horario" id="editarHorario" href="${pageContext.request.contextPath}/horario?action=editar&id=1">
+                                    <a title="Editar Horario" id="editarHorario" href="${pageContext.request.contextPath}/horario?accion=editar&id=${horario.id_horario}">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
@@ -68,7 +69,8 @@
                             </td>
 
                         </tr>
-                        <tr>
+                      </c:forEach>  
+                       <%-- <tr>
                             <th scope="row">1</th>
                             <td>17:00</td>
                             <td>Tarde</td>
@@ -88,7 +90,7 @@
                                 </div>
                             </td>
 
-                        </tr>
+                        </tr>--%>
 
                     </tbody>
                 </table> 

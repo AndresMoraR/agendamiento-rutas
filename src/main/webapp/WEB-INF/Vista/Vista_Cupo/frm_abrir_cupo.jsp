@@ -6,11 +6,10 @@
 
 
 <title>Rutas - Abrir Cupos</title>
-
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_admin_cupo.js"></script>
 <script type="text/javascript">
-    var path_url = "${pageContext.request.contextPath}";
+ var path_url = "${pageContext.request.contextPath}";
 </script>
 
 
