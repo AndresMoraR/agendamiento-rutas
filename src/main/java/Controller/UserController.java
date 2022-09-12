@@ -45,25 +45,29 @@ public class UserController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
         HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if(sesion.getAttribute("id") != null){
-            if (action != null) {
-                switch(action){
-                    case "add":
-                        this.frmCrearUsuario(request, response);
-                        break;
-                    case "editar":
-                        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_editar_usuario.jsp").forward(request, response);
-                        break;
-                    default:
-                        this.accionDefault(request, response);
-                }   
-            }
-            else{
-                this.accionDefault(request, response);    
-            }
+        if("add_login".equals(action)){
+            this.frmCrearUsuario(request, response);
         }else{
-            this.redirectToIndex(request, response);
-        }
+            if(sesion.getAttribute("id") != null){
+                if (action != null) {
+                    switch(action){
+                        case "add":
+                            this.frmCrearUsuario(request, response);
+                            break;
+                        case "editar":
+                            request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_editar_usuario.jsp").forward(request, response);
+                            break;
+                        default:
+                            this.accionDefault(request, response);
+                    }   
+                }
+                else{
+                    this.accionDefault(request, response);    
+                }
+            }else{
+                this.redirectToIndex(request, response);
+            }
+        }                
     }
 
     @Override
