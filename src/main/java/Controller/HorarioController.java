@@ -22,6 +22,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,23 +33,27 @@ public class HorarioController extends HttpServlet{
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
+        HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if (action != null) {
-            switch(action){
-                case "add":
-                    this.frmCrearHorario(request, response);
-                    //request.getRequestDispatcher("/WEB-INF/Vista/Vista_Horario/frm_crear_horario.jsp").forward(request, response);
-                    break;
-                case "editar":
-                    editarHorario(request, response);
-                    break;    
-                default:
-                    this.accionDefault(request, response);
-            }   
+        if(sesion.getAttribute("id") != null){
+            if (action != null) {
+                switch(action){
+                    case "add":
+                        this.frmCrearHorario(request, response);
+                        //request.getRequestDispatcher("/WEB-INF/Vista/Vista_Horario/frm_crear_horario.jsp").forward(request, response);
+                        break;
+                    case "editar":
+                        editarHorario(request, response);
+                        break;    
+                    default:
+                        this.accionDefault(request, response);
+                }
+            }else{
+                this.accionDefault(request, response);    
+            }
+        }else{
+            this.redirectToIndex(request, response);
         }
-        else{
-            this.accionDefault(request, response);    
-        }         
     }
 
     @Override
@@ -71,10 +76,6 @@ public class HorarioController extends HttpServlet{
         }
         
     }
-    /*
-    private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
-        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Horario/frm_admin_horario.jsp").forward(request, response);
-    }*/
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
         List<AR_admin_horario> horarios = new QueryAdminHorarioDAO().consultarHorarios();
@@ -90,9 +91,8 @@ public class HorarioController extends HttpServlet{
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Horario/frm_editar_horario.jsp").forward(request, response);
     }
     
-    //metodo para cargar el select
-    
     private void frmCrearHorario(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
+       //metodo para cargar el select de rutas
         List<AR_admin_ruta> rutas = new QueryAdminRutaDAO().consultarRutas();
         request.setAttribute("rutas", rutas);
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Horario/frm_crear_horario.jsp").forward(request, response);
@@ -119,7 +119,7 @@ public class HorarioController extends HttpServlet{
         }
     }*/
     
-        private void crearHorario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void crearHorario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Time horaHorario = Time.valueOf(request.getParameter("appt"));
         String jornadaHorario = (request.getParameter("rbJornada"));
         int facultadAreaHorario = Integer.parseInt(request.getParameter("facultad_area"));
@@ -145,4 +145,7 @@ public class HorarioController extends HttpServlet{
         }
     } 
     
+    private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        response.sendRedirect("index.jsp");
+    }
 }

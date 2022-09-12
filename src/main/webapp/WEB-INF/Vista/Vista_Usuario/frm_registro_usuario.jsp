@@ -3,13 +3,15 @@
     Created on : 11/04/2022, 10:25:14 AM
     Author     : OSIADMIN
 --%>
-
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <title>Rutas - Registro de Usuario</title>
-
 <!--Header-->
-<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp" /> 
+<jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_usuario.js"></script>
+<script type="text/javascript">
+    var path_url = "${pageContext.request.contextPath}";
+</script>
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
     <div class="container-fluid container-fluid-form p-4 col-md-2 border-3 shadow" id="containerRegistroU">        
@@ -43,14 +45,16 @@
                 <div class="col-md-12">
                     <label><b>Facultad/Área</b></label>
                     <select id="facultad_area" class="form-select form-select-sm">
-                        <option selected>Facultad/Área</option>
-                        <option>...</option>
+                        <option value="" selected>Seleccione</option>                        
+                        <c:forEach var="facul_area" items="${facul_areas}">
+                            <option value="${facul_area.idFacultadArea}">${facul_area.nombreFacultadArea}</option>
+                        </c:forEach>
                     </select>
                 </div>                
                 <div class="col-md-12">
                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                        <button type="submit" class="btn btn-primary col-md-6 btn-buttons" id="btnAceptar">Guardar</button>
-                        <button type="submit" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelar">Cancelar</button>
+                        <button type="button" class="btn btn-primary col-md-6 btn-buttons" id="btnCrear">Guardar</button>
+                        <a href="${pageContext.request.contextPath}/user?accion=cancelar_login" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelar">Cancelar</a>
                     </div>
                 </div>
             </div>
