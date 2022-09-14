@@ -41,7 +41,6 @@ public class RutaController extends HttpServlet{
                         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_crear_ruta.jsp").forward(request, response);
                         break;
                     case "editar":
-                        //request.getRequestDispatcher("/WEB-INF/Vista/Vista_Ruta/frm_editar_ruta.jsp").forward(request, response);
                         editarRuta(request, response);
                         break;
                     default:
@@ -63,7 +62,6 @@ public class RutaController extends HttpServlet{
         if(sesion.getAttribute("id") != null){
             if (action != null) {
                 switch(action){
-
                     case "modificar_ruta":
                         this.modificarRuta(request, response);
                         break;
@@ -124,14 +122,14 @@ public class RutaController extends HttpServlet{
         AR_admin_ruta ruta = new AR_admin_ruta (nombreRuta, descripcionRuta);
 
         //Insertar en base de datos el objeto.
-        int registroModificado = new QueryAdminRutaDAO().insertarRuta(ruta);
-        System.out.println("registroModificados = " + registroModificado);
+        int registroCreado = new QueryAdminRutaDAO().insertarRuta(ruta);
+        System.out.println("registroCreado = " + registroCreado);
 
         PrintWriter out = response.getWriter();
         Gson gson = new GsonBuilder().serializeNulls().create();
         JsonObject myObj = new JsonObject();
         response.setContentType("application/json");
-        JsonElement rutain_obj = gson.toJsonTree(registroModificado);
+        JsonElement rutain_obj = gson.toJsonTree(registroCreado);
         myObj.add("rs_rutain", rutain_obj);
         
         try {

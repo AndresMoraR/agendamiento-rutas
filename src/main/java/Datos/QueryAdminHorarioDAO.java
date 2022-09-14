@@ -122,7 +122,7 @@ public class QueryAdminHorarioDAO {
         try {
             conn = Conexion.getConnection();
             ps = conn.prepareStatement(SQL_INSERT);
-            ps.setTime(1, (Time) horario.getHora_horario());
+            ps.setTime(1, horario.getHora_horario());            
             ps.setString(2, horario.getJornada_horario());
             ps.setInt(3, 1);
             ps.setInt(4, horario.getId_ruta_horario());

@@ -71,7 +71,7 @@ public class AR_admin_horario {
         this.id_horario = id_horario;
     }
 
-    public Date getHora_horario() {
+    public Time getHora_horario() {
         return hora_horario;
     }
 

@@ -16,6 +16,9 @@ import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -40,7 +43,6 @@ public class HorarioController extends HttpServlet{
                 switch(action){
                     case "add":
                         this.frmCrearHorario(request, response);
-                        //request.getRequestDispatcher("/WEB-INF/Vista/Vista_Horario/frm_crear_horario.jsp").forward(request, response);
                         break;
                     case "editar":
                         editarHorario(request, response);
@@ -120,29 +122,41 @@ public class HorarioController extends HttpServlet{
     }*/
     
     private void crearHorario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Time horaHorario = Time.valueOf(request.getParameter("appt"));
-        String jornadaHorario = (request.getParameter("rbJornada"));
-        int facultadAreaHorario = Integer.parseInt(request.getParameter("facultad_area"));
+        
+        String horaHorario = request.getParameter("horaHorario");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+        Date date;
+        Time horaHorarioFinal = null;
+        
+        try {
+            date = dateFormat.parse(horaHorario);
+            horaHorarioFinal = new java.sql.Time(date.getTime());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        
+        String jornadaHorario = request.getParameter("jornadaHorario");
+        int facultadAreaHorario = Integer.parseInt(request.getParameter("facultadAreaHorario"));
         
         //Crearmo el objeto de cliente (modelo) 
-        AR_admin_horario horario = new AR_admin_horario (horaHorario, jornadaHorario,facultadAreaHorario);
+        AR_admin_horario horario = new AR_admin_horario (horaHorarioFinal, jornadaHorario,facultadAreaHorario);
 
         //Insertar en base de datos el objeto.
-        int registroModificado = new QueryAdminHorarioDAO().insertarHorario(horario);
-        System.out.println("registroModificados = " + registroModificado);
+        int registroCreado = new QueryAdminHorarioDAO().insertarHorario(horario);
+        System.out.println("registroCreado = " + registroCreado);
 
-        PrintWriter out = response.getWriter();
+        /*PrintWriter out = response.getWriter();
         Gson gson = new GsonBuilder().serializeNulls().create();
         JsonObject myObj = new JsonObject();
         response.setContentType("application/json");
-        JsonElement horarioin_obj = gson.toJsonTree(registroModificado);
+        JsonElement horarioin_obj = gson.toJsonTree(registroCreado);
         myObj.add("rs_horarioin", horarioin_obj);
         
         try {
             out.println(myObj.toString());
         } finally {
             out.close();
-        }
+        }*/
     } 
     
     private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{

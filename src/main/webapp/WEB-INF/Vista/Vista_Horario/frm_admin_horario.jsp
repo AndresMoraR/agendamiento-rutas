@@ -36,7 +36,6 @@
 
             <div class="table-responsive">
                 <table class="table">
-
                     <thead>
                         <tr>
                             <th scope="col"></th>
@@ -69,31 +68,9 @@
                             </td>
 
                         </tr>
-                      </c:forEach>  
-                       <%-- <tr>
-                            <th scope="row">1</th>
-                            <td>17:00</td>
-                            <td>Tarde</td>
-                            <td>CUC - Sede Norte</td>
-                            <td>
-                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Horario" id="editarRuta" href="${pageContext.request.contextPath}/horario?action=editar&id=2">
-                                        <span>
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                    <a title="Eliminar Horario" id="eliminarRuta" href="">
-                                        <span>
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </td>
-
-                        </tr>--%>
-
+                      </c:forEach>
                     </tbody>
-                </table> 
+                </table>
             </div>
 
             <div class=" d-flex justify-content-end align-content-end">

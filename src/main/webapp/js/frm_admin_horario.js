@@ -6,7 +6,7 @@
 
 $(function () {
 
-    $('#btnEditar').on('click', function () {
+    /*$('#btnEditar').on('click', function () {
         $.post('horario', {
             id: $(this).val(),
             horaHorario: $('#nombreRuta').val(),
@@ -15,11 +15,11 @@ $(function () {
         }, function (rs) {
             window.location.href = path_url + "/ruta";
         });
-    });
+    });*/
     
-    $('#btnCrear').on('click', function () {
+    $('#btnCrearHorario').on('click', function () {
         $.post('horario', {
-            horaHorario: $('#appt').val(),
+            horaHorario: $('#hora').val()+':00',
             jornadaHorario: $('#rbJornada').val(),
             facultadAreaHorario: $('#facultad_area').val(),
             accion: 'crear_horario'

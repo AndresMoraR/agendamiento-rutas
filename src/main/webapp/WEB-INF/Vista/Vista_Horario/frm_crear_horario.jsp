@@ -27,24 +27,24 @@
         <form class="mt-1">
             <div class="row g-3">
                 <div class="col-md-12">
-                    <label for="appt" class="  " ><b>Seleccionar Hora</b></label>
-                    <input type="time" class=" form-control form-control-sm border-0" id="appt" name="appt" value="">
+                    <label for="hora"><b>Seleccionar Hora</b></label>
+                    <input type="time" class=" form-control form-control-sm border-0" id="hora" name="hora" value="">
                 </div>
                 <div class="col-md-12">
-                    <input class="form-check-input" type="radio" name="rbJornada" id="rbJornada" value="M">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="rbJornadaM" id="rbJornada" value="M">
+                    <label class="form-check-label" for="rbJornadaM">
                         <b>Mañana</b>
                     </label>
                 </div>
                 <div class="col-md-12">
-                    <input class="form-check-input" type="radio" name="rbJornada" id="rbJornada" value ="T">
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="rbJornadaT" id="rbJornada" value ="T">
+                    <label class="form-check-label" for="rbJornadaT">
                         <b>Tarde</b>
                     </label>
                 </div>
                 <div class="col-md-12">
-                    <input class="form-check-input" type="radio" name="rbJornada" id="rbJornada" value ="N">
-                    <label class="form-check-label" for="flexRadioDefault3">
+                    <input class="form-check-input" type="radio" name="rbJornadaN" id="rbJornada" value ="N">
+                    <label class="form-check-label" for="rbJornadaN">
                         <b>Noche</b>
                     </label>
                 </div>
@@ -52,8 +52,7 @@
                 <div class="col-md-12">
                     
                     <select  name="facultad_area" id="facultad_area" class="form-select form-select-sm">
-                          <c:forEach var="ruta" items="${rutas}" varStatus="status">  
-                              <%--<option selected>Nombre de la ruta</option>--%>
+                          <c:forEach var="ruta" items="${rutas}" varStatus="status">
                              <option value="${ruta.id_ruta}">${ruta.nombre_ruta}</option>
                           </c:forEach>  
                         </select>
@@ -61,7 +60,7 @@
                 </div>                
                 <div class="col-md-12">
                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                        <button type="submit" class="btn btn-primary btn-buttons col-md-6" id="btnCrear">Guardar</button>
+                        <button type="button" class="btn btn-primary btn-buttons col-md-6" id="btnCrearHorario">Guardar</button>
                         <a href="${pageContext.request.contextPath}/horario" class="btn btn-primary btn-buttons col-md-6" id="btnCancelar">Cancelar</a>
                     </div>
                 </div>
