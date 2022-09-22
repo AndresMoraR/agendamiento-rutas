@@ -6,14 +6,18 @@
 package Datos;
 
 import Model.AR_admin_horario;
+import com.mysql.cj.MysqlType;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
+import java.util.Calendar;
 import java.util.List;
+import java.util.TimeZone;
 
 
 /**
@@ -43,7 +47,8 @@ public class QueryAdminHorarioDAO {
             rs = ps.executeQuery();
             while (rs.next()) {
                 int idHorario = rs.getInt("id_horario");
-                Time horaHorario = rs.getTime("hora_horario");
+                //Time horaHorario = rs.getTime("hora_horario");
+                String horaHorario = rs.getString("hora_horario");
                 String jornadaHorario = rs.getString("jornada_horario");
                 Date fechaCreacionHorario = rs.getDate("fecha_creacion_horario");
                 int idUsuarioCreacionHorario = rs.getInt("id_usuario_creacion_horario");
@@ -69,7 +74,7 @@ public class QueryAdminHorarioDAO {
         try {
             conn = Conexion.getConnection();
             ps = conn.prepareStatement(SQL_UPDATE);
-            ps.setTime(1, (java.sql.Time) horario.getHora_horario());
+            ps.setString(1, horario.getHora_horario());
             ps.setString(2, horario.getJornada_horario());
             ps.setInt(3, horario.getId_ruta_horario());
             
@@ -95,7 +100,8 @@ public class QueryAdminHorarioDAO {
             rs = ps.executeQuery();
             rs.absolute(1); //POSICIONARSE EN EL PRIMER REGISTRO
            
-            Time horaHorario = rs.getTime("hora_horario");
+            //Time horaHorario = rs.getTime("hora_horario");
+            String horaHorario = rs.getString("hora_horario");
             String jornadaHorario = rs.getString("jornada_horario");
             int idRutaHorario = rs.getInt("id_ruta_horario");
             
@@ -122,7 +128,7 @@ public class QueryAdminHorarioDAO {
         try {
             conn = Conexion.getConnection();
             ps = conn.prepareStatement(SQL_INSERT);
-            ps.setTime(1, horario.getHora_horario());            
+            ps.setString(1, horario.getHora_horario());     
             ps.setString(2, horario.getJornada_horario());
             ps.setInt(3, 1);
             ps.setInt(4, horario.getId_ruta_horario());

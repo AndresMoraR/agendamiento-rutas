@@ -6,6 +6,7 @@
 package Model;
 
 import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -17,7 +18,7 @@ public class AR_admin_horario {
     //Atributos
     
     private int id_horario;
-    private Time hora_horario;
+    private String hora_horario;
     private String jornada_horario;
     private Date fecha_creacion_horario;
     private int id_usuario_creacion_horario;
@@ -26,7 +27,7 @@ public class AR_admin_horario {
     //Atributo del INNER
     private String nombre_ruta;
     
-    public AR_admin_horario ( int idHorario, Time horaHorario, String jornadaHorario, Date fechaCreacionHorario, int idUsuarioCreacion, int idRutaHorario, String nombreRuta ){
+    public AR_admin_horario ( int idHorario, String horaHorario, String jornadaHorario, Date fechaCreacionHorario, int idUsuarioCreacion, int idRutaHorario, String nombreRuta ){
         
         this.id_horario = idHorario;
         this.hora_horario = horaHorario;
@@ -40,7 +41,7 @@ public class AR_admin_horario {
     }
 
     
-    public AR_admin_horario(Time horaHorario, String jornadaHorario,/* int idUsuarioCreacion,*/ int idRutaHorario){
+    public AR_admin_horario(String horaHorario, String jornadaHorario,/* int idUsuarioCreacion,*/ int idRutaHorario){
         
         this.hora_horario = horaHorario;
         this.jornada_horario = jornadaHorario;
@@ -71,11 +72,11 @@ public class AR_admin_horario {
         this.id_horario = id_horario;
     }
 
-    public Time getHora_horario() {
+    public String getHora_horario() {
         return hora_horario;
     }
 
-    public void setHora_horario(Time hora_horario) {
+    public void setHora_horario(String hora_horario) {
         this.hora_horario = hora_horario;
     }
 

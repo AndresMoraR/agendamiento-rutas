@@ -124,7 +124,7 @@ public class HorarioController extends HttpServlet{
     private void crearHorario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
         String horaHorario = request.getParameter("horaHorario");
-        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+        /*SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         Date date;
         Time horaHorarioFinal = null;
         
@@ -133,13 +133,16 @@ public class HorarioController extends HttpServlet{
             horaHorarioFinal = new java.sql.Time(date.getTime());
         } catch (ParseException e) {
             e.printStackTrace();
-        }
+        }*/
+        
+        /*java.util.Date date=new java.util.Date();
+        java.sql.Timestamp sqlTime=new java.sql.Timestamp(date.getTime());*/
         
         String jornadaHorario = request.getParameter("jornadaHorario");
         int facultadAreaHorario = Integer.parseInt(request.getParameter("facultadAreaHorario"));
         
         //Crearmo el objeto de cliente (modelo) 
-        AR_admin_horario horario = new AR_admin_horario (horaHorarioFinal, jornadaHorario,facultadAreaHorario);
+        AR_admin_horario horario = new AR_admin_horario (horaHorario, jornadaHorario,facultadAreaHorario);
 
         //Insertar en base de datos el objeto.
         int registroCreado = new QueryAdminHorarioDAO().insertarHorario(horario);
