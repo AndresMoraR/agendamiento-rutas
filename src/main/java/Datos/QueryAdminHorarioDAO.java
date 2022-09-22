@@ -6,18 +6,14 @@
 package Datos;
 
 import Model.AR_admin_horario;
-import com.mysql.cj.MysqlType;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.sql.Date;
-import java.util.Calendar;
 import java.util.List;
-import java.util.TimeZone;
 
 
 /**
@@ -46,8 +42,7 @@ public class QueryAdminHorarioDAO {
             ps = conn.prepareStatement(SQL_SELECT);
             rs = ps.executeQuery();
             while (rs.next()) {
-                int idHorario = rs.getInt("id_horario");
-                //Time horaHorario = rs.getTime("hora_horario");
+                int idHorario = rs.getInt("id_horario");                
                 String horaHorario = rs.getString("hora_horario");
                 String jornadaHorario = rs.getString("jornada_horario");
                 Date fechaCreacionHorario = rs.getDate("fecha_creacion_horario");
@@ -99,8 +94,7 @@ public class QueryAdminHorarioDAO {
             ps.setInt(1, horario.getId_horario());
             rs = ps.executeQuery();
             rs.absolute(1); //POSICIONARSE EN EL PRIMER REGISTRO
-           
-            //Time horaHorario = rs.getTime("hora_horario");
+                       
             String horaHorario = rs.getString("hora_horario");
             String jornadaHorario = rs.getString("jornada_horario");
             int idRutaHorario = rs.getInt("id_ruta_horario");

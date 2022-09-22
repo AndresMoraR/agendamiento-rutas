@@ -20,6 +20,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -125,18 +126,15 @@ public class HorarioController extends HttpServlet{
         
         String horaHorario = request.getParameter("horaHorario");
         /*SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-        Date date;
-        Time horaHorarioFinal = null;
-        
+        Date date = null;
+        java.sql.Time horaHorarioFinal = null; 
         try {
-            date = dateFormat.parse(horaHorario);
-            horaHorarioFinal = new java.sql.Time(date.getTime());
+            horaHorarioFinal = new java.sql.Time(dateFormat.parse(horaHorario).getTime());
+            //date = dateFormat.parse(horaHorario);
+            //horaHorarioFinal = new java.sql.Time(date.getTime());
         } catch (ParseException e) {
             e.printStackTrace();
-        }*/
-        
-        /*java.util.Date date=new java.util.Date();
-        java.sql.Timestamp sqlTime=new java.sql.Timestamp(date.getTime());*/
+        }*/        
         
         String jornadaHorario = request.getParameter("jornadaHorario");
         int facultadAreaHorario = Integer.parseInt(request.getParameter("facultadAreaHorario"));
@@ -148,7 +146,7 @@ public class HorarioController extends HttpServlet{
         int registroCreado = new QueryAdminHorarioDAO().insertarHorario(horario);
         System.out.println("registroCreado = " + registroCreado);
 
-        /*PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();
         Gson gson = new GsonBuilder().serializeNulls().create();
         JsonObject myObj = new JsonObject();
         response.setContentType("application/json");
@@ -159,7 +157,7 @@ public class HorarioController extends HttpServlet{
             out.println(myObj.toString());
         } finally {
             out.close();
-        }*/
+        }
     } 
     
     private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
