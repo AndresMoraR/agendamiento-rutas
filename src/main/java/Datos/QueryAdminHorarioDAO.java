@@ -27,9 +27,9 @@ public class QueryAdminHorarioDAO {
     
     private static final String SQL_INSERT = "INSERT INTO ar_admin_horario (hora_horario, jornada_horario, id_usuario_creacion_horario, id_ruta_horario)VALUES(?,?,?,?)";
     
-    private static final String SQL_UPDATE = "UPDATE ar_admin_horario SET hora_horario, jornada_horario WHERE id_horario=?";
+    private static final String SQL_UPDATE = "UPDATE ar_admin_horario SET hora_horario=?, jornada_horario=?, id_ruta_horario=? WHERE id_horario=?";
     
-    private static final String SQL_SELECT_BY_ID = "SELECT hora_horario, jornada_horario, id_ruta_horario FROM ar_admin_ruta WHERE id_horario = ?";
+    private static final String SQL_SELECT_BY_ID = "SELECT hora_horario, jornada_horario, id_ruta_horario FROM ar_admin_horario WHERE id_horario = ?";
     
     public List<AR_admin_horario> consultarHorarios() {
         Connection conn = null;
@@ -71,9 +71,8 @@ public class QueryAdminHorarioDAO {
             ps = conn.prepareStatement(SQL_UPDATE);
             ps.setString(1, horario.getHora_horario());
             ps.setString(2, horario.getJornada_horario());
-            ps.setInt(3, horario.getId_ruta_horario());
-            
-            
+            ps.setInt(3, horario.getId_ruta_horario());   
+            ps.setInt(4, horario.getId_horario());   
             rows = ps.executeUpdate();            
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);

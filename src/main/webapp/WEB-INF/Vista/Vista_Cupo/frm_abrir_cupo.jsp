@@ -59,8 +59,8 @@
             </div>  
             <div class="col-md-12 mt-3">
                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                    <button type="button" class="btn btn-primary btn-buttons col-md-6 " id="btnCrear">Guardar</button>
-                    <a href="${pageContext.request.contextPath}/cupo" class="btn btn-primary btn-buttons col-md-6" id="btnCancelar">Cancelar</a>
+                    <button type="button" class="btn btn-primary btn-buttons col-md-6 " id="btnCrearCupo">Guardar</button>
+                    <a href="${pageContext.request.contextPath}/cupo" class="btn btn-primary btn-buttons col-md-6" id="btnCancelarCupo">Cancelar</a>
                 </div>
             </div>
         </form>

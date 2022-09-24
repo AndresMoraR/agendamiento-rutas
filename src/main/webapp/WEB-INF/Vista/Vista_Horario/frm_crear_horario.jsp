@@ -54,7 +54,7 @@
                 <div class="col-md-12">
                     <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
                         <button type="button" class="btn btn-primary btn-buttons col-md-6" id="btnCrearHorario">Guardar</button>
-                        <a href="${pageContext.request.contextPath}/horario" class="btn btn-primary btn-buttons col-md-6" id="btnCancelar">Cancelar</a>
+                        <a href="${pageContext.request.contextPath}/horario" class="btn btn-primary btn-buttons col-md-6" id="btnCancelarHorario">Cancelar</a>
                     </div>
                 </div>
             </div>

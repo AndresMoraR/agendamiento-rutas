@@ -40,6 +40,14 @@ public class AR_admin_horario {
 
     }
 
+    public AR_admin_horario(int idHorario, String horaHorario, String jornadaHorario,/* int idUsuarioCreacion,*/ int idRutaHorario){
+        
+        this.id_horario = idHorario;
+        this.hora_horario = horaHorario;
+        this.jornada_horario = jornadaHorario;
+       // this.id_usuario_creacion_horario = idUsuarioCreacion;
+        this.id_ruta_horario = idRutaHorario;
+    }
     
     public AR_admin_horario(String horaHorario, String jornadaHorario,/* int idUsuarioCreacion,*/ int idRutaHorario){
         

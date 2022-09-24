@@ -6,7 +6,7 @@
 
 $(function () {
 
-    $('#btnEditar').on('click', function () {
+    $('#btnEditarRuta').on('click', function () {
         $.post('ruta', {
             id: $(this).val(),
             nombreRuta: $('#nombreRuta').val(),
@@ -17,7 +17,7 @@ $(function () {
         });
     });
     
-    $('#btnCrear').on('click', function () {
+    $('#btnCrearRuta').on('click', function () {
         $.post('ruta', {
             nombreRuta: $('#nombreRuta').val(),
             descripRuta: $('#descripRuta').val(),
