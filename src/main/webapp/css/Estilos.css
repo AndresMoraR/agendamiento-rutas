@@ -89,6 +89,14 @@ button{
     height: 835px;
 }
 
+.btn_span{
+    color:#0d6efd; 
+    background: none; 
+    border: none; 
+    margin: 0;
+    padding: 0;
+}
+
 @media only screen and (max-width: 800px) {
   .form-resp {
     height: 950px !important;

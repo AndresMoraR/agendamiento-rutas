@@ -58,36 +58,15 @@
                                                 <i class="fa-solid fa-file-pen"></i>
                                             </span>
                                         </a>
-                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
+                                        <button type="button" class="btn_span borrarRuta" title="Eliminar Ruta" id="borrarRuta" name="borrarRuta" data-value="${ruta.id_ruta}">
                                             <span>
                                                 <i class="fa-solid fa-trash-can"></i>
                                             </span>
-                                        </a>
+                                        </button>
                                     </div>
                                 </td> 
                             </tr>
-                        </c:forEach>       
-                        <%--<tr>
-                            <th scope="row">2</th>
-                            <td>CUC - Venecia</td>
-                            <td>Ruta .......</td>
-                            <td>
-                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Ruta" id="editarRuta" href="${pageContext.request.contextPath}/Ruta?action=editar&id=2">
-                                        <span>
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                        <a title="Eliminar Ruta" id="eliminarRuta" href="">
-                                        <span>
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </td>
-
-                        </tr>--%>
-
+                        </c:forEach>
                     </tbody>
                 </table> 
             </div>
@@ -98,7 +77,28 @@
                         <button type="submit" class=" btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
                     </div>
                 </div>
-            </div>    
+            </div>  
+                    
+            <!-- Modal -->
+            <div class="modal" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="modalInfo" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">                    
+                            <span class="modal-title">
+                                <i class="fa fa-info-circle"></i>
+                            </span>
+                        </div>
+                        <div class="modal-body">
+                            ¿Desea borrar los datos?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-buttons" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary btn-buttons" id="btnBorrarRuta">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal --> 
         </form>
     </div>
 

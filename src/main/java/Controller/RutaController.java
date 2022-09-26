@@ -68,6 +68,9 @@ public class RutaController extends HttpServlet{
                     case "crear_ruta":
                         this.crearRuta(request, response);
                         break;
+                    case "borrar_ruta":
+                        this.borrarRuta(request, response);
+                        break;
                     default:
                         this.accionDefault(request, response);
                 }   
@@ -141,5 +144,24 @@ public class RutaController extends HttpServlet{
         
     private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.sendRedirect("index.jsp");
+    }
+
+    private void borrarRuta(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        int idRuta = Integer.parseInt(request.getParameter("id"));
+        AR_admin_ruta ruta = new AR_admin_ruta(idRuta);
+        int registroBorrado = new QueryAdminRutaDAO().eliminarRuta(ruta);
+        
+        PrintWriter out = response.getWriter();
+        Gson gson = new GsonBuilder().serializeNulls().create();
+        JsonObject myObj = new JsonObject();
+        response.setContentType("application/json");
+        JsonElement rutabr_obj = gson.toJsonTree(registroBorrado);
+        myObj.add("rs_rutabr", rutabr_obj);
+        
+        try {
+            out.println(myObj.toString());
+        } finally {
+            out.close();
+        }
     }
 }

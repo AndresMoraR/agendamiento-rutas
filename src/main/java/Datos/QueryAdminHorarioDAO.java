@@ -23,7 +23,7 @@ import java.util.List;
 public class QueryAdminHorarioDAO {
     
     private static final String SQL_SELECT = "SELECT id_horario, hora_horario, jornada_horario,fecha_creacion_horario, id_usuario_creacion_horario, "
-            + " id_ruta_horario, ar_admin_ruta.nombre_ruta as ruta FROM ar_admin_horario INNER JOIN ar_admin_ruta ON ar_admin_ruta.id_ruta = ar_admin_horario.id_ruta_horario";
+            + " id_ruta_horario, ar_admin_ruta.nombre_ruta as ruta FROM ar_admin_horario LEFT JOIN ar_admin_ruta ON ar_admin_ruta.id_ruta = ar_admin_horario.id_ruta_horario";
     
     private static final String SQL_INSERT = "INSERT INTO ar_admin_horario (hora_horario, jornada_horario, id_usuario_creacion_horario, id_ruta_horario)VALUES(?,?,?,?)";
     

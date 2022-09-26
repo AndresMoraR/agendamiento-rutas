@@ -59,7 +59,7 @@
                                                 <i class="fa-solid fa-file-pen"></i>
                                             </span>
                                         </a>
-                                        <button type="button" title="Eliminar Horario" class="borrarHorario" style="color:#0d6efd; background: none; border: none; margin: 0; padding: 0" id="borrarHorario" name="borrarHorario" data-value="${horario.id_horario}">
+                                        <button type="button" title="Eliminar Horario" class="borrarHorario btn_span" id="borrarHorario" name="borrarHorario" data-value="${horario.id_horario}">
                                             <span>
                                                 <i class="fa-solid fa-trash-can"></i>
                                             </span>
