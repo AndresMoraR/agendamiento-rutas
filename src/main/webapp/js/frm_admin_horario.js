@@ -10,21 +10,10 @@ $(function () {
      var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
      var yyyy = date.getFullYear();*/
 
-    $('#btnEditarHorario').on('click', function () {
-        $.post('horario', {
-            id: $(this).val(),
-            horaHorario: $('#inp_hora').val() /*+ ':00'*/,
-            jornadaHorario: meridiano,
-            facultadAreaHorario: $('#facultad_area').val(),
-            accion: 'modificar_horario'
-        }, function (rs) {
-            window.location.href = path_url + "/horario";
-        });
-    });
 
     var meridiano = "";
     var inp_hora = $('#inp_hora').val();
-    if (inp_hora !== "") {
+    if (inp_hora !== "" && $('#inp_hora').length) {
         seleccionar_jornada(inp_hora);
     }
 
@@ -42,18 +31,34 @@ $(function () {
             window.location.href = path_url + "/horario";
         });
     });
-
+    
     $('#btnEditarHorario').on('click', function () {
         $.post('horario', {
             id: $(this).val(),
-            horaHorario: $('#inp_hora').val() + ':00',
+            horaHorario: $('#inp_hora').val(),
             jornadaHorario: meridiano,
             facultadAreaHorario: $('#facultad_area').val(),
-            accion: 'modificar_cupo'
+            accion: 'modificar_horario'
         }, function (rs) {
             window.location.href = path_url + "/horario";
         });
     });
+    
+    $('.borrarHorario').each(function () {
+        $(this).on('click', function(){
+            $('#modalInfo').modal('show');
+            $('#btnBorrarHorario').val($(this).data("value"));
+        })
+    })
+    
+    $('#btnBorrarHorario').on('click', function (){   
+        $.post('horario', {
+            id: $(this).val(),
+            accion: 'borrar_horario'
+        }, function (rs) {
+            window.location.href = path_url + "/horario";
+        });
+    })
 
     function seleccionar_jornada(hora) {
         var time_split = hora.split(':');

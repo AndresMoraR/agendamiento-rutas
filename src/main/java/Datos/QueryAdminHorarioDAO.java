@@ -31,6 +31,8 @@ public class QueryAdminHorarioDAO {
     
     private static final String SQL_SELECT_BY_ID = "SELECT hora_horario, jornada_horario, id_ruta_horario FROM ar_admin_horario WHERE id_horario = ?";
     
+    private static final String SQL_DELETE = "DELETE FROM ar_admin_horario WHERE id_horario = ?";
+    
     public List<AR_admin_horario> consultarHorarios() {
         Connection conn = null;
         PreparedStatement ps = null;
@@ -135,6 +137,24 @@ public class QueryAdminHorarioDAO {
         }
         return rows;
         
+    }
+    
+    public int eliminarHorario(AR_admin_horario horario){
+        Connection conn = null;
+        PreparedStatement ps = null;        
+        int rows = 0;
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement(SQL_DELETE);
+            ps.setInt(1, horario.getId_horario());            
+            rows = ps.executeUpdate();            
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return rows;
     }
     
 }

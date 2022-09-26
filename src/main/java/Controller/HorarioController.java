@@ -65,6 +65,9 @@ public class HorarioController extends HttpServlet{
                 case "crear_horario":
                     this.crearHorario(request, response);
                     break;
+                case "borrar_horario":
+                    this.borrarHorario(request, response);
+                    break;
                 default:
                     this.accionDefault(request, response);
             }   
@@ -158,6 +161,25 @@ public class HorarioController extends HttpServlet{
             out.close();
         }
     } 
+    
+    private void borrarHorario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int idHorario = Integer.parseInt(request.getParameter("id"));
+        AR_admin_horario horario = new AR_admin_horario(idHorario);
+        int registroBorrado = new QueryAdminHorarioDAO().eliminarHorario(horario);
+        
+        PrintWriter out = response.getWriter();
+        Gson gson = new GsonBuilder().serializeNulls().create();
+        JsonObject myObj = new JsonObject();
+        response.setContentType("application/json");
+        JsonElement horariobr_obj = gson.toJsonTree(registroBorrado);
+        myObj.add("rs_horariobr", horariobr_obj);
+        
+        try {
+            out.println(myObj.toString());
+        } finally {
+            out.close();
+        }
+    }
     
     private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.sendRedirect("index.jsp");
