@@ -56,25 +56,29 @@ public class HorarioController extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if (action != null) {
-            switch(action){                
-                case "modificar_horario":
-                    this.modificarHorario(request, response);
-                    break;
-                case "crear_horario":
-                    this.crearHorario(request, response);
-                    break;
-                case "borrar_horario":
-                    this.borrarHorario(request, response);
-                    break;
-                default:
-                    this.accionDefault(request, response);
-            }   
+        if(sesion.getAttribute("id") != null){
+            if (action != null) {
+                switch(action){                
+                    case "modificar_horario":
+                        this.modificarHorario(request, response);
+                        break;
+                    case "crear_horario":
+                        this.crearHorario(request, response);
+                        break;
+                    case "borrar_horario":
+                        this.borrarHorario(request, response);
+                        break;
+                    default:
+                        this.accionDefault(request, response);
+                }   
+            }else{
+                this.accionDefault(request, response);
+            }
         }else{
-            this.accionDefault(request, response);
-        }
-        
+            this.redirectToIndex(request, response);
+        }                
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
