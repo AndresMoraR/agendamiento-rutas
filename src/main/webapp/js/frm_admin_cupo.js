@@ -12,7 +12,7 @@ $(function () {
         });
     });
     
-    $('#btnEditar').on('click', function () {
+    $('#btnEditarCupo').on('click', function () {
         $.post('cupo', {
             id: $(this).val(),
             totalCupo: $('#totalCupo').val(),
@@ -25,7 +25,7 @@ $(function () {
         });
     });
     
-    $('#btnCrear').on('click', function () {
+    $('#btnCrearCupo').on('click', function () {
         $.post('cupo', {
             totalCupo: $('#totalCupo').val(),
             cupoEstudiante: $('#cupoEstudiante').val(),

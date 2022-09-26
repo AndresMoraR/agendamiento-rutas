@@ -59,8 +59,8 @@
             </div>  
             <div class="col-md-12 mt-3">
                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                    <button type="button" class="btn btn-primary col-md-6 btn-buttons" id="btnEditar" value="${cupo.idCupo}">Guardar</button>
-                    <a href="${pageContext.request.contextPath}/cupo" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelar">Cancelar</a>
+                    <button type="button" class="btn btn-primary col-md-6 btn-buttons" id="btnEditarCupo" value="${cupo.idCupo}">Guardar</button>
+                    <a href="${pageContext.request.contextPath}/cupo" class="btn btn-primary col-md-6 btn-buttons" id="btnCancelarCupo">Cancelar</a>
                 </div>
             </div>
         <%--</form>--%>

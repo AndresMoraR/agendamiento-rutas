@@ -3,10 +3,10 @@
     Created on : 5/05/2022, 08:59:18 AM
     Author     : OSIADMIN
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Rutas - Administrar Horarios</title>
-
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_admin_horario.js"></script>
 
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
@@ -26,17 +26,16 @@
 
 
             <div class="d-grid mb-3 gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                <a class="btn btn-primary btn-buttons" title="Abrir Ruta" href="${pageContext.request.contextPath}/horario?action=add">
+                <a class="btn btn-primary btn-buttons" title="Abrir Ruta" href="${pageContext.request.contextPath}/horario?accion=add">
                     <span>
                         <i class="fa-solid fa-plus"></i>
-                         Crear Horario  
+                        Crear Horario  
                     </span>
                 </a>    
             </div>
 
             <div class="table-responsive">
                 <table class="table">
-
                     <thead>
                         <tr>
                             <th scope="col"></th>
@@ -47,60 +46,60 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>6:50</td>
-                            <td>Diurna</td>
-                            <td>CUC - Sede Norte</td>
-                            <td>
-                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Horario" id="editarHorario" href="${pageContext.request.contextPath}/horario?action=editar&id=1">
-                                        <span>
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                        <a title="Eliminar Horario" id="eliminarHorario" href="">
-                                        <span>
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>17:00</td>
-                            <td>Tarde</td>
-                            <td>CUC - Sede Norte</td>
-                            <td>
-                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Horario" id="editarRuta" href="${pageContext.request.contextPath}/horario?action=editar&id=2">
-                                        <span>
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </span>
-                                    </a>
-                                    <a title="Eliminar Horario" id="eliminarRuta" href="">
-                                        <span>
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </td>
-
-                        </tr>
-
+                        <c:forEach var="horario" items="${horarios}" varStatus="status"> 
+                            <tr>
+                                <th scope="row">${status.count}</th>
+                                <td>${horario.hora_horario}</td>
+                                <td>${horario.jornada_horario}</td>
+                                <td>${horario.nombre_ruta}</td>
+                                <td>
+                                    <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
+                                        <a title="Editar Horario" id="editarHorario" href="${pageContext.request.contextPath}/horario?accion=editar&id=${horario.id_horario}">
+                                            <span>
+                                                <i class="fa-solid fa-file-pen"></i>
+                                            </span>
+                                        </a>
+                                        <button type="button" title="Eliminar Horario" class="borrarHorario" style="color:#0d6efd; background: none; border: none; margin: 0; padding: 0" id="borrarHorario" name="borrarHorario" data-value="${horario.id_horario}">
+                                            <span>
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </span>
+                                        </button>
+                                    </div>                                                                        
+                                </td>
+                            </tr>
+                        </c:forEach>
                     </tbody>
-                </table> 
+                </table>
             </div>
 
             <div class=" d-flex justify-content-end align-content-end">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="submit" class=" btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
+                        <button type="button" class=" btn btn-primary btn-buttons" id="btnRegresar">Cancelar</button>
                     </div>
                 </div>
-            </div>    
+            </div>  
+
+            <!-- Modal -->
+            <div class="modal" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="modalInfo" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">                    
+                            <span class="modal-title">
+                                <i class="fa fa-info-circle"></i>
+                            </span>
+                        </div>
+                        <div class="modal-body">
+                            ¿Desea borrar los datos?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-buttons" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary btn-buttons" id="btnBorrarHorario">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal -->                            
         </form>
     </div>
 
