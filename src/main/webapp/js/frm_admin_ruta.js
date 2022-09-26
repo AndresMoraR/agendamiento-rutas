@@ -27,6 +27,20 @@ $(function () {
         });
     });
 
-
+    $('.borrarRuta').each(function () {
+        $(this).on('click', function(){
+            $('#modalInfo').modal('show');
+            $('#btnBorrarRuta').val($(this).data("value"));
+        })
+    })
+    
+    $('#btnBorrarRuta').on('click', function (){   
+        $.post('ruta', {
+            id: $(this).val(),
+            accion: 'borrar_ruta'
+        }, function (rs) {
+            window.location.href = path_url + "/ruta";
+        });
+    })
 });
 

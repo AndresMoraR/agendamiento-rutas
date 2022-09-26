@@ -20,7 +20,7 @@ public class QueryAdminRutaDAO {
     private static final String SQL_INSERT = "INSERT INTO ar_admin_ruta (nombre_ruta, descripcion_ruta)VALUES (?,?)";
     private static final String SQL_UPDATE_RUTA = "UPDATE ar_admin_ruta SET nombre_ruta=?, descripcion_ruta=? WHERE id_ruta=?";
     private static final String SQL_SELECT_BY_ID = "SELECT nombre_ruta, descripcion_ruta FROM ar_admin_ruta WHERE id_ruta = ?";
-    
+    private static final String SQL_DELETE_RUTA = "DELETE FROM ar_admin_ruta WHERE id_ruta=?";
     
     public List<AR_admin_ruta> consultarRutas(){
         Connection conn = null;
@@ -123,4 +123,21 @@ public class QueryAdminRutaDAO {
         
     }
     
+    public int eliminarRuta(AR_admin_ruta ruta){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int rows = 0;
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement(SQL_DELETE_RUTA);
+            ps.setInt(1, ruta.getId_ruta());            
+            rows = ps.executeUpdate();            
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return rows;
+    }
 }
