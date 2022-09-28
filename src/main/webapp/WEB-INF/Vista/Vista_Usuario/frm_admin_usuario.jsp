@@ -3,11 +3,9 @@
     Created on : 5/05/2022, 08:59:18 AM
     Author     : OSIADMIN
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Rutas - Administrar Usuarios</title>
-
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
-
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
 
@@ -44,27 +42,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Juan Sebastian</td>
-                        <td>Latorre Cardenas</td>
-                        <td>1000117396</td>
-                        <td>jslatorre@unisanitas.edu.co</td>
-                        <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                            </div>
-                        </td>
-                        <td>2022-19-05 12:00:00</td>
-                        <td>
-                            <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                <a title="Editar Usuario"  id="editarUsuario" href="${pageContext.request.contextPath}/user?action=editar&id=1"><span>
-                                        <i class="fas fa-user-edit"></i>
-                                    </span></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
+                    
+                    <!--<tr>
                         <th scope="row">2</th>
                         <td>Harold</td>
                         <td>Roa</td>
@@ -82,8 +61,31 @@
                                     </span></a>
                             </div>
                         </td>
-                    </tr>
-
+                    </tr>-->
+                    <c:forEach var="user" items="${users}" varStatus="status">
+                        <tr>
+                            <th scope="row">${status.count}</th>
+                            <td>${user.nombres}</td>
+                            <td>${user.apellidos}</td>
+                            <td>${user.identificacion}</td>
+                            <td>${user.correo}</td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" value="${user.idUser}" id="flexSwitchCheckChecked" ${user.estado == 'true' ? "checked" : ""}>
+                                </div>
+                            </td>
+                            <td>${user.fecha_creacion}</td>
+                            <td>
+                                <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
+                                    <a title="Editar Usuario"  id="editartCupo" href="${pageContext.request.contextPath}/cupo?accion=editar&id=${user.idUser}">
+                                        <span>
+                                            <i class="fa-solid fa-file-pen"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </c:forEach>
                 </tbody>
             </table> 
         </div>
@@ -91,7 +93,7 @@
         <div class=" d-flex justify-content-end align-content-end">
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class=" btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
+                    <button type="button" class=" btn btn-primary btn-buttons" id="btnRegresar">Cancelar</button>
                 </div>
             </div>
         </div>
