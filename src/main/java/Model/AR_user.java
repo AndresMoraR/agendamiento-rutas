@@ -12,7 +12,7 @@ import java.util.Date;
  * @author estfa
  */
 public class AR_user {
-    private String idUser;
+    private int idUser;
     private String nombres;
     private String apellidos;
     private int identificacion;
@@ -39,11 +39,21 @@ public class AR_user {
         this.correo = correo;
     }
 
-    public String getIdUser() {
+    public AR_user(int idUser, String nombresUsuario, String apellidosUsuario, int numIdUsuario, String correoUsuario, boolean estadoUsuario, Date fechaCreacionUsuario) {
+        this.idUser = idUser;
+        this.nombres = nombresUsuario;
+        this.apellidos = apellidosUsuario;
+        this.identificacion = numIdUsuario;
+        this.correo = correoUsuario;
+        this.estado = estadoUsuario;
+        this.fecha_creacion = fechaCreacionUsuario;
+    }
+
+    public int getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(int idUser) {
         this.idUser = idUser;
     }
 

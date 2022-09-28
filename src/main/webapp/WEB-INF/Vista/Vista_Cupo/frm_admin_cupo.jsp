@@ -9,11 +9,8 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_admin_cupo.js"></script>
 
 <section class="form-resp m-0 row justify-content-center align-items-center">
-
     <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminCupo">
-
         <form>
-
             <div class="row"> 
                 <div class="col-md-4">
                     <img id="logoBF" src="${pageContext.request.contextPath}/imagen/logo-bienestar.png"  alt="Logo Universidad" >
@@ -79,13 +76,12 @@
             <div class=" d-flex justify-content-end align-content-end">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="submit" class=" btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
+                        <button type="button" class=" btn btn-primary btn-buttons" id="btnRegresar">Cancelar</button>
                     </div>
                 </div>
             </div>    
         </form>
     </div>
-
 </section>
 
 

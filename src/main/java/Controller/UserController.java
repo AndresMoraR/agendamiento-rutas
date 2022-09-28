@@ -22,9 +22,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.jasypt.util.password.StrongPasswordEncryptor;
-
 import javax.servlet.http.HttpSession;
-  
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -74,18 +72,25 @@ public class UserController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession sesion = request.getSession();
         String action = request.getParameter("accion");
-        if(sesion.getAttribute("id") != null){
-            if (action != null) {
-                switch(action){
-                    case "crear_usuario":
-                        this.crearUsuario(request, response);
-                        break;
-                    default:
-                        this.accionDefault(request, response);
-                }
-            }
+        String id_user_session = request.getParameter("id_user_session");
+        if(id_user_session == ""){
+            this.crearUsuario(request, response);
         }else{
-            this.redirectToIndex(request, response);
+            if(sesion.getAttribute("id") != null){
+                if (action != null) {
+                    switch(action){
+                        case "crear_usuario":
+                            this.crearUsuario(request, response);
+                            break;
+                        default:
+                            this.accionDefault(request, response);
+                    }
+                }else{
+                    this.accionDefault(request, response);    
+                }
+            }else{
+                this.redirectToIndex(request, response);
+            }
         }
     }
     
@@ -105,7 +110,13 @@ public class UserController extends HttpServlet {
         //Creación de contraseña cifrada
         StrongPasswordEncryptor encryptor = new StrongPasswordEncryptor();
         String contraseña = encryptor.encryptPassword(request.getParameter("n_identificacion"));
-        System.out.println("passEncrypted = " + contraseña);
+        
+        //Crear el objeto de user (modelo)
+        AR_user user = new AR_user(nombres, apellidos, n_identificacion, correo, contraseña, facultad, true, 3);
+
+        //Insertar en base de datos el objeto.
+        int registroCreado = new QueryUserDAO().insertarUsuario(user);
+        System.out.println("registroCreado = " + registroCreado);
                
         //Envio de correos a usaurio y administrador
         String titulo_email = "Usuario - Agendamiento de Rutas";
@@ -119,14 +130,7 @@ public class UserController extends HttpServlet {
                 "<b>Apreciado usuario, tiene un usuario nuevo para cambio de rol:</b></br>"+
                 "<b>Usuario: </b>"+correo+"</br></br>";
         //Cambiar correo de envio para ambiente productivo
-        this.enviarCorreo(correo, titulo_email, contenido_email_admin);
-        
-        //Crear el objeto de user (modelo)
-        AR_user user = new AR_user(nombres, apellidos, n_identificacion, correo, contraseña, facultad, true, 3);
-
-        //Insertar en base de datos el objeto.
-        int registroCreado = new QueryUserDAO().insertarUser(user);
-        System.out.println("registroCreado = " + registroCreado);
+        this.enviarCorreo(correo, titulo_email, contenido_email_admin);              
 
         PrintWriter out = response.getWriter();
         Gson gson = new GsonBuilder().serializeNulls().create();
@@ -142,7 +146,9 @@ public class UserController extends HttpServlet {
         }
     }
     
-    private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
+    private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<AR_user> users = new QueryUserDAO().consultarUsuarios();
+        request.setAttribute("users", users);
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_admin_usuario.jsp").forward(request, response);
     }
     

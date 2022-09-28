@@ -23,9 +23,9 @@
         <script type="text/javascript">
             $.fn.selectpicker.Constructor.BootstrapVersion = '4';
         </script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_usuario.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_login.js"></script>
         <script type="text/javascript">
-            var path_url = "${pageContext.request.contextPath}";
+            var path_url = "${pageContext.request.contextPath}";            
         </script>
         <title>Rutas</title>
     </head>

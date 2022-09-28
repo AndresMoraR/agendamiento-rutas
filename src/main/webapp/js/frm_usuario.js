@@ -1,31 +1,16 @@
-$(function () {
-    $('#btnCrear').on('click', function () {
+$(function () {    
+    $('#btnCrearUsuario').on('click', function () {        
         $.post('user', {
             nombres: $('#nombres').val(),
             apellidos: $('#apellidos').val(),
             n_identificacion: $('#n_identificacion').val(),
             correo: $('#correo').val(),
             facultad: $('#facultad_area').val(),
-            accion: 'crear_usuario'
+            accion: 'crear_usuario',
+            id_user_session: id_user_session
         }, function (rs) {
             window.location.href = path_url+"/";
         });
     });
-    
-    $('#btnLogin').on('click', function () {
-        $.post('login', {
-            email: $('#email').val(),
-            password: $('#password').val(),
-            //accion: 'login'
-        }, function (rs) {
-            window.location.href = path_url+"/home";
-        });
-    });
-    
-    $(document).keydown(function (tecla) {
-        if (tecla.keyCode == 13) {
-            $('#btnLogin').click();
-        }
-    });
-})
+});
 
