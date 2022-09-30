@@ -82,4 +82,7 @@ public class QueryUserDAO {
         }
         return users;
     }
+    
+    public int findOneById(){
+    }
 }

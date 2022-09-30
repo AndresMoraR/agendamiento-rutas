@@ -53,7 +53,7 @@ public class UserController extends HttpServlet {
                             this.frmCrearUsuario(request, response);
                             break;
                         case "editar":
-                            request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_editar_usuario.jsp").forward(request, response);
+                            this.frmEditarUsuario(request, response);
                             break;
                         default:
                             this.accionDefault(request, response);
@@ -98,6 +98,13 @@ public class UserController extends HttpServlet {
         List<AR_facultad_area> facul_areas = new QueryFacultadAreaDAO().consultarFacultadArea();
         request.setAttribute("facul_areas", facul_areas);
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_registro_usuario.jsp").forward(request, response);
+    }
+    
+    private void frmEditarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int idUsuario = Integer.parseInt(request.getParameter("id"));
+        AR_admin_cupo usuario = new QueryAdminCupoDAO().findOneById(new AR_admin_cupo(idCupo));
+        request.setAttribute("usuario", usuario);
+        request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_editar_usuario.jsp").forward(request, response);
     }
     
     private void crearUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -163,8 +170,6 @@ public class UserController extends HttpServlet {
         properties.setProperty("mail.smtp.auth", "true");
         properties.setProperty("mail.smtp.port", "587");  
         properties.setProperty("mail.smtp.starttls.enable", "true");
-        
-        //Session emailSession = Session.getInstance(properties);
         
         // Setup authentication, get session
        Session emailSession = Session.getInstance(properties,

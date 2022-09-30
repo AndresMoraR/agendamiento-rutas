@@ -39,7 +39,7 @@ public class AR_user {
         this.correo = correo;
     }
 
-    public AR_user(int idUser, String nombresUsuario, String apellidosUsuario, int numIdUsuario, String correoUsuario, boolean estadoUsuario, Date fechaCreacionUsuario) {
+    public AR_user(int idUser, String nombresUsuario, String apellidosUsuario, int numIdUsuario, String correoUsuario, Boolean estadoUsuario, Date fechaCreacionUsuario) {
         this.idUser = idUser;
         this.nombres = nombresUsuario;
         this.apellidos = apellidosUsuario;
