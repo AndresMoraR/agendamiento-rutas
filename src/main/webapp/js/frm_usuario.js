@@ -9,7 +9,11 @@ $(function () {
             accion: 'crear_usuario',
             id_user_session: id_user_session
         }, function (rs) {
-            window.location.href = path_url+"/";
+            if(id_user_session == ""){
+                window.location.href = path_url+"/";
+            }else{                
+                window.location.href = path_url+"/user";
+            }
         });
     });
     
