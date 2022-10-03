@@ -9,6 +9,7 @@ import Datos.QueryUserDAO;
 import Datos.QueryFacultadAreaDAO;
 import Model.AR_user;
 import Model.AR_facultad_area;
+import Model.AR_rol;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -82,6 +83,9 @@ public class UserController extends HttpServlet {
                         case "crear_usuario":
                             this.crearUsuario(request, response);
                             break;
+                        case "modificar_usuario":
+                            this.modificarUsuario(request, response);
+                            break;
                         default:
                             this.accionDefault(request, response);
                     }
@@ -102,8 +106,12 @@ public class UserController extends HttpServlet {
     
     private void frmEditarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int idUsuario = Integer.parseInt(request.getParameter("id"));
-        AR_admin_cupo usuario = new QueryAdminCupoDAO().findOneById(new AR_admin_cupo(idCupo));
-        request.setAttribute("usuario", usuario);
+        AR_user usuario = new QueryUserDAO().findOneById(new AR_user(idUsuario));
+        request.setAttribute("usuario", usuario);        
+        List<AR_facultad_area> facul_areas = new QueryFacultadAreaDAO().consultarFacultadArea();
+        request.setAttribute("facul_areas", facul_areas);        
+        List<AR_rol> roles = new QueryUserDAO().consultarRoles();   
+        request.setAttribute("roles", roles);
         request.getRequestDispatcher("/WEB-INF/Vista/Vista_Usuario/frm_editar_usuario.jsp").forward(request, response);
     }
     
@@ -202,5 +210,31 @@ public class UserController extends HttpServlet {
     
     private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.sendRedirect("index.jsp");
+    }
+    
+    private void modificarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        int idUser = Integer.parseInt(request.getParameter("id"));
+        String nombres = request.getParameter("nombres");
+        String apellidos = request.getParameter("apellidos");
+        int n_identificacion = Integer.parseInt(request.getParameter("n_identificacion"));
+        String correo = request.getParameter("correo");
+        int facultad = Integer.parseInt(request.getParameter("facultad"));
+        int rol = Integer.parseInt(request.getParameter("rol"));
+        
+        AR_user user = new AR_user(idUser, nombres, apellidos, n_identificacion, correo, facultad, rol);
+        int registroModificado = new QueryUserDAO().actualizarUsuario(user);
+        
+        PrintWriter out = response.getWriter();
+        Gson gson = new GsonBuilder().serializeNulls().create();
+        JsonObject myObj = new JsonObject();
+        response.setContentType("application/json");
+        JsonElement usuarioed_obj = gson.toJsonTree(registroModificado);
+        myObj.add("rs_usuarioed", usuarioed_obj);
+        
+        try {
+            out.println(myObj.toString());
+        } finally {
+            out.close();
+        }
     }
 }

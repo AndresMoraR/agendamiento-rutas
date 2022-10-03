@@ -77,7 +77,7 @@
                             <td>${user.fecha_creacion}</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Usuario"  id="editartCupo" href="${pageContext.request.contextPath}/cupo?accion=editar&id=${user.idUser}">
+                                    <a title="Editar Usuario"  id="editarUsuario" href="${pageContext.request.contextPath}/user?accion=editar&id=${user.idUser}">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
