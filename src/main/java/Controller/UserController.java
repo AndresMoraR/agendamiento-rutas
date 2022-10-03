@@ -85,6 +85,9 @@ public class UserController extends HttpServlet {
                             break;
                         case "modificar_usuario":
                             this.modificarUsuario(request, response);
+                            break;                            
+                        case "cambiar_estado":
+                            this.cambiarEstado(request, response);
                             break;
                         default:
                             this.accionDefault(request, response);
@@ -96,6 +99,14 @@ public class UserController extends HttpServlet {
                 this.redirectToIndex(request, response);
             }
         }
+    }
+    
+    private void cambiarEstado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int idUser = Integer.parseInt(request.getParameter("idUser"));
+        boolean nuevoEstado =  Boolean.parseBoolean(request.getParameter("nuevoEstado"));        
+        AR_user usuario = new AR_user(idUser, nuevoEstado);
+        int registroModificado = new QueryUserDAO().actualizarEstado(usuario);
+        this.accionDefault(request, response);        
     }
     
     private void frmCrearUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

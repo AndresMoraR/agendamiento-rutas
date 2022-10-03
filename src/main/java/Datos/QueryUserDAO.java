@@ -39,6 +39,28 @@ public class QueryUserDAO {
         "UPDATE ar_registro_usuario aru SET aru.nombres_usuario=?, aru.apellidos_usuario=?, aru.numero_identificacion_usuario=?, "
         + "aru.correo_usuario=?, aru.id_facultad_area_usuario=?, aru.id_rol_usuario=? WHERE aru.id_usuario =?";
     
+    private static final String SQL_UPDATE_STATUS = "UPDATE ar_registro_usuario SET estado_usuario=? WHERE id_usuario=?";
+    
+    public int actualizarEstado(AR_user user){
+        Connection conn = null;
+        PreparedStatement stmt = null;        
+        int rows = 0;
+        try {
+            conn = Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_UPDATE_STATUS);
+            stmt.setBoolean(1, user.getEstado());
+            stmt.setInt(2, user.getIdUser());
+            
+            rows = stmt.executeUpdate();            
+        } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            Conexion.close(stmt);
+            Conexion.close(conn);
+        }
+        return rows;
+    }
+    
     public int insertarUsuario(AR_user user){
         Connection conn = null;
         PreparedStatement stmt = null;        

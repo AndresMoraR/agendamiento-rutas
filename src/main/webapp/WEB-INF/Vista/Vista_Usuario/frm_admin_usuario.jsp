@@ -6,7 +6,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Rutas - Administrar Usuarios</title>
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
-
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_usuario.js"></script>
+<script type="text/javascript">
+    var path_url = "${pageContext.request.contextPath}";
+</script>
 <section class="form-resp m-0 row justify-content-center align-items-center">
 
     <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminUsuario">

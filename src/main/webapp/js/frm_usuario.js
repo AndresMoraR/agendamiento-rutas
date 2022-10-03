@@ -31,5 +31,13 @@ $(function () {
             window.location.href = path_url+"/user";
         });
     });
+    
+    $('.form-check-input').on('click', function () {        
+        $.post('user', {
+            idUser: $(this).val(),
+            nuevoEstado: $(this).is(":checked"),
+            accion: 'cambiar_estado'
+        });
+    });
 });
 

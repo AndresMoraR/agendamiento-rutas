@@ -72,6 +72,11 @@ public class AR_user {
         this.rol = rol;
     }
 
+    public AR_user(int idUser, boolean estadoUsuario) {
+       this.idUser = idUser;
+       this.estado = estadoUsuario;
+    }
+
     public int getIdUser() {
         return idUser;
     }
