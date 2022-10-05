@@ -39,7 +39,7 @@ public class AR_user {
         this.correo = correo;
     }
 
-    public AR_user(int idUser, String nombresUsuario, String apellidosUsuario, int numIdUsuario, String correoUsuario, boolean estadoUsuario, Date fechaCreacionUsuario) {
+    public AR_user(int idUser, String nombresUsuario, String apellidosUsuario, int numIdUsuario, String correoUsuario, Boolean estadoUsuario, Date fechaCreacionUsuario) {
         this.idUser = idUser;
         this.nombres = nombresUsuario;
         this.apellidos = apellidosUsuario;
@@ -47,6 +47,34 @@ public class AR_user {
         this.correo = correoUsuario;
         this.estado = estadoUsuario;
         this.fecha_creacion = fechaCreacionUsuario;
+    }
+    
+    public AR_user(int idUser) {
+        this.idUser = idUser;
+    }
+
+    /*public AR_user(String nombres, String apellidos, int n_identificacion, String correo, int facultad, int rol) {
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.identificacion = n_identificacion;
+        this.correo = correo;
+        this.facultad = facultad;
+        this.rol = rol;        
+    }*/
+
+    public AR_user(int idUser, String nombres, String apellidos, int n_identificacion, String correo, int facultad, int rol) {
+        this.idUser = idUser;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.identificacion = n_identificacion;
+        this.correo = correo;
+        this.facultad = facultad;
+        this.rol = rol;
+    }
+
+    public AR_user(int idUser, boolean estadoUsuario) {
+       this.idUser = idUser;
+       this.estado = estadoUsuario;
     }
 
     public int getIdUser() {

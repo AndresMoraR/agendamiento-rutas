@@ -6,7 +6,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Rutas - Administrar Usuarios</title>
 <jsp:include page="/WEB-INF/Vista/Vista_Base/header.jsp"/>
-
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/frm_usuario.js"></script>
+<script type="text/javascript">
+    var path_url = "${pageContext.request.contextPath}";
+</script>
 <section class="form-resp m-0 row justify-content-center align-items-center">
 
     <div class="container-fluid container-fluid-form p-3 col-md-8  border-3 shadow  mb-1 " id="containerAdminUsuario">
@@ -77,7 +80,7 @@
                             <td>${user.fecha_creacion}</td>
                             <td>
                                 <div class="d-grid gap-2 d-flex flex-sm-row flex-column justify-content-center">
-                                    <a title="Editar Usuario"  id="editartCupo" href="${pageContext.request.contextPath}/cupo?accion=editar&id=${user.idUser}">
+                                    <a title="Editar Usuario"  id="editarUsuario" href="${pageContext.request.contextPath}/user?accion=editar&id=${user.idUser}">
                                         <span>
                                             <i class="fa-solid fa-file-pen"></i>
                                         </span>
