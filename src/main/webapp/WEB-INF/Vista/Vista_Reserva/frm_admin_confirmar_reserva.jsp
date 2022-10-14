@@ -138,7 +138,11 @@
                         </span>
                     </a>
                     <button type="submit" class="btn btn-primary btn-buttons" id="btnGuardar">Guardar</button>
-                    <button type="submit" class="btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
+                    <a class="btn btn-primary btn-buttons" id="btnRegresar" title="Cancelar" href="${pageContext.request.contextPath}/home">
+                        <span>
+                            Cancelar
+                        </span>
+                    </a>
                 </div>
             </div>    
         </form>

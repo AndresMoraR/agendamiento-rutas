@@ -17,18 +17,18 @@
                     <h1 class="color-text"> <b>Crear Reservas</b> </h1>
                 </div>
             </div>
-                
+
             <div class="mb-3 mt-3 row g-2 justify-content-end">
                 <div class="col-md-3">
-                  <label><b>Seleccione el rango de fechas a consultar:</b></label>                  
-                  <select class="form-select form-select-sm" id="inp_date_range">
-                      <option value="">Seleccione</option>
-                      <option value="1">(2022-06-06 / 2022-06-11)</option>
-                      <option value="2">(2022-06-13 / 2022-06-18)</option>
-                  </select>
+                    <label><b>Seleccione el rango de fechas a consultar:</b></label>                  
+                    <select class="form-select form-select-sm" id="inp_date_range">
+                        <option value="">Seleccione</option>
+                        <option value="1">(2022-06-06 / 2022-06-11)</option>
+                        <option value="2">(2022-06-13 / 2022-06-18)</option>
+                    </select>
                 </div>
             </div>
-                
+
             <div class="table-responsive">
                 <table class="table table-bordered table-sm border-secondary text-center" style="vertical-align: middle">
                     <thead>
@@ -98,7 +98,11 @@
             <div class="col-md-12 mt-3">
                 <div class="gap-2 d-flex flex-sm-row flex-column justify-content-end">
                     <button type="submit" class="btn btn-primary btn-buttons" id="btnRservar">Reservar</button>
-                    <button type="submit" class="btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
+                    <a class="btn btn-primary btn-buttons" id="btnRegresar" title="Cancelar" href="${pageContext.request.contextPath}/home">
+                        <span>
+                            Cancelar
+                        </span>
+                    </a>
                 </div>
             </div>
         </form>

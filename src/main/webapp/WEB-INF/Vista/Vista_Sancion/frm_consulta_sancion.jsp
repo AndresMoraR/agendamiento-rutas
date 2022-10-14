@@ -18,11 +18,11 @@
                     <h1 class="color-text"> <b>Consultar Sanciones</b> </h1>
                 </div>
             </div>
-                
+
             <div class="mb-3 mt-3 row g-2 justify-content-end">
                 <div class="col-md-2">
-                  <label><b>Fecha a Consultar:</b></label>
-                  <input type="date" class="form-control form-control-sm" id="inp_date_init">
+                    <label><b>Fecha a Consultar:</b></label>
+                    <input type="date" class="form-control form-control-sm" id="inp_date_init">
                 </div>             
             </div>     
             <div class="table-responsive">
@@ -66,7 +66,11 @@
             </div>
             <div class="col-md-12 mt-3">
                 <div class="gap-2 d-flex flex-sm-row flex-column justify-content-end">
-                    <button type="submit" class="btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
+                    <a class="btn btn-primary btn-buttons" id="btnRegresar" title="Cancelar" href="${pageContext.request.contextPath}/home">
+                        <span>
+                            Cancelar
+                        </span>
+                    </a>
                 </div>
             </div>    
         </form>
