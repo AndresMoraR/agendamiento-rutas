@@ -22,7 +22,7 @@
             <a class="btn btn-primary btn-buttons" title="Nuevo Usuario" href="${pageContext.request.contextPath}/user?accion=add">
                 <span>
                     <i class="fa-solid fa-plus"></i>
-                      Nuevo Usuario 
+                    Nuevo Usuario 
                 </span>
             </a>
         </div> 
@@ -42,7 +42,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                     <!--<tr>
                         <th scope="row">2</th>
                         <td>Harold</td>
@@ -93,7 +93,11 @@
         <div class=" d-flex justify-content-end align-content-end">
             <div class="row">
                 <div class="col-md-12">
-                    <button type="button" class=" btn btn-primary btn-buttons" id="btnRegresar">Cancelar</button>
+                    <a class="btn btn-primary btn-buttons" id="btnRegresar" title="Cancelar" href="${pageContext.request.contextPath}/home">
+                        <span>
+                            Cancelar
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

@@ -75,7 +75,11 @@
             <div class=" d-flex justify-content-end align-content-end">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="button" class=" btn btn-primary btn-buttons" id="btnRegresar">Cancelar</button>
+                        <a class="btn btn-primary btn-buttons" id="btnRegresar" title="Cancelar" href="${pageContext.request.contextPath}/home">
+                            <span>
+                                Cancelar
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>  

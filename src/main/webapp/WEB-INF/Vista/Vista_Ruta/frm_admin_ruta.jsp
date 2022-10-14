@@ -29,7 +29,7 @@
                 <a class="btn btn-primary btn-buttons " title="Abrir Ruta" href="${pageContext.request.contextPath}/ruta?accion=add">
                     <span>
                         <i class="fa-solid fa-plus"></i>
-                         Crear Ruta  
+                        Crear Ruta  
                     </span>
                 </a>    
             </div>
@@ -74,11 +74,15 @@
             <div class=" d-flex justify-content-end align-content-end">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="submit" class=" btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
+                        <a class="btn btn-primary btn-buttons" id="btnRegresar" title="Cancelar" href="${pageContext.request.contextPath}/home">
+                            <span>
+                                Cancelar
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>  
-                    
+
             <!-- Modal -->
             <div class="modal" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="modalInfo" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">

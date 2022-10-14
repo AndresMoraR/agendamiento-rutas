@@ -16,21 +16,21 @@
                     <h1 class="color-text"> <b>Crear Bloque</b> </h1>
                 </div>
             </div>
-                
+
             <div class="mb-3 mt-3 row g-2 justify-content-end">
                 <div class="col-md-2">
-                  <label><b>Fecha Inicial:</b></label>
-                  <input type="date" class="form-control form-control-sm" id="inp_date_init">
+                    <label><b>Fecha Inicial:</b></label>
+                    <input type="date" class="form-control form-control-sm" id="inp_date_init">
                 </div>
                 <div class="col-md-2">
-                  <label><b>Fecha Final:</b></label>
-                  <input type="date" class="form-control form-control-sm" id="inp_date_end">
+                    <label><b>Fecha Final:</b></label>
+                    <input type="date" class="form-control form-control-sm" id="inp_date_end">
                 </div>             
                 <div class="d-flex flex-sm-row flex-column justify-content-end">
                     <button type="submit" class="btn btn-primary btn-buttons" id="btnConsultar">Consultar</button>
                 </div>
             </div>
-                
+
             <div class="row">
                 <label class="text-center"><b>Días Disponibles</b></label>
                 <div class="gap-1 d-flex flex-sm-row flex-column justify-content-center">
@@ -44,7 +44,7 @@
                     <a href="" class="btn btn-primary btn-buttons">06</a>
                 </div>
             </div>
-                
+
             <div class="table-responsive">
                 <table class="table text-center">
                     <thead>
@@ -134,7 +134,11 @@
                 </div>
                 <div class="gap-2 d-flex flex-sm-row flex-column justify-content-end">
                     <button type="submit" class="btn btn-primary btn-buttons" id="btnGuardar">Guardar</button>
-                    <button type="submit" class="btn btn-primary btn-buttons" id="btnCancelar">Cancelar</button>
+                    <a class="btn btn-primary btn-buttons" id="btnRegresar" title="Cancelar" href="${pageContext.request.contextPath}/home">
+                        <span>
+                            Cancelar
+                        </span>
+                    </a>
                 </div>
             </div>    
         </form>
