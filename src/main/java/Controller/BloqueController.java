@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
 public class BloqueController extends HttpServlet{
     
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {                
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
         HttpSession sesion = request.getSession();
         if(sesion.getAttribute("id") != null){
             this.accionDefault(request, response); 
@@ -32,7 +32,23 @@ public class BloqueController extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+        /*HttpSession sesion = request.getSession();
+        String accion = request.getParameter("accion");
+        if(sesion.getAttribute("id") != null){
+            if (accion != null) {
+                switch(accion){
+                    case "":
+                        
+                        break;
+                    default:
+                        this.accionDefault(request, response);
+                }   
+            }else{
+                this.accionDefault(request, response);
+            }
+        }else{
+            this.redirectToIndex(request, response);
+        }*/
     }
     
     private void accionDefault(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {        
@@ -42,4 +58,6 @@ public class BloqueController extends HttpServlet{
     private void redirectToIndex(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.sendRedirect("index.jsp");
     }
+    
+    
 }
