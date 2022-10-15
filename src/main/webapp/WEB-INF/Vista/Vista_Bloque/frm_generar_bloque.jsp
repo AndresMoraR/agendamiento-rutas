@@ -23,11 +23,11 @@
             </div>
                 
             <div class="mb-3 mt-3 row g-2 justify-content-end">
-                <div class="col-md-2">
+                <div class="col-sm-3">
                   <label><b>Fecha Inicial del bloque:</b></label>
                   <input type="date" class="form-control form-control-sm" id="inp_fecha_inicial">
                 </div>
-                <div class="col-md-2">
+                <div class="col-sm-3">
                   <label><b>Fecha Final del bloque:</b></label>
                   <input type="date" class="form-control form-control-sm" id="inp_fecha_final">
                 </div>             
@@ -60,66 +60,6 @@
                         </tr>
                     </thead>
                     <tbody id="fechas_bloque">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>2022-05-26</td>
-                            <td>
-                                <div class="form-check form-switch" style="padding: 0% !important">
-                                    <input class="form-check-input" style="margin: 3px 0 0 0 !important; float: none !important" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                </div>
-                            </td>
-                            <td> 
-                                <select class="form-select form-select-sm">
-                                    <option>5:50</option>
-                                    <option>6:50</option>
-                                </select> 
-                            </td>
-                            <td>
-                                <select class="form-select form-select-sm">
-                                    <option>16</option>
-                                    <option>12</option>
-                                </select> 
-                            </td>
-                            <td><label>16</label></td>
-                            <td><input type="number" min="0" class="form-control form-control-sm"></td>
-                            <td><input type="number" min="0" class="form-control form-control-sm"></td>
-                            <td><label>16</label></td>
-                            <td>
-                                <a href="#" class="btn btn-buttons">
-                                    <span><i class="fa-solid fa-plus"></i></span>
-                                </a>
-                            </td>
-                        </tr>
-                        <!--<tr>
-                            <th scope="row">2</th>
-                            <td>2022-05-26</td>
-                            <td>
-                                <div class="form-check form-switch" style="padding: 0% !important">
-                                    <input class="form-check-input" style="margin: 3px 0 0 0 !important; float: none !important" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                </div>
-                            </td>
-                            <td> 
-                                <select class="form-select form-select-sm">
-                                    <option>5:50</option>
-                                    <option>6:50</option>
-                                </select> 
-                            </td>
-                            <td>
-                                <select class="form-select form-select-sm">
-                                    <option>16</option>
-                                    <option>12</option>
-                                </select> 
-                            </td>
-                            <td><label>16</label></td>
-                            <td><input type="number" min="0" class="form-control form-control-sm"></td>
-                            <td><input type="number" min="0" class="form-control form-control-sm"></td>
-                            <td><label>16</label></td>
-                            <td>
-                                <a href="#" class="btn btn-buttons">
-                                    <span><i class="fa-solid fa-minus"></i></span>
-                                </a>
-                            </td>
-                        </tr>-->
                     </tbody>
                 </table> 
             </div>
