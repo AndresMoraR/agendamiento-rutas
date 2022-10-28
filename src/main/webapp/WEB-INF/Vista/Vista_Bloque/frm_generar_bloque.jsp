@@ -39,12 +39,14 @@
             <div class="row">
                 <label class="text-center"><b>Días Disponibles</b></label>
                 <div class="dias_dis gap-1 d-flex flex-sm-row flex-column justify-content-center">
-                    <button type="button" class="btn btn-primary btn-buttons">Consulte por fechas para buscar los días disponibles</button>
+                    <!--<nav class="tab-list dias_dis">-->                      
+                        <button type="button" class="btn btn-primary btn-buttons">Consulte por fechas para buscar los días disponibles</button>
+                    <!--</nav>-->               
                 </div>
             </div>
                 
-            <div class="table-responsive">
-                <table class="table text-center">
+            <div class="tabs">
+                <!--<table class="table text-center">
                     <thead>
                         <tr>
                             <th scope="col"></th>
@@ -61,7 +63,7 @@
                     </thead>
                     <tbody id="fechas_bloque">
                     </tbody>
-                </table> 
+                </table>-->
             </div>
             <div class="col-md-12 mt-3">
                 <div class="gap-2 d-flex justify-content-end mb-1">

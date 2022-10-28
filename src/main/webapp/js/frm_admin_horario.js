@@ -10,7 +10,6 @@ $(function () {
      var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
      var yyyy = date.getFullYear();*/
 
-
     var meridiano = "";
     var inp_hora = $('#inp_hora').val();
     if (inp_hora !== "" && $('#inp_hora').length) {

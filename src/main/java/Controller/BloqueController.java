@@ -37,8 +37,7 @@ public class BloqueController extends HttpServlet{
         if(sesion.getAttribute("id") != null){
             if (accion != null) {
                 switch(accion){
-                    case "":
-                        
+                    case "":                        
                         break;
                     default:
                         this.accionDefault(request, response);
